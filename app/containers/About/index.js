@@ -10,8 +10,11 @@ import {Link} from 'react-router';
 
 export default class About extends React.PureComponent {
   render() {
+    const divStyle={
+
+    }
     return (
-      <div>
+      <div style={divStyle}>
         <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
 
         <header>
