@@ -7,6 +7,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
+import {Paper} from 'material-ui/Paper';
 
 export default class Home extends React.PureComponent {
   render() {
@@ -15,25 +16,35 @@ export default class Home extends React.PureComponent {
                 fontFamily: "Raleway",
                 display: "flex",
                 flexDirection:"column",
-                height: "100vh",
-                }
+                overflow: "hidden",
+
+              }
 
                 const nonHeadingFontStyle={
                 fontFamily: "Cabin",
+                margin: "auto auto",
              }
 
               const headerStyle={
-                background:"#828CEC",
                 fontSize: ".8em",
                 margin: "0 0",
                 display: "flex",
                 flexDirection: "column",
-                borderStyle: "solid",
-                borderWidth: "",
-
+                zIndex: "9999",
+                margin: "3em 2em",
+                justifyContent: "flex-end", 
               }
+                  const headerShapeStyle= {
+                    width: "0",
+                    height:"0",
+                    border: "0 solid transparent",
+                    borderWidth:"100vh",
+                    borderTop: "15vh solid #828CEC",
+                    position: "fixed",
+                  }
+
+
                   const headerOneStyle={
-                    margin: "0",
                     fontSize: "1.5em",
                   }
 
@@ -41,6 +52,7 @@ export default class Home extends React.PureComponent {
                 height: "100vh",
                 display: "flex",
                 flexDirection:"column",
+                marginTop: "15%",
               }
 
                   const blogStyle={
@@ -49,6 +61,7 @@ export default class Home extends React.PureComponent {
                    width: "60%",
                    marginLeft: "40%",
                   }
+
                     const blogTitleStyle={
                       margin: "1em",
                       marginBottom: "0",
@@ -82,28 +95,41 @@ export default class Home extends React.PureComponent {
                  flexDirection: "column",
                  bottom: "0",
                  width: "100%",
-                }
+                 height: "5em",
+                 padding: ".5em",
+              }
+
+                    const footerFontStyle={
+                      fontFamily: "Cabin",
+                      justifyContent: "space-between",
+                      margin: "auto",
+                    }
                     const socialLinksStyle= {
                       display: 'flex',
                       flexDirection: "row",
                       listStyleType: "none",
-                       margin: "0 auto",
-                      }
+                      justifyContent: "space-between",
+                      margin: "0 40vw",
 
-    return (
+                    }
+
+        return (
 <div style={divStyle}>
+
+
          <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
-
-           <header style={headerStyle}>
-             <h1 style={headerOneStyle}> Audora Chalker </h1>
-             <nav>
-               <Link to="/"> Home </Link>
-             </nav>
-           </header>
-
+         <div style={headerShapeStyle}>
+          </div>
+          <header style={headerStyle}>
+            <h1 style={headerOneStyle}> Audora Chalker </h1>
+            <nav>
+              <Link to="/"> Home </Link>
+            </nav>
+          </header>
 <main style={mainStyle}>
-    <div style={blogStyle}>
-        <div style={blogTitleStyle}>
+
+  <div style={blogStyle}>
+      <div style={blogTitleStyle}>
           <header>
             <h2> Blog </h2>
           </header>
@@ -121,7 +147,7 @@ export default class Home extends React.PureComponent {
                 </section>
               </article>
 
-                <article style={blogCardStyle}>
+                <article style={blogCardStyle} >
                   <header>
                     <h3>
                       <a href=""> Ipsum 2 </a>
@@ -145,7 +171,7 @@ export default class Home extends React.PureComponent {
             </div>
       </div>
 
-          <div style={aboutStyle}>
+          <div style={aboutStyle} zDepth={3}>
                 <section style={aboutTextBlockStyle}>
                   <header>
                     <h2> About Me </h2>
@@ -155,18 +181,21 @@ export default class Home extends React.PureComponent {
                 </section>
           </div>
 
+
   </main>
 
-          <footer style={footerStyle}>
-            <ul class="socialLinks" style={socialLinksStyle}>
-              <li><a href="mailto:audoralc@gmail.com">📧</a></li>
-              <li> <a href="https://github.com/scribeklio"> X </a> </li>
-              <li> <a href="https://www.linkedin.com/achalker24"> X </a></li>
-              <li> <a href="https://twitter.com/klioonthemoon"> X </a></li>
-            </ul>
+  <footer style={footerStyle}>
+    <ul class="socialLinks" style={socialLinksStyle}>
+      <li><a href="mailto:audoralc@gmail.com">📧</a></li>
+      <li> <a href="https://github.com/scribeklio"> X </a> </li>
+      <li> <a href="https://www.linkedin.com/achalker24"> X </a></li>
+      <li> <a href="https://twitter.com/klioonthemoon"> X </a></li>
+    </ul>
 
-            <p style={nonHeadingFontStyle}>  audora chalker. made with ❤️️ & ☕ </p>
-          </footer>
+    <p style={footerFontStyle}>  audora chalker. made with ❤️️ & ☕ </p>
+  </footer>
+
+
 
 
       </div>
