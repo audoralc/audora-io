@@ -12,10 +12,10 @@ export default class Home extends React.PureComponent {
   render() {
                const divStyle={
                 background: "#80C5DB",
-                height: "100%",
                 fontFamily: "Raleway",
-                display: "grid",
-
+                display: "flex",
+                flexDirection:"column",
+                height: "100vh",
                 }
 
                 const nonHeadingFontStyle={
@@ -25,23 +25,43 @@ export default class Home extends React.PureComponent {
               const headerStyle={
                 background:"#828CEC",
                 fontSize: ".8em",
-                margin: "0 0", 
+                margin: "0 0",
+                display: "flex",
+                flexDirection: "column",
+                borderStyle: "solid",
+                borderWidth: "",
 
               }
+                  const headerOneStyle={
+                    margin: "0",
+                    fontSize: "1.5em",
+                  }
 
               const mainStyle={
+                height: "100vh",
+                display: "flex",
+                flexDirection:"column",
               }
 
                   const blogStyle={
                    margin: "40px",
                    background:"#69BAC2",
-                   display: "flex",
                    width: "60%",
-                }
+                   marginLeft: "40%",
+                  }
+                    const blogTitleStyle={
+                      margin: "1em",
+                      marginBottom: "0",
+                      }
 
+                      const blogGroupStyle={
+                        display: "inline-flex",
+                        margin: "-1.25em 1em 1em 1em",
+                    }
                           const blogCardStyle={
                             padding: ".5em",
-                            flexWrap: "wrap",
+                            margin: ".5em",
+                            display: "block",
                           }
 
                   const aboutStyle={
@@ -50,11 +70,16 @@ export default class Home extends React.PureComponent {
                   width: "30%",
                   height: "auto",
                 }
+                    const aboutTextBlockStyle= {
+                      margin: "1em 1em 0 1em",
+                    }
 
                const footerStyle={
                  background:"#8DE0CA",
                  color: "#669daf",
                  position: "fixed",
+                 display: "flex",
+                 flexDirection: "column",
                  bottom: "0",
                  width: "100%",
                 }
@@ -62,16 +87,15 @@ export default class Home extends React.PureComponent {
                       display: 'flex',
                       flexDirection: "row",
                       listStyleType: "none",
-                      alignSelf: "auto",
-
+                       margin: "0 auto",
                       }
 
     return (
-      <div style={divStyle}>
-         <Helmet title="Home" meta={[ { name: 'description', content: 'Description of Home' }]}/>
+<div style={divStyle}>
+         <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
            <header style={headerStyle}>
-             <h1> Audora Chalker </h1>
+             <h1 style={headerOneStyle}> Audora Chalker </h1>
              <nav>
                <Link to="/"> Home </Link>
              </nav>
@@ -79,11 +103,13 @@ export default class Home extends React.PureComponent {
 
 <main style={mainStyle}>
     <div style={blogStyle}>
-      <header>
-        <h2> Blog </h2>
-      </header>
+        <div style={blogTitleStyle}>
+          <header>
+            <h2> Blog </h2>
+          </header>
+        </div>
 
-
+        <div style={blogGroupStyle}>
               <article style={blogCardStyle}>
                 <header>
                   <h3>
@@ -116,12 +142,11 @@ export default class Home extends React.PureComponent {
                     <p style={nonHeadingFontStyle}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
                   </section>
                 </article>
-
-          </div>
-
+            </div>
+      </div>
 
           <div style={aboutStyle}>
-                <section>
+                <section style={aboutTextBlockStyle}>
                   <header>
                     <h2> About Me </h2>
                   </header>
@@ -129,6 +154,7 @@ export default class Home extends React.PureComponent {
 
                 </section>
           </div>
+
   </main>
 
           <footer style={footerStyle}>
@@ -139,7 +165,7 @@ export default class Home extends React.PureComponent {
               <li> <a href="https://twitter.com/klioonthemoon"> X </a></li>
             </ul>
 
-            <p style={nonHeadingFontStyle}> made with ❤️️ & ☕ </p>
+            <p style={nonHeadingFontStyle}>  audora chalker. made with ❤️️ & ☕ </p>
           </footer>
 
 
