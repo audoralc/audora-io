@@ -8,9 +8,13 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 import Responsive from 'react-responsive';
-import {Paper} from 'material-ui/Paper';
+import Paper from 'material-ui/Paper';
+import FontIcon from 'material-ui/FontIcon';
+import IconButton from 'material-ui/IconButton';
 
-export default class Home extends React.PureComponent {
+
+export default class Home extends
+ React.PureComponent {
   render() {
                const divStyle={
                 background: "#80C5DB",
@@ -18,7 +22,6 @@ export default class Home extends React.PureComponent {
                 display: "flex",
                 flexDirection:"column",
                 overflow: "hidden",
-
               }
 
                 const nonHeadingFontStyle={
@@ -27,7 +30,7 @@ export default class Home extends React.PureComponent {
              }
 
               const headerStyle={
-                fontSize: ".8em",
+                fontSize: "1em",
                 display: "flex",
                 flexDirection: "column",
                 zIndex: "2",
@@ -50,10 +53,14 @@ export default class Home extends React.PureComponent {
                     width: "30vw",
                     }
 
-
                   const headerOneStyle={
                     fontSize: "1.5em",
                     color: "#fff",
+                  }
+
+                  const linkTextStyle={
+                  textDecoration: "none",
+                  color: "#fff",
                   }
 
               const mainStyle={
@@ -72,22 +79,22 @@ export default class Home extends React.PureComponent {
                   }
 
 
-                    const blogTitleStyle={
-                      margin: "1em 1em 1em 1.5em",
+                          const blogTitleStyle={
+                            margin: "1em 1em 1em 1.5em",
 
-                      }
+                            }
 
-                      const blogGroupStyle={
-                        display: "inline-flex",
-                        margin: "-1.25em 1em 1em 1em",
-                        flexWrap: "wrap",
-                        flexDirection: "row",
-                    }
-                          const blogCardStyle={
-                            padding: ".5em",
-                            margin: ".5em",
-                            display: "block",
+                            const blogGroupStyle={
+                              display: "inline-flex",
+                              margin: "-1.25em 1em 1em 1em",
+                              flexWrap: "wrap",
+                              flexDirection: "row",
                           }
+                                const blogCardStyle={
+                                  padding: ".5em",
+                                  margin: ".5em",
+                                  display: "block",
+                                }
 
                   const aboutStyle={
                   background:"#E7F4F5",
@@ -117,6 +124,7 @@ export default class Home extends React.PureComponent {
                       fontFamily: "Cabin",
                       justifyContent: "space-between",
                       margin: "auto",
+
                     }
                     const socialLinksStyle= {
                       display: 'flex',
@@ -124,97 +132,116 @@ export default class Home extends React.PureComponent {
                       listStyleType: "none",
                       justifyContent: "space-between",
                       margin: "0 40vw",
-
                     }
+
 
         return (
 <div style={divStyle}>
 
 
-         <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
-         <div style={headerShapeStyle}>
-          </div>
-          <header style={headerStyle}>
-            <div style={headerTextBlockStyle}>
-                <h1 style={headerOneStyle}> Audora Chalker </h1>
-                <nav>
-                  <Link to="/"> Home </Link>
-                </nav>
-            </div>
-          </header>
-<main style={mainStyle}>
+  <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
+  <div style={headerShapeStyle}>
+  </div>
+  <header style={headerStyle}>
+    <div style={headerTextBlockStyle}>
+      <h1 style={headerOneStyle}> Audora Chalker </h1>
+      <nav>
+        <Link to="/" style={linkTextStyle}>
+          <IconButton>
+             <FontIcon className="muidocs-icon-action-home">
+         Home
+              </FontIcon>
+            </IconButton>
+          </Link>
+      </nav>
+    </div>
+  </header>
+  <main style={mainStyle}>
 
-  <div style={blogStyle}>
+  <Paper style={blogStyle} zDepth={2}>
+    <div>
       <div style={blogTitleStyle}>
-          <header>
-            <h2> Blog </h2>
-          </header>
-        </div>
-
-        <div style={blogGroupStyle}>
-              <article style={blogCardStyle}>
-                <header>
-                  <h3>
-                    <a href=""> Lorem 1 </a>
-                  </h3>
-                </header>
-                <section>
-                  <p style={nonHeadingFontStyle}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </section>
-              </article>
-
-                <article style={blogCardStyle} >
-                  <header>
-                    <h3>
-                      <a href=""> Ipsum 2 </a>
-                    </h3>
-                  </header>
-                  <section>
-                    <p style={nonHeadingFontStyle}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                  </section>
-                </article>
-
-                <article style={blogCardStyle}>
-                  <header>
-                    <h3>
-                      <a href=""> Dolor 3 </a>
-                    </h3>
-                  </header>
-                  <section>
-                    <p style={nonHeadingFontStyle}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                  </section>
-                </article>
-            </div>
+        <header>
+          <h2> Blog </h2>
+        </header>
       </div>
 
-          <div style={aboutStyle}>
-                <section style={aboutTextBlockStyle}>
-                  <header>
-                    <h2> About Me </h2>
-                  </header>
-                    <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+      <div style={blogGroupStyle}>
+        <article style={blogCardStyle}>
+          <header>
+            <h3>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
+                  </h3>
+          </header>
+          <section>
+            <p style={nonHeadingFontStyle}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
+          </section>
+        </article>
 
-                </section>
-          </div>
+        <article style={blogCardStyle}>
+          <header>
+            <h3>
+                    <Link to="/" style={linkTextStyle}> Ipsum 2
+                    </Link>
+                        </h3>
+          </header>
+          <section>
+            <p style={nonHeadingFontStyle}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </section>
+        </article>
 
+        <article style={blogCardStyle}>
+          <header>
+            <h3>
+                    <Link to="/" style={linkTextStyle}> Dolor 3
+                    </Link>
+                    </h3>
+          </header>
+          <section>
+            <p style={nonHeadingFontStyle}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
+          </section>
+        </article>
+      </div>
+    </div>
+  </Paper>
+
+  <Paper style={aboutStyle} zDepth={2}>
+    <div>
+      <section style={aboutTextBlockStyle}>
+        <header>
+          <h2> About Me </h2>
+        </header>
+        <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit,
+          sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+
+      </section>
+    </div>
+    </Paper>
 
   </main>
 
   <footer style={footerStyle}>
     <ul class="socialLinks" style={socialLinksStyle}>
-      <li><a href="mailto:audoralc@gmail.com">📧</a></li>
-      <li> <a href="https://github.com/scribeklio"> X </a> </li>
-      <li> <a href="https://www.linkedin.com/achalker24"> X </a></li>
-      <li> <a href="https://twitter.com/klioonthemoon"> X </a></li>
+      <li>
+        <Link to="mailto:audoralc@gmail.com" style={linkTextStyle}>📧</Link>
+      </li>
+      <li>
+        <Link to="https://github.com/scribeklio" style={linkTextStyle}> X </Link>
+      </li>
+      <li>
+        <Link to="https://www.linkedin.com/achalker24" style={linkTextStyle}> X </Link>
+      </li>
+      <li>
+        <Link to="https://twitter.com/klioonthemoon" style={linkTextStyle}> X </Link>
+      </li>
     </ul>
 
-    <p style={footerFontStyle}>  audora chalker. made with ❤️️ & ☕ </p>
+    <p style={footerFontStyle}> audora chalker. made with ❤️️ & ☕ </p>
   </footer>
 
 
 
 
-      </div>
+</div>
     );
   }
 }
