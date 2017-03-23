@@ -7,6 +7,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
+import Responsive from 'react-responsive';
 import {Paper} from 'material-ui/Paper';
 
 export default class Home extends React.PureComponent {
@@ -27,12 +28,10 @@ export default class Home extends React.PureComponent {
 
               const headerStyle={
                 fontSize: ".8em",
-                margin: "0 0",
                 display: "flex",
                 flexDirection: "column",
-                zIndex: "9999",
-                margin: "3em 2em",
-                justifyContent: "flex-end", 
+                zIndex: "2",
+
               }
                   const headerShapeStyle= {
                     width: "0",
@@ -41,35 +40,48 @@ export default class Home extends React.PureComponent {
                     borderWidth:"100vh",
                     borderTop: "15vh solid #828CEC",
                     position: "fixed",
+                    zIndex: "4",
                   }
+
+                  const headerTextBlockStyle= {
+                    position: "fixed",
+                    margin: "3vh 0 0 0",
+                    padding: "0 0 0 1em",
+                    width: "30vw",
+                    }
 
 
                   const headerOneStyle={
                     fontSize: "1.5em",
+                    color: "#fff",
                   }
 
               const mainStyle={
-                height: "100vh",
+                height: "100%",
                 display: "flex",
                 flexDirection:"column",
-                marginTop: "15%",
+
               }
 
                   const blogStyle={
-                   margin: "40px",
+                   margin: "20vh 0 10% 40%",
                    background:"#69BAC2",
                    width: "60%",
-                   marginLeft: "40%",
+                   display: "flex",
+
                   }
 
+
                     const blogTitleStyle={
-                      margin: "1em",
-                      marginBottom: "0",
+                      margin: "1em 1em 1em 1.5em",
+
                       }
 
                       const blogGroupStyle={
                         display: "inline-flex",
                         margin: "-1.25em 1em 1em 1em",
+                        flexWrap: "wrap",
+                        flexDirection: "row",
                     }
                           const blogCardStyle={
                             padding: ".5em",
@@ -81,16 +93,18 @@ export default class Home extends React.PureComponent {
                   background:"#E7F4F5",
                   padding: ".5em",
                   width: "30%",
-                  height: "auto",
+                  marginBottom:"10%",
+                  display: "flex",
+                  zIndex: "3",
                 }
                     const aboutTextBlockStyle= {
-                      margin: "1em 1em 0 1em",
+                      margin: "1em",
+
                     }
 
                const footerStyle={
                  background:"#8DE0CA",
                  color: "#669daf",
-                 position: "fixed",
                  display: "flex",
                  flexDirection: "column",
                  bottom: "0",
@@ -121,10 +135,12 @@ export default class Home extends React.PureComponent {
          <div style={headerShapeStyle}>
           </div>
           <header style={headerStyle}>
-            <h1 style={headerOneStyle}> Audora Chalker </h1>
-            <nav>
-              <Link to="/"> Home </Link>
-            </nav>
+            <div style={headerTextBlockStyle}>
+                <h1 style={headerOneStyle}> Audora Chalker </h1>
+                <nav>
+                  <Link to="/"> Home </Link>
+                </nav>
+            </div>
           </header>
 <main style={mainStyle}>
 
@@ -171,7 +187,7 @@ export default class Home extends React.PureComponent {
             </div>
       </div>
 
-          <div style={aboutStyle} zDepth={3}>
+          <div style={aboutStyle}>
                 <section style={aboutTextBlockStyle}>
                   <header>
                     <h2> About Me </h2>
