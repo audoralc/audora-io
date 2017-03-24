@@ -182,20 +182,7 @@ class ResponsiveHome extends React.PureComponent {
       </main>
 
       <div>
-      <footer style={footerStyle}>
-
-        <ul style={socialIconStyles}>
-        <li> <a href="mailto:scribeklio@gmail.com"><FaEnvelope></FaEnvelope></a></li>
-        <li> <a href="https://github.com/scribeklio"><FaGithub></FaGithub></a></li>
-        <li><a href="https://www.linkedin.com/achalker24"><FaLinkedin></FaLinkedin></a></li>
-        <li><a href="https://twitter.com/klioonthemoon"><FaTwitter></FaTwitter></a></li>
-        </ul>
-
-        <div style={copyrightStyle}>
-        <p style={footerFontStyle}> © 2017 audora chalker. made with ❤️️ & ☕. </p>
-        </div>
-
-      </footer>
+        <Footer> </Footer>
       </div>
 
       </div>

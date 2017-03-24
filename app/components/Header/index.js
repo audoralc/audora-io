@@ -8,6 +8,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 import Responsive from 'react-responsive';
+import Paper from 'material-ui/Paper';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
@@ -15,10 +16,6 @@ import ActionHome from 'material-ui/svg-icons/action/home';
 class Header extends React.PureComponent {
   render() {
 
-
-   const iconButtonStyle= {
-     display: "initial",
-   }
 
     const headerStyle={
       fontSize: "1em",
@@ -38,44 +35,49 @@ class Header extends React.PureComponent {
 
         const headerTextBlockStyle= {
           position: "fixed",
-          margin: "0",
+          margin: "auto auto",
           padding: "2em 2em 0 2em",
           maxWidth: "30vw",
-          borderRadius: " 0 0 50% 50%",
+          borderRadius: "0 0 50% 50%",
           background: "#E7F4F5",
-
           }
 
-        const headerOneStyle={
-          fontSize: "1.5em",
-          color: "#5D64A8",
-          padding: "1vw 1vw 0 1vw",
-          lineHeight: "1",
-        }
+          const navBarStyle={
+            display: "flex",
+            justifyContent: "center",
+          }
 
-        const linkTextStyle={
-        textDecoration: "none",
-        color: "#E7F4F5",
-        }
+
+            const headerOneStyle={
+              fontSize: "1.5em",
+              color: "#5D64A8",
+              padding: "1vw 1vw 0 1vw",
+              lineHeight: "1",
+            }
+
+            const linkTextStyle={
+            textDecoration: "none",
+            color: "#E7F4F5",
+            }
 
     return (
-      <div>
+      <div class="header">
       <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
         <div style={headerShapeStyle}>
         </div>
         <header style={headerStyle}>
-          <div style={headerTextBlockStyle}>
-            <h1 style={headerOneStyle}> Audora Chalker </h1>
-            <nav>
-
-                <IconButton href="/" style={iconButtonStyle}>
-                   <ActionHome>
-               Home
-                    </ActionHome>
-                  </IconButton>
-
-            </nav>
-          </div>
+          <Paper style={headerTextBlockStyle} zDepth={2}>
+            <div>
+              <h1 style={headerOneStyle}> Audora Chalker </h1>
+              <nav style={navBarStyle}>
+                  <IconButton href="/">
+                     <ActionHome>
+                 Home
+                      </ActionHome>
+                    </IconButton>
+                </nav>
+              </div>
+            </Paper>
         </header>
       </div>
     );

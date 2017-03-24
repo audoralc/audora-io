@@ -30,19 +30,24 @@ class Footer extends React.PureComponent {
            color: "#669daf",
 
          }
-         const socialIconStyles= {
+         const iconListStyle= {
              display: 'flex',
              flexDirection: "row",
              listStyleType: "none",
              justifyContent: "space-around",
              margin: "0 0",
-             padding: ".25em 1em",
+             padding: ".25em 3em",
              color: "#E7F4F5",
            }
 
+                const socialIconStyles= {
+                  color: "white",
+                  fontSize: "1.5em",
+                }
+
            const copyrightStyle= {
              margin: "1.5em auto",
-             lineHeight: "1.5em",
+             lineHeight: "2em",
            }
 
            const linkTextStyle={
@@ -53,11 +58,11 @@ class Footer extends React.PureComponent {
       <div>
       <footer>
       <Paper style={footerStyle} zDepth={2}>
-        <ul style={socialIconStyles}>
-        <li> <a href="mailto:scribeklio@gmail.com"><FaEnvelope></FaEnvelope></a></li>
-        <li> <a href="https://github.com/scribeklio"><FaGithub></FaGithub></a></li>
-        <li><a href="https://www.linkedin.com/achalker24"><FaLinkedin></FaLinkedin></a></li>
-        <li><a href="https://twitter.com/klioonthemoon"><FaTwitter></FaTwitter></a></li>
+        <ul style={iconListStyle}>
+        <li> <a style={socialIconStyles} href="mailto:scribeklio@gmail.com"><FaEnvelope></FaEnvelope></a></li>
+        <li> <a style={socialIconStyles} href="https://github.com/scribeklio"><FaGithub></FaGithub></a></li>
+        <li> <a style={socialIconStyles} href="https://www.linkedin.com/achalker24"><FaLinkedin></FaLinkedin></a></li>
+        <li> <a style={socialIconStyles} href="https://twitter.com/klioonthemoon"><FaTwitter></FaTwitter></a></li>
         </ul>
 
         <div style={copyrightStyle}>

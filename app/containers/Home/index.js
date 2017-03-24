@@ -56,6 +56,10 @@ export default class Home extends
                                       display: "block",
                                     }
 
+                                    const blogHeaderStyle={
+                                      margin: ".25em 0",
+                                    }
+
                         const aboutStyle={
                         background:"#E7F4F5",
                         padding: ".5em",
@@ -111,19 +115,26 @@ export default class Home extends
           </div>
 
           <div style={blogGroupStyle}>
+
             <article style={blogCardStyle}>
               <header>
-                <h3>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
+                <h3 style={blogHeaderStyle}>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
                         </h3>
               </header>
               <section>
                 <p style={nonHeadingFontStyle}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
               </section>
+
+              <footer>
+                <small>
+                  <time datetime="2017-02-02T16:00">Feb 2</time>
+                </small>
+              </footer>
             </article>
 
             <article style={blogCardStyle}>
               <header>
-                <h3>
+                <h3 style={blogHeaderStyle}>
                           <Link to="/" style={linkTextStyle}> Ipsum 2
                           </Link>
                               </h3>
@@ -131,11 +142,16 @@ export default class Home extends
               <section>
                 <p style={nonHeadingFontStyle}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </section>
+              <footer>
+                <small>
+                  <time datetime="2017-01-17T21:45">Jan 17</time>
+                </small>
+              </footer>
             </article>
 
             <article style={blogCardStyle}>
               <header>
-                <h3>
+                <h3 style={blogHeaderStyle}>
                           <Link to="/" style={linkTextStyle}> Dolor 3
                           </Link>
                           </h3>
@@ -143,6 +159,11 @@ export default class Home extends
               <section>
                 <p style={nonHeadingFontStyle}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
               </section>
+              <footer>
+                <small>
+                  <time datetime="2016-12-30T11:00">Dec 30</time>
+                </small>
+              </footer>
             </article>
           </div>
         </div>
