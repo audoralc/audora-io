@@ -86,13 +86,15 @@ export default class Home extends
                }
 
        return (
-<div class="componentWrapper">
+
+<div>
   <div class="responsiveContainer">
-  <Responsive minDeviceWidth={1024}>
-  <ResponsiveHome></ResponsiveHome>
-  </Responsive>
+      <Responsive maxDeviceWidth={1023}>
+        <ResponsiveHome></ResponsiveHome>
+      </Responsive>
   </div>
 
+<Responsive minDeviceWidth={1024}>
   <div style={divStyle}>
 
 
@@ -165,11 +167,9 @@ export default class Home extends
 
 
   </div>
+</Responsive>
+
 </div>
-
-
-
-
     );
   }
 }

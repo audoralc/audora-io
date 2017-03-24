@@ -39,10 +39,10 @@ class Header extends React.PureComponent {
         const headerTextBlockStyle= {
           position: "fixed",
           margin: "0",
-          padding: "0 0 0 1em",
+          padding: "2em 2em 0 2em",
           maxWidth: "30vw",
           borderRadius: " 0 0 50% 50%",
-        
+          background: "#E7F4F5",
 
           }
 

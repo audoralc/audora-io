@@ -116,7 +116,7 @@ class ResponsiveHome extends React.PureComponent {
 
     return (
 
-<Responsive maxDeviceWidth={1023}>
+
       <div style={divStyle}>
 
         <Header> </Header>
@@ -199,7 +199,6 @@ class ResponsiveHome extends React.PureComponent {
       </div>
 
       </div>
-</Responsive>
 
     );
   }
