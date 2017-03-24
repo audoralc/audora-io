@@ -37,7 +37,7 @@ class Header extends React.PureComponent {
           position: "fixed",
           margin: "auto auto",
           padding: "2em 2em 0 2em",
-          maxWidth: "30vw",
+          maxWidth: "28vw",
           borderRadius: "0 0 50% 50%",
           background: "#E7F4F5",
           }
@@ -49,7 +49,7 @@ class Header extends React.PureComponent {
 
 
             const headerOneStyle={
-              fontSize: "1.5em",
+              fontSize: "2.5vw", 
               color: "#5D64A8",
               padding: "1vw 1vw 0 1vw",
               lineHeight: "1",
