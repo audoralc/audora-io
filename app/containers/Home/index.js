@@ -88,8 +88,9 @@ export default class Home extends
        return (
 <div class="componentWrapper">
   <div class="responsiveContainer">
-    <Responsive minDeviceWidth={1024}> </Responsive>
-    <ResponsiveHome></ResponsiveHome>
+  <Responsive minDeviceWidth={1024}>
+  <ResponsiveHome></ResponsiveHome>
+  </Responsive>
   </div>
 
   <div style={divStyle}>
