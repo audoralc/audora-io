@@ -38,15 +38,18 @@ class Header extends React.PureComponent {
 
         const headerTextBlockStyle= {
           position: "fixed",
-          margin: "3vh 0 0 0",
+          margin: "0",
           padding: "0 0 0 1em",
-          width: "30vw",
+          maxWidth: "30vw",
+          borderRadius: " 0 0 50% 50%",
+        
+
           }
 
         const headerOneStyle={
           fontSize: "1.5em",
-          color: "#fff",
-          marginBottom: "0",
+          color: "#5D64A8",
+          padding: "1vw 1vw 0 1vw",
           lineHeight: "1",
         }
 
