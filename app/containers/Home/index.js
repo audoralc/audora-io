@@ -15,7 +15,7 @@ import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
 import Footer from 'components/Footer';
- import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
+import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
 
 
@@ -39,10 +39,9 @@ export default class Home extends
                     }
 
                         const blogStyle={
-                         margin: "20vh 0 10% 40%",
-                         paddingRight: "5em",
+                         margin: "30vh 0 10vh 20%",
                          background:"#69BAC2",
-                         width: "70%",
+                         width: "80%",
                          display: "flex",
                          flexDirection: "row",
                         }
@@ -55,6 +54,7 @@ export default class Home extends
                                       margin: ".5em",
                                     }
 
+
                         const aboutStyle={
                         background:"#E7F4F5",
                         padding: ".5em",
@@ -62,6 +62,7 @@ export default class Home extends
                         marginBottom:"10%",
                         display: "flex",
                         zIndex: "3",
+
                       }
 
 
@@ -168,6 +169,8 @@ export default class Home extends
             </div>
           </div>
         </Paper>
+
+
 
         <Paper style={aboutStyle} zDepth={2}>
           <div>

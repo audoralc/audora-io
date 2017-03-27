@@ -25,19 +25,12 @@ class Header extends React.PureComponent {
 
 
 
-  TitleLinkEvent() {
-
-  }
-
-  HomeIconEvent () {
-
-  }
 */
 
 
 
   render() {
-    
+
     const headerStyle={
       fontSize: "1em",
       display: "flex",
