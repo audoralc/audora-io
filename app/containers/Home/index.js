@@ -22,7 +22,7 @@ import Footer from 'components/Footer';
 
 export default class Home extends
  React.PureComponent {
-
+  function
   render() {
             const divStyle={
                 background: "#80C5DB",
@@ -40,20 +40,19 @@ export default class Home extends
 
                         const blogStyle={
                          margin: "20vh 0 10% 40%",
+                         paddingRight: "5em",
                          background:"#69BAC2",
-                         width: "60%",
+                         width: "70%",
                          display: "flex",
+                         flexDirection: "row",
                         }
                               const blogGroupStyle={
-                                display: "inline-flex",
-                                margin: "-1.25em 1em 1em 1em",
-                                flexWrap: "wrap",
-                                flexDirection: "row",
+                                display: "flex",
+                                margin: "-1.25em 2em 1em 1em",
                             }
                                     const blogCardStyle={
                                       padding: ".5em",
                                       margin: ".5em",
-                                      display: "block",
                                     }
 
                         const aboutStyle={

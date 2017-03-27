@@ -14,6 +14,28 @@ import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
 
 class Header extends React.PureComponent {
+/*  constructor(props) {
+    super (props);
+    this.state = {onMouseEnter: true};
+    this.
+  }
+
+  handleMouseEnter() {
+  }
+
+
+
+  TitleLinkEvent() {
+
+  }
+
+  HomeIconEvent () {
+
+  }
+*/
+
+
+
   render() {
 
 
@@ -49,7 +71,7 @@ class Header extends React.PureComponent {
 
 
             const headerOneStyle={
-              fontSize: "2.5vw", 
+              fontSize: "2.5vw",
               color: "#5D64A8",
               padding: "1vw 1vw 0 1vw",
               lineHeight: "1",
@@ -58,6 +80,8 @@ class Header extends React.PureComponent {
             const linkTextStyle={
             textDecoration: "none",
             color: "#E7F4F5",
+            width: "1vw",
+            height: "1vw",
             }
 
     return (
