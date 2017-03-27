@@ -19,8 +19,7 @@ class Footer extends React.PureComponent {
       width: "50%",
       height: "5em",
       padding: ".5em",
-      margin: "auto auto",
-
+      margin: "0 auto",
      }
 
          const footerFontStyle={

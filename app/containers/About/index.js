@@ -19,18 +19,34 @@ export default class About extends React.PureComponent {
         fontFamily: "Raleway",
         display: "flex",
         flexDirection:"column",
+        overflow: "hidden",
       }
+
           const aboutMain= {
             background: "#828CEC",
             maxWidth: "80vw",
             margin: "30vh auto 10vh auto",
             padding: "1.5em",
-          }
+            }
 
               const headingBlock={
-                
-
+                margin: "1.5em",
+                color: "#fff",
+                fontSize: "1.5em",
               }
+
+              const textBlock= {
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "flex-end",
+                margin: "1.5em 1.5em 1.5em 30%",
+              }
+
+                  const pFont={
+                    fontFamily: "Cabin",
+                    fontSize: "1.15em",
+                    margin: ".25em 0", 
+                  }
     return (
       <div style={divStyle}>
         <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
@@ -42,11 +58,14 @@ export default class About extends React.PureComponent {
           <section>
             <div style={headingBlock}>
               <h2>about</h2>
-              <img src="http://placehold.it/200x100" />
+              <img src="http://placehold.it/200x200" />
             </div>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-              <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+
+            <div style={textBlock}>
+              <p style={pFont}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+              <p style={pFont}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+              <p style={pFont}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+              </div>
           </section>
         </main>
         </Paper>

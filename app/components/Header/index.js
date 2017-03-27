@@ -37,8 +37,7 @@ class Header extends React.PureComponent {
 
 
   render() {
-
-
+    
     const headerStyle={
       fontSize: "1em",
       display: "flex",
