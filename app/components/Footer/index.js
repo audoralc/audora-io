@@ -39,40 +39,44 @@ class Footer extends React.PureComponent {
       justifyContent: "space-around",
     }
 
-    const socialIconStyles= {
-      color: "white",
-      fontSize: "1.5em",
-    };
+    const linkTextStyle={
+    textDecoration: "none",
+    color: "#E7F4F5",
+    fontSize: "1em",
+  }
 
     const aniIcons = {
       color: "#444",
-      fontSize: "1.5em",
+      fontSize: "1em",
     }
 
     if(this.state.socialHover == true)
     {
       return (
         <div style={iconBlockStyle}>
-        <li style={socialIconStyles} onMouseLeave={this.leaveHover}> <a  href="mailto:scribeklio@gmail.com"><FaEnvelope></FaEnvelope></a></li>
-        <li style={socialIconStyles} onMouseLeave={this.leaveHover}>  <a  href="https://github.com/scribeklio"><FaGithub></FaGithub></a></li>
-        <li style={socialIconStyles} onMouseLeave={this.leaveHover}> <a  href="https://www.linkedin.com/achalker24"><FaLinkedin></FaLinkedin></a></li>
-        <li style={socialIconStyles} onMouseLeave={this.leaveHover}> <a  href="https://twitter.com/klioonthemoon"><FaTwitter></FaTwitter></a></li>
+        <li onMouseLeave={this.leaveHover}> <a  href="mailto:scribeklio@gmail.com" style={aniIcons}><FaEnvelope></FaEnvelope></a></li>
+        <li onMouseLeave={this.leaveHover}>  <a  href="https://github.com/scribeklio" style={aniIcons}><FaGithub></FaGithub></a></li>
+        <li onMouseLeave={this.leaveHover}> <a  href="https://www.linkedin.com/achalker24" style={aniIcons}><FaLinkedin></FaLinkedin></a></li>
+        <li onMouseLeave={this.leaveHover}> <a  href="https://twitter.com/klioonthemoon" style={aniIcons}><FaTwitter></FaTwitter></a></li>
         </div>
       )
     }
     else {
       return(
         <div style={iconBlockStyle}>
-        <li style={aniIcons} onMouseOver={this.enterHover}> <a  href="mailto:scribeklio@gmail.com"><FaEnvelope></FaEnvelope></a></li>
-        <li style={aniIcons} onMouseOver={this.enterHover}>  <a  href="https://github.com/scribeklio"><FaGithub></FaGithub></a></li>
-        <li style={aniIcons} onMouseOver={this.enterHover}> <a  href="https://www.linkedin.com/achalker24"><FaLinkedin></FaLinkedin></a></li>
-        <li style={aniIcons} onMouseOver={this.enterHover}> <a  href="https://twitter.com/klioonthemoon"><FaTwitter></FaTwitter></a></li>
+        <li onMouseEnter={this.enterHover}> <a  href="mailto:scribeklio@gmail.com" style={linkTextStyle}><FaEnvelope></FaEnvelope></a></li>
+        <li onMouseEnter={this.enterHover}>  <a  href="https://github.com/scribeklio" style={linkTextStyle}><FaGithub></FaGithub></a></li>
+        <li onMouseEnter={this.enterHover}> <a  href="https://www.linkedin.com/achalker24" style={linkTextStyle}><FaLinkedin></FaLinkedin></a></li>
+        <li onMouseEnter={this.enterHover}> <a  href="https://twitter.com/klioonthemoon" style={linkTextStyle}><FaTwitter></FaTwitter></a></li>
         </div>
       )
     }
   }
 
   render() {
+    const footerContainer= {
+      zIndex: "9",
+    }
     const footerStyle={
       background:"#8DE0CA",
       display: "flex",
@@ -81,7 +85,7 @@ class Footer extends React.PureComponent {
       width: "50%",
       height: "auto",
       margin: "0 auto",
-     }
+    }
 
          const footerFontStyle={
            fontFamily: "Cabin",
@@ -90,37 +94,37 @@ class Footer extends React.PureComponent {
            margin: "0 0",
          }
 
+         const ulstyleReset={
+           paddingLeft: "0px",
+         }
+
          const iconBlockStyle={
            display: "flex",
-           flexDirection: "row",
-         }
+          }
 
              const iconListStyle= {
                  listStyleType: "none",
-                 margin: "0 0",
-                 padding: ".25em 3em",
                }
-
-                  const socialIconStyles= {
-                    color: "white",
-                    fontSize: "1.5em",
-                  }
 
                const copyrightStyle= {
                  margin: "0 auto",
                  lineHeight: "1em",
                }
 
+               const linkTextStyle={
+               color: "#E7F4F5",
+               zIndex: "9999",
+             }
+
     return (
-      <div>
+      <div style={footerContainer}>
       <footer>
       <Paper style={footerStyle} zDepth={2}>
-      <ul>
+      <ul style={ulstyleReset}>
         <div style={iconListStyle}>
         {this.showAni()}
         </div>
       </ul>
-
         <div style={copyrightStyle}>
         <p style={footerFontStyle}> © 2017 audora chalker. made with ❤️️ & ☕. </p>
         </div>

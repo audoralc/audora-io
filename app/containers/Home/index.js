@@ -11,15 +11,63 @@ import Responsive from 'react-responsive';
 import ResponsiveHome from 'components/ResponsiveHome';
 import Header from 'components/Header';
 import Paper from 'material-ui/Paper';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import ActionHome from 'material-ui/svg-icons/action/home';
 import Footer from 'components/Footer';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
 
 export default class Home extends
  React.PureComponent {
+  constructor(props) {
+    super(props)
+      super(props);
+      this.state = {
+        blogTitleHover:false
+      }
+    }
+
+      enterHover = () => {
+        this.setState({
+          blogTitleHover:true
+        })
+        console.log(this.state.blogTitleHover);
+      };
+
+      leaveHover = () => {
+        this.setState({
+          blogTitleHover:false
+        })
+        console.log(this.state.blogTitleHover);
+      };
+
+      showAni = () => {
+
+        const blogTitleStyle={
+        zIndex: "5",
+      };
+
+        const blogTitleAni={
+          color: "#000",
+        };
+
+        if(this.state.blogTitleHover == true)
+        {
+          return( <div style={blogTitleStyle}>
+            <header>
+              <h2> Blog </h2>
+            </header>
+          </div>
+          )
+        }
+        else {
+          return( <div style={blogTitleAni}>
+            <header>
+              <h2> Blog </h2>
+            </header>
+          </div>
+
+          )
+        }
+    }
 
   render() {
             const divStyle={
@@ -28,6 +76,7 @@ export default class Home extends
                 display: "flex",
                 flexDirection:"column",
                 overflow: "hidden",
+                zIndex: "-10",
               }
 
                     const mainStyle={
@@ -39,27 +88,28 @@ export default class Home extends
                         const blogStyle={
                          margin: "30vh 0 10vh 20%",
                          background:"#69BAC2",
-                         width: "80%",
                          display: "flex",
                          flexDirection: "row",
                         }
                               const blogGroupStyle={
                                 display: "flex",
-                                margin: "-1.25em 2em 1em 1em",
+                                margin: " .5em 1em",
+                                width: "100%",
                             }
                                     const blogCardStyle={
-                                      padding: ".5em",
-                                      margin: ".5em",
+                                      display: "flex",
+                                      flexDirection: "column",
+                                      alignContent: "space-between",
+                                      padding: ".5em 1em",
                                     }
 
 
                         const aboutStyle={
                         background:"#E7F4F5",
                         padding: ".5em",
-                        width: "30%",
+                        width: "35%",
                         marginBottom:"10%",
                         display: "flex",
-                        zIndex: "3",
                       }
 
 
@@ -76,7 +126,7 @@ export default class Home extends
               }
 
                 const blogTitleStyle={
-                margin: "1em 1em 1em 1.5em",
+                zIndex: "5",
               }
 
                 const aboutTextBlockStyle= {
@@ -84,7 +134,7 @@ export default class Home extends
                }
 
                const blogHeaderStyle={
-                 margin: ".25em 0",
+                 margin: "0 1.5em",
                }
 
        return (
@@ -106,7 +156,7 @@ export default class Home extends
 
         <Paper style={blogStyle} zDepth={2}>
           <div>
-            <div style={blogTitleStyle}>
+            <div style={blogHeaderStyle}>
               <header>
                 <h2> Blog </h2>
               </header>
@@ -116,7 +166,7 @@ export default class Home extends
 
               <article style={blogCardStyle}>
                 <header>
-                  <h3 style={blogHeaderStyle}>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
+                  <h3 style={blogTitleStyle}>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
                         </h3>
                 </header>
                 <section>
@@ -132,7 +182,7 @@ export default class Home extends
 
               <article style={blogCardStyle}>
                 <header>
-                  <h3 style={blogHeaderStyle}>
+                  <h3 style={blogTitleStyle}>
                           <Link to="/" style={linkTextStyle}> Ipsum 2
                           </Link>
                               </h3>
@@ -149,7 +199,7 @@ export default class Home extends
 
               <article style={blogCardStyle}>
                 <header>
-                  <h3 style={blogHeaderStyle}>
+                  <h3 style={blogTitleStyle}>
                           <Link to="/" style={linkTextStyle}> Dolor 3
                           </Link>
                           </h3>
