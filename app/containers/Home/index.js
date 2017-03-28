@@ -18,11 +18,9 @@ import Footer from 'components/Footer';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
 
-
-
 export default class Home extends
  React.PureComponent {
-  function
+
   render() {
             const divStyle={
                 background: "#80C5DB",
@@ -62,7 +60,6 @@ export default class Home extends
                         marginBottom:"10%",
                         display: "flex",
                         zIndex: "3",
-
                       }
 
 
@@ -93,7 +90,7 @@ export default class Home extends
        return (
 
 <div>
-  <div class="responsiveContainer">
+  <div className="responsiveContainer">
     <Responsive maxDeviceWidth={1023}>
       <ResponsiveHome></ResponsiveHome>
     </Responsive>
@@ -128,7 +125,7 @@ export default class Home extends
 
                 <footer>
                   <small>
-                  <time datetime="2017-02-02T16:00">Feb 2</time>
+                  <time dateTime="2017-02-02T16:00">Feb 2</time>
                 </small>
                 </footer>
               </article>
@@ -145,7 +142,7 @@ export default class Home extends
                 </section>
                 <footer>
                   <small>
-                  <time datetime="2017-01-17T21:45">Jan 17</time>
+                  <time dateTime="2017-01-17T21:45">Jan 17</time>
                 </small>
                 </footer>
               </article>
@@ -162,7 +159,7 @@ export default class Home extends
                 </section>
                 <footer>
                   <small>
-                  <time datetime="2016-12-30T11:00">Dec 30</time>
+                  <time dateTime="2016-12-30T11:00">Dec 30</time>
                 </small>
                 </footer>
               </article>

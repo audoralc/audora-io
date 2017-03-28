@@ -12,23 +12,62 @@ import Paper from 'material-ui/Paper';
 import FontIcon from 'material-ui/FontIcon';
 import IconButton from 'material-ui/IconButton';
 import ActionHome from 'material-ui/svg-icons/action/home';
+import {FaHome} from 'react-icons/lib/fa';
 
 class Header extends React.PureComponent {
-/*  constructor(props) {
-    super (props);
-    this.state = {onMouseEnter: true};
-    this.
+  constructor(props) {
+   super(props);
+   this.state = {
+     infoHover:false
+   }
+ }
+
+ enterHover = () => {
+   this.setState({
+     infoHover:true
+   })
+   console.log(this.state.infoHover);
+ };
+
+ leaveHover = () => {
+   this.setState({
+     infoHover:false
+   })
+   console.log(this.state.infoHover);
+ };
+
+  showAni = () => {
+    const navBarStyle= {
+      display: "flex",
+      justifyContent: "center",
+      color: "#000",
+      marginBottom: "1em",
+    };
+
+    const aniBox = {
+      display: "flex",
+      justifyContent: "center",
+      color: "#828CEC",
+      marginBottom: "1em",
+      transition: "color .5s",
+    }
+    if(this.state.infoHover == true)
+    {
+      return (
+        <div style={aniBox}  onMouseOver={this.enterHover}><FaHome> <Link to="/">
+         Home
+         </Link></FaHome> </div>
+      )
+    }
+    else {
+      return(
+        <div style={navBarStyle} onMouseLeave={this.leaveHover}>
+          <FaHome> <Link to="/">
+         Home
+          </Link></FaHome> </div>
+      )
+    }
   }
-
-  handleMouseEnter() {
-  }
-
-
-
-*/
-
-
-
   render() {
 
     const headerStyle={
@@ -38,8 +77,6 @@ class Header extends React.PureComponent {
       zIndex: "2",
     }
         const headerShapeStyle= {
-          width: "0",
-          height:"0",
           border: "0 solid transparent",
           borderWidth:"100vh",
           borderTop: "15vh solid #828CEC",
@@ -56,11 +93,12 @@ class Header extends React.PureComponent {
           background: "#E7F4F5",
           }
 
-          const navBarStyle={
+          const navBarStyle= {
             display: "flex",
             justifyContent: "center",
-          }
-
+            color: "#000",
+            marginBottom: "1em",
+          };
 
             const headerOneStyle={
               fontSize: "2.5vw",
@@ -77,7 +115,7 @@ class Header extends React.PureComponent {
             }
 
     return (
-      <div class="header">
+      <div className="header">
       <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
         <div style={headerShapeStyle}>
         </div>
@@ -85,13 +123,9 @@ class Header extends React.PureComponent {
           <Paper style={headerTextBlockStyle} zDepth={2}>
             <div>
               <h1 style={headerOneStyle}> Audora Chalker </h1>
-              <nav style={navBarStyle}>
-                  <IconButton href="/">
-                     <ActionHome>
-                 Home
-                      </ActionHome>
-                    </IconButton>
-                </nav>
+              <nav>
+                {this.showAni()}
+              </nav>
               </div>
             </Paper>
         </header>
