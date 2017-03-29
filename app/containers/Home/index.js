@@ -11,63 +11,13 @@ import Responsive from 'react-responsive';
 import ResponsiveHome from 'components/ResponsiveHome';
 import Header from 'components/Header';
 import Paper from 'material-ui/Paper';
+import PostPreviews from 'components/PostPreviews';
 import Footer from 'components/Footer';
-import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
+
 
 
 export default class Home extends
  React.PureComponent {
-  constructor(props) {
-    super(props)
-      super(props);
-      this.state = {
-        blogTitleHover:false
-      }
-    }
-
-      enterHover = () => {
-        this.setState({
-          blogTitleHover:true
-        })
-        console.log(this.state.blogTitleHover);
-      };
-
-      leaveHover = () => {
-        this.setState({
-          blogTitleHover:false
-        })
-        console.log(this.state.blogTitleHover);
-      };
-
-      showAni = () => {
-
-        const blogTitleStyle={
-        zIndex: "5",
-      };
-
-        const blogTitleAni={
-          color: "#000",
-        };
-
-        if(this.state.blogTitleHover == true)
-        {
-          return( <div style={blogTitleStyle}>
-            <header>
-              <h2> Blog </h2>
-            </header>
-          </div>
-          )
-        }
-        else {
-          return( <div style={blogTitleAni}>
-            <header>
-              <h2> Blog </h2>
-            </header>
-          </div>
-
-          )
-        }
-    }
 
   render() {
             const divStyle={
@@ -76,6 +26,7 @@ export default class Home extends
                 display: "flex",
                 flexDirection:"column",
                 overflow: "hidden",
+                textAlign: "justify",
                 zIndex: "-10",
               }
 
@@ -90,18 +41,13 @@ export default class Home extends
                          background:"#69BAC2",
                          display: "flex",
                          flexDirection: "row",
+                         zIndex: "3",
                         }
                               const blogGroupStyle={
                                 display: "flex",
-                                margin: " .5em 1em",
-                                width: "100%",
-                            }
-                                    const blogCardStyle={
-                                      display: "flex",
-                                      flexDirection: "column",
-                                      alignContent: "space-between",
-                                      padding: ".5em 1em",
-                                    }
+                                margin: ".5em 1em",
+                              }
+
 
 
                         const aboutStyle={
@@ -110,6 +56,7 @@ export default class Home extends
                         width: "35%",
                         marginBottom:"10%",
                         display: "flex",
+                        zIndex: "3",
                       }
 
 
@@ -118,11 +65,13 @@ export default class Home extends
                 fontFamily: "Cabin",
                 margin: "auto auto",
                 fontSize: "1.15em",
+                marginBottom: ".5em",
               }
 
                 const linkTextStyle={
                 textDecoration: "none",
                 color: "#E7F4F5",
+
               }
 
                 const blogTitleStyle={
@@ -131,10 +80,18 @@ export default class Home extends
 
                 const aboutTextBlockStyle= {
                   margin: "1em",
+
+               }
+
+               const aboutLinkStyle={
+                 textDecoration: "none",
+                 color: "#69BAC2",
+                 zIndex: "5",
+
                }
 
                const blogHeaderStyle={
-                 margin: "0 1.5em",
+                 margin: ".5em 1em -.5em 1em",
                }
 
        return (
@@ -156,63 +113,16 @@ export default class Home extends
 
         <Paper style={blogStyle} zDepth={2}>
           <div>
-            <div style={blogHeaderStyle}>
+            <div>
               <header>
-                <h2> Blog </h2>
+                <h2 style={blogHeaderStyle}> Blog </h2>
               </header>
             </div>
 
             <div style={blogGroupStyle}>
-
-              <article style={blogCardStyle}>
-                <header>
-                  <h3 style={blogTitleStyle}>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
-                        </h3>
-                </header>
-                <section>
-                  <p style={nonHeadingFontStyle}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                </section>
-
-                <footer>
-                  <small>
-                  <time dateTime="2017-02-02T16:00">Feb 2</time>
-                </small>
-                </footer>
-              </article>
-
-              <article style={blogCardStyle}>
-                <header>
-                  <h3 style={blogTitleStyle}>
-                          <Link to="/" style={linkTextStyle}> Ipsum 2
-                          </Link>
-                              </h3>
-                </header>
-                <section>
-                  <p style={nonHeadingFontStyle}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </section>
-                <footer>
-                  <small>
-                  <time dateTime="2017-01-17T21:45">Jan 17</time>
-                </small>
-                </footer>
-              </article>
-
-              <article style={blogCardStyle}>
-                <header>
-                  <h3 style={blogTitleStyle}>
-                          <Link to="/" style={linkTextStyle}> Dolor 3
-                          </Link>
-                          </h3>
-                </header>
-                <section>
-                  <p style={nonHeadingFontStyle}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                </section>
-                <footer>
-                  <small>
-                  <time dateTime="2016-12-30T11:00">Dec 30</time>
-                </small>
-                </footer>
-              </article>
+              <PostPreviews></PostPreviews>
+              <PostPreviews> </PostPreviews>
+              <PostPreviews> </PostPreviews>
             </div>
           </div>
         </Paper>
@@ -227,7 +137,7 @@ export default class Home extends
               </header>
               <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
                 velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
-
+                <Link to="/about" style={aboutLinkStyle}> >>> </Link>
             </section>
           </div>
         </Paper>

@@ -9,11 +9,8 @@ import Helmet from 'react-helmet';
 import {Link} from 'react-router';
 import Responsive from 'react-responsive';
 import Header from 'components/Header';
-import FontIcon from 'material-ui/FontIcon';
-import IconButton from 'material-ui/IconButton';
-import ActionHome from 'material-ui/svg-icons/action/home';
+import PostPreviews from 'components/PostPreviews';
 import Footer from 'components/Footer';
-import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
 class ResponsiveHome extends React.PureComponent {
   render() {
@@ -129,41 +126,10 @@ class ResponsiveHome extends React.PureComponent {
                   <h2> Blog </h2>
                 </header>
               </div>
-
                   <div style={blogGroupStyle}>
-                    <article style={blogCardStyle}>
-                      <header>
-                        <h3>  <Link to="/" style={linkTextStyle}>Lorem 1 </Link>
-                            </h3>
-                      </header>
-                      <section>
-                        <p style={nonHeadingFontStyle}> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </p>
-                      </section>
-                    </article>
-
-                    <article style={blogCardStyle}>
-                      <header>
-                        <h3>
-                              <Link to="/" style={linkTextStyle}> Ipsum 2
-                              </Link>
-                                  </h3>
-                      </header>
-                      <section>
-                        <p style={nonHeadingFontStyle}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                      </section>
-                    </article>
-
-                    <article style={blogCardStyle}>
-                      <header>
-                        <h3>
-                              <Link to="/" style={linkTextStyle}> Dolor 3
-                              </Link>
-                              </h3>
-                      </header>
-                      <section>
-                        <p style={nonHeadingFontStyle}>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. </p>
-                      </section>
-                    </article>
+                  <PostPreviews></PostPreviews>
+                  <PostPreviews> </PostPreviews>
+                  <PostPreviews> </PostPreviews>
               </div>
             </div>
 

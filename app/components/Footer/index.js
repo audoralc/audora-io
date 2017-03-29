@@ -9,7 +9,13 @@ import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
+const icon={
+link: 'mailto:scribeklio@gmail.com',
+tag: <FaEnvelope></FaEnvelope>,
+};
+
 class Footer extends React.PureComponent {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -33,11 +39,7 @@ class Footer extends React.PureComponent {
 
   showAni = () => {
 
-    const iconBlockStyle={
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-    }
+
 
     const linkTextStyle={
     textDecoration: "none",
@@ -53,26 +55,16 @@ class Footer extends React.PureComponent {
     if(this.state.socialHover == true)
     {
       return (
-        <div style={iconBlockStyle}>
-        <li onMouseLeave={this.leaveHover}> <a  href="mailto:scribeklio@gmail.com" style={aniIcons}><FaEnvelope></FaEnvelope></a></li>
-        <li onMouseLeave={this.leaveHover}>  <a  href="https://github.com/scribeklio" style={aniIcons}><FaGithub></FaGithub></a></li>
-        <li onMouseLeave={this.leaveHover}> <a  href="https://www.linkedin.com/achalker24" style={aniIcons}><FaLinkedin></FaLinkedin></a></li>
-        <li onMouseLeave={this.leaveHover}> <a  href="https://twitter.com/klioonthemoon" style={aniIcons}><FaTwitter></FaTwitter></a></li>
-        </div>
+        <li onMouseLeave={this.leaveHover}> <a  href={icon.link} style={aniIcons}> {icon.tag}</a></li>
       )
     }
+
     else {
       return(
-        <div style={iconBlockStyle}>
-        <li onMouseEnter={this.enterHover}> <a  href="mailto:scribeklio@gmail.com" style={linkTextStyle}><FaEnvelope></FaEnvelope></a></li>
-        <li onMouseEnter={this.enterHover}>  <a  href="https://github.com/scribeklio" style={linkTextStyle}><FaGithub></FaGithub></a></li>
-        <li onMouseEnter={this.enterHover}> <a  href="https://www.linkedin.com/achalker24" style={linkTextStyle}><FaLinkedin></FaLinkedin></a></li>
-        <li onMouseEnter={this.enterHover}> <a  href="https://twitter.com/klioonthemoon" style={linkTextStyle}><FaTwitter></FaTwitter></a></li>
-        </div>
+        <li onMouseEnter={this.enterHover}> <a  href={icon.link} style={linkTextStyle}> {icon.tag} </a></li>
       )
     }
   }
-
   render() {
     const footerContainer= {
       zIndex: "9",
@@ -100,7 +92,9 @@ class Footer extends React.PureComponent {
 
          const iconBlockStyle={
            display: "flex",
-          }
+           flexDirection: "row",
+           justifyContent: "space-around",
+         }
 
              const iconListStyle= {
                  listStyleType: "none",
@@ -122,7 +116,9 @@ class Footer extends React.PureComponent {
       <Paper style={footerStyle} zDepth={2}>
       <ul style={ulstyleReset}>
         <div style={iconListStyle}>
+        <div style={iconBlockStyle}>
         {this.showAni()}
+        </div>
         </div>
       </ul>
         <div style={copyrightStyle}>

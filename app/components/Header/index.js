@@ -87,6 +87,7 @@ class Header extends React.PureComponent {
           padding: "0 2em",
           maxWidth: "28vw",
           background: "#E7F4F5",
+          borderRadius: "0 0 50% 50%",
           zIndex: "4",
           }
 
