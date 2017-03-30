@@ -67,16 +67,18 @@ class PostLinkHoverAni extends React.PureComponent {
   render() {
 
     const h3Style={
-      margin: ".5em auto 0 auto",
+      margin: ".5em 1em 0 0",
       zIndex: "10",
     }
 
     return (
-      <div>
+
+
       <h3 style={h3Style}>
       {this.showAni()}
       </h3>
-      </div>
+
+
     );
   }
 }

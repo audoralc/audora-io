@@ -22,7 +22,7 @@ class PostPreviews extends React.PureComponent {
     const blogCardStyle={
       display: "flex",
       flexDirection: "column",
-      alignContent: "space-between",
+      alignContent: "space-around",
       padding: "1em",
       margin: "-.5em 1em",
       textAlign: "justify",
@@ -40,7 +40,7 @@ class PostPreviews extends React.PureComponent {
       <article style={blogCardStyle}>
 
 
-        <PostLinkHoverAni> <header></header> </PostLinkHoverAni>
+        <PostLinkHoverAni> </PostLinkHoverAni>
 
 
         <section>

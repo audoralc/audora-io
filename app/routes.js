@@ -43,6 +43,15 @@ export default function createRoutes() {
           .catch(errorLoading);
       },
     },
+        {
+          path: '/blog/post',
+          name: 'BlogPost',
+          getComponent(nextState, cb) {
+            import('containers/BlogPost')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
 
      {
       path: '*',
