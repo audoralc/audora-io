@@ -25,7 +25,7 @@ export default class About extends React.PureComponent {
           const aboutMain= {
             background: "#828CEC",
             maxWidth: "80vw",
-            margin: "30vh auto 10vh auto",
+            margin: "20vh auto 10vh auto",
             padding: "1.5em",
             }
 
@@ -45,7 +45,7 @@ export default class About extends React.PureComponent {
                   const pFont={
                     fontFamily: "Cabin",
                     fontSize: "1.15em",
-                    margin: ".25em 0", 
+                    margin: ".25em 0",
                   }
     return (
       <div style={divStyle}>

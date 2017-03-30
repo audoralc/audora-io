@@ -37,7 +37,7 @@ export default class Home extends
                     }
 
                         const blogStyle={
-                         margin: "30vh 0 10vh 20%",
+                         margin: "20vh 0 10vh 20%",
                          background:"#69BAC2",
                          display: "flex",
                          flexDirection: "row",
@@ -45,7 +45,7 @@ export default class Home extends
                         }
                               const blogGroupStyle={
                                 display: "flex",
-                                margin: ".5em 1em",
+                                margin: ".5em 1em 1em 1em",
                               }
 
 
@@ -91,7 +91,7 @@ export default class Home extends
                }
 
                const blogHeaderStyle={
-                 margin: ".5em 1em -.5em 1em",
+                 margin: "1em 1em -.5em 1em",
                }
 
        return (

@@ -7,64 +7,13 @@
 import React from 'react';
 import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
+import SocialHoverAni from 'components/SocialHoverAni';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
-const icon={
-link: 'mailto:scribeklio@gmail.com',
-tag: <FaEnvelope></FaEnvelope>,
-};
 
 class Footer extends React.PureComponent {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      socialHover:false
-    }
-  }
 
-  enterHover = () => {
-    this.setState({
-      socialHover:true
-    })
-    console.log(this.state.socialHover);
-  };
-
-  leaveHover = () => {
-    this.setState ({
-      socialHover:false
-    })
-    console.log(this.state.socialHover);
-  };
-
-  showAni = () => {
-
-
-
-    const linkTextStyle={
-    textDecoration: "none",
-    color: "#E7F4F5",
-    fontSize: "1em",
-  }
-
-    const aniIcons = {
-      color: "#444",
-      fontSize: "1em",
-    }
-
-    if(this.state.socialHover == true)
-    {
-      return (
-        <li onMouseLeave={this.leaveHover}> <a  href={icon.link} style={aniIcons}> {icon.tag}</a></li>
-      )
-    }
-
-    else {
-      return(
-        <li onMouseEnter={this.enterHover}> <a  href={icon.link} style={linkTextStyle}> {icon.tag} </a></li>
-      )
-    }
-  }
   render() {
     const footerContainer= {
       zIndex: "9",
@@ -117,7 +66,11 @@ class Footer extends React.PureComponent {
       <ul style={ulstyleReset}>
         <div style={iconListStyle}>
         <div style={iconBlockStyle}>
-        {this.showAni()}
+            <a href="mailto:scribeklio@gmail.com">
+            <SocialHoverAni> <FaEnvelope></FaEnvelope></SocialHoverAni></a>
+            <a href="https://github.com/scribeklio"> <SocialHoverAni><FaGithub></FaGithub></SocialHoverAni></a>
+            <a href="https://www.linkedin.com/in/achalker24"> <SocialHoverAni><FaLinkedin></FaLinkedin></SocialHoverAni></a>
+            <a href="https://twitter.com/klioonthemoon"> <SocialHoverAni><FaTwitter></FaTwitter></SocialHoverAni></a>
         </div>
         </div>
       </ul>

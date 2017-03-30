@@ -7,6 +7,8 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Header from 'components/Header';
+import PostPreviews from 'components/PostPreviews';
+import Paper from 'material-ui/Paper';
 import Footer from 'components/Footer';
 
 export default class Blog extends React.PureComponent {
@@ -16,11 +18,22 @@ export default class Blog extends React.PureComponent {
         display: "flex",
         flexDirection:"column",
         overflow: "hidden",
+        background:"#E7F4F5",
       }
 
         const blogMainStyle={
           height: "100vh",
+          display: "flex",
+          flexDirection: "column",
+          margin: "20vh auto 10vh auto",
+          justifyContent: "space-between",
         }
+
+          const articleStyle={
+            height: "auto",
+            width: "70vw",
+            background: "#80C5DB",
+            }
 
     return (
       <div style={blogStyle}>
@@ -29,9 +42,9 @@ export default class Blog extends React.PureComponent {
         <Header></Header>
 
         <main style={blogMainStyle}>
-          <article></article>
-          <article></article>
-          <article></article>
+          <Paper zDepth={2}><article style={articleStyle}><PostPreviews></PostPreviews></article></Paper>
+          <Paper zDepth={2}><article style={articleStyle}><PostPreviews></PostPreviews></article></Paper>
+          <Paper zDepth={2}><article style={articleStyle}><PostPreviews></PostPreviews></article></Paper>
         </main>
 
 

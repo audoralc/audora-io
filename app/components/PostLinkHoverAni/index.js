@@ -1,6 +1,6 @@
 /**
 *
-* LinkHoverAni
+* PostLinkHoverAni
 *
 */
 
@@ -11,10 +11,10 @@ const post= {
   title: 'Lorem',
   date: 'Feb 2',
   blurb: 'yo',
-  slug: '/blog',
+  slug: '/about',
 };
 
-class LinkHoverAni extends React.PureComponent {
+class PostLinkHoverAni extends React.PureComponent {
   constructor(props) {
     super(props)
       super(props);
@@ -66,12 +66,19 @@ class LinkHoverAni extends React.PureComponent {
 
   render() {
 
+    const h3Style={
+      margin: ".5em auto 0 auto",
+      zIndex: "10",
+    }
+
     return (
       <div>
+      <h3 style={h3Style}>
       {this.showAni()}
+      </h3>
       </div>
     );
   }
 }
 
-export default LinkHoverAni;
+export default PostLinkHoverAni;
