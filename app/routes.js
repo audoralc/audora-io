@@ -25,6 +25,17 @@ export default function createRoutes() {
     },
 
     {
+      path: '/',
+      name: 'Dashboard',
+      getComponent(nextState, cb) {
+        import('containers/Dashboard')
+          .then(loadModule(cb))
+          .catch(errorLoading);
+      },
+    },
+
+
+    {
       path: '/about',
       name: 'about',
       getComponent(nextState, cb) {
