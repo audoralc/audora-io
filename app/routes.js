@@ -25,7 +25,7 @@ export default function createRoutes() {
     },
 
     {
-      path: '/',
+      path: '/dashboard',
       name: 'Dashboard',
       getComponent(nextState, cb) {
         import('containers/Dashboard')

@@ -15,8 +15,7 @@ const post= {
 };
 
 class PostLinkHoverAni extends React.PureComponent {
-  constructor(props) {
-    super(props)
+  constructor(props) {  
       super(props);
       this.state = {
         blogTitleHover:false
