@@ -34,12 +34,12 @@ class SocialHoverAni extends React.PureComponent {
 
     const linkTextStyle={
     textDecoration: "none",
-    color: "#E7F4F5",
+    color: "#FCFAFA",
     fontSize: "1.25em",
   }
 
     const aniIcons = {
-      color: "#69BAC2",
+      color: "#266DD3",
       fontSize: "1.25em",
     }
 

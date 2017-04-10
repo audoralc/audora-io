@@ -44,7 +44,7 @@ class Header extends React.PureComponent {
     const homeAni = {
       display: "flex",
       justifyContent: "center",
-      color: "#828CEC",
+      color: "#266DD3",
       margin: "1em 0",
       transition: "color .5s",
     }
@@ -84,10 +84,8 @@ class Header extends React.PureComponent {
         const headerTextBlockStyle= {
           position: "fixed",
           margin: "auto auto",
-          padding: "0 2em",
+          padding: "1em 0 2em 1em",
           maxWidth: "28vw",
-          background: "#E7F4F5",
-          borderRadius: "0 0 50% 50%",
           zIndex: "4",
           }
 
@@ -100,7 +98,7 @@ class Header extends React.PureComponent {
 
             const headerOneStyle={
               fontSize: "2vw",
-              color: "#5D64A8",
+              color: "#89B6A5",
               padding: "1vw 1vw 0 1vw",
               lineHeight: "1",
             }
@@ -116,14 +114,13 @@ class Header extends React.PureComponent {
         <div style={headerShapeStyle}>
         </div>
         <header style={headerStyle}>
-          <Paper style={headerTextBlockStyle} zDepth={2}>
-            <div>
+            <div style={headerTextBlockStyle}>
               <h1 style={headerOneStyle}> Audora Chalker </h1>
               <nav>
                 {this.showAni()}
               </nav>
               </div>
-            </Paper>
+
         </header>
       </div>
     );

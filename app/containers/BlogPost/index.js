@@ -25,24 +25,27 @@ export default class BlogPost extends React.PureComponent {
     display: "flex",
     flexDirection: "column",
     fontFamily: "Raleway",
-    background: "#ffffff",
-    alignSelf: "flex-end",
+    background: "#FCFAFA",
     }
 
     const blogMainStyle={
-      height: "100vh",
+      marginBottom: "10vh",
+
     }
 
-        const articleStyle={
-          width: "70vw",
-          margin: "20vh auto 5vh auto",
-          height: "90%",
-          }
+          const articleStyle={
+            width: "70vw",
+            margin: "20% auto 2.5% auto",
+            }
 
-              const pStyle={
+    const footerReset = {
+      bottom: "0",
+      width: "100vw",
+    }
 
-
-              }
+                const pStyle={
+                  fontFamily: "Cabin",
+                }
 
 
     return (
@@ -68,10 +71,12 @@ export default class BlogPost extends React.PureComponent {
             </section>
           </article>
         </main>
-        <Footer></Footer>
+
         </div>
 
-
+      <div style={footerReset}>
+        <Footer></Footer>
+      </div>
 
       </div>
 

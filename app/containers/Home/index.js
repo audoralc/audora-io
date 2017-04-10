@@ -21,7 +21,7 @@ export default class Home extends
 
   render() {
             const divStyle={
-                background: "#80C5DB",
+                background: "#FCFAFA",
                 fontFamily: "Raleway",
                 display: "flex",
                 flexDirection:"column",
@@ -38,7 +38,7 @@ export default class Home extends
 
                         const blogStyle={
                          margin: "20vh 0 10vh 20%",
-                         background:"#69BAC2",
+                         background:"#D6E3F8",
                          display: "flex",
                          flexDirection: "row",
                          zIndex: "3",
@@ -51,7 +51,7 @@ export default class Home extends
 
 
                         const aboutStyle={
-                        background:"#E7F4F5",
+                        background:"#C9AFC2",
                         padding: ".5em",
                         width: "35%",
                         marginBottom:"10%",
@@ -80,19 +80,18 @@ export default class Home extends
 
                 const aboutTextBlockStyle= {
                   margin: "1em",
-
                }
 
                const aboutLinkStyle={
                  textDecoration: "none",
-                 color: "#69BAC2",
+                 color: "#266DD3",
                  zIndex: "5",
 
                }
 
                const blogHeaderStyle={
                  margin: "1em 1em -.5em 1em",
-               }
+                }
 
        return (
 

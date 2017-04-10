@@ -15,7 +15,7 @@ import Paper from 'material-ui/Paper';
 export default class About extends React.PureComponent {
   render() {
     const divStyle={
-        background: "#80C5DB",
+        background: "#FCFAFA",
         fontFamily: "Raleway",
         display: "flex",
         flexDirection:"column",
@@ -23,7 +23,7 @@ export default class About extends React.PureComponent {
       }
 
           const aboutMain= {
-            background: "#828CEC",
+            background: "#C9AFC2",
             maxWidth: "80vw",
             margin: "20vh auto 10vh auto",
             padding: "1.5em",

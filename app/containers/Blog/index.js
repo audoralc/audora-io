@@ -41,7 +41,7 @@ export default class Blog extends React.PureComponent {
           const articleStyle={
             height: "auto",
             width: "70vw",
-            background: "#80C5DB",
+            background: "#D6E3F8",
             }
 
     return (

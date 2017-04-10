@@ -15,7 +15,7 @@ const post= {
 };
 
 class PostLinkHoverAni extends React.PureComponent {
-  constructor(props) {  
+  constructor(props) {
       super(props);
       this.state = {
         blogTitleHover:false
@@ -42,13 +42,13 @@ class PostLinkHoverAni extends React.PureComponent {
 
         const linkTextStyle={
         textDecoration: "none",
-        color: "#E7F4F5",
+        color: "#7A3B69",
         zIndex: "9",
       };
 
         const blogTitleAni={
           textDecoration: "none",
-          color: "#000",
+          color: "#266DD3",
           zIndex: "9",
         };
 
@@ -66,9 +66,9 @@ class PostLinkHoverAni extends React.PureComponent {
   render() {
 
     const h3Style={
-      margin: ".5em 1em 0 0",
       zIndex: "10",
-    }
+      margin: "1em 0 -.5em 0",
+      }
 
     return (
 

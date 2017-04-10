@@ -19,7 +19,7 @@ class Footer extends React.PureComponent {
       zIndex: "9",
     }
     const footerStyle={
-      background:"#8DE0CA",
+      background:"#89B6A5",
       display: "flex",
       flexDirection: "column",
       bottom: "0",
@@ -31,7 +31,7 @@ class Footer extends React.PureComponent {
          const footerFontStyle={
            fontFamily: "Cabin",
            justifyContent: "space-between",
-           color: "#669daf",
+           color: "#7A3B69",
            margin: "0 0",
          }
 
@@ -55,7 +55,7 @@ class Footer extends React.PureComponent {
                }
 
                const linkTextStyle={
-               color: "#E7F4F5",
+               color: "#FCFAFA",
                zIndex: "9999",
              }
 
