@@ -61,7 +61,7 @@ storeArticle = () => {
   data.append("image", this.state.image);
   data.append("preview", this.state.image);
 /*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://localhost:8000/API/storeArticle")*/
-    fetch("", {
+    fetch("http://localhost:8000/api/storeArticle", {
 //getting & posting, body is builtin key of fetch
         method: "post",
         body: data,
@@ -85,7 +85,6 @@ return response.json();
 
   render() {
       const formContainer ={
-        height: '100vh',
         background: 'hsl(231, 15%, 18%)',
         }
 
@@ -98,14 +97,14 @@ return response.json();
       }
 
       const titleStyle={
-        color: '#8be8fd',
+        color: '#f1fa89',
         background: '#44475a',
         fontWeight: 'bold',
         fontSize: '1.25em',
         height: "1.5em",
         width: "50vw",
         margin: "15vh auto 2.5vh 20vh",
-        fontFamily: "VT323",
+        fontFamily: "Cabin",
       }
 
       const textAreaStyle={
@@ -114,15 +113,22 @@ return response.json();
         width: "70vw",
         margin: "0 auto 2.5vh auto",
         fontSize: '1.25em',
+        minHeight: "40vh",
       }
 
       const imgInputStyle={
         margin: "2.5vh auto 2.5vh 20vh",
         color: "#52fa7c",
+        width: "50vw",
+      }
+
+      const imagePreview={
+        width: "40vw",
+        height: "40 vw",
       }
 
       const buttonStyle={
-        margin: "0 auto",
+        margin: "auto",
         color: '#ff7ac6',
         background: '#44475a',
       }
@@ -134,11 +140,11 @@ return response.json();
         <div style={inputContainer}>
         <input onChange={this.handleTitle} type="text" placeholder="Title" style={titleStyle}/>
 
-        <textArea onChange={this.handleBody} style={textAreaStyle}> </textArea>
+        <textArea onChange={this.handleBody} style={textAreaStyle} > </textArea>
 
         <input onChange={this.handleImage} type="file" style={imgInputStyle}/>
 
-        <img src={this.state.preview}  />
+        <img src={this.state.preview} style={imagePreview} />
 
         <input onTouchTap={this.storeArticle} type="submit" style={buttonStyle}/>
         </div>

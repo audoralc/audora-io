@@ -35,14 +35,13 @@ class PostLinkHoverAni extends React.PureComponent {
         const linkTextStyle={
         textDecoration: "none",
         color: "#E7F4F5",
-        zIndex: "9",
+        zIndex: "2",
       };
 
         const blogTitleAni={
           textDecoration: "none",
           color: "#000",
-          
-          zIndex: "9",
+          zIndex: "2",
         };
 
         if(this.state.blogTitleHover == true)

@@ -71,6 +71,7 @@ class Header extends React.PureComponent {
       fontSize: "1em",
       display: "flex",
       flexDirection: "column",
+      
     }
         const headerShapeStyle= {
           border: "0 solid transparent",
@@ -78,7 +79,7 @@ class Header extends React.PureComponent {
           borderTop: "15vh solid #828CEC",
           position: "fixed",
           zIndex: "1",
-          maxHeight: "30vh",
+          maxHeight: "1vh",
         }
 
         const headerTextBlockStyle= {

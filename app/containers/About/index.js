@@ -25,7 +25,7 @@ export default class About extends React.PureComponent {
           const aboutMain= {
             background: "#C9AFC2",
             maxWidth: "80vw",
-            margin: "20vh auto 10vh auto",
+            margin: "20vh auto 10vh 25vh",
             padding: "1.5em",
             }
 

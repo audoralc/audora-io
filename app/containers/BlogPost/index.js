@@ -26,20 +26,22 @@ export default class BlogPost extends React.PureComponent {
     flexDirection: "column",
     fontFamily: "Raleway",
     background: "#FCFAFA",
+    zIndex: "",
     }
 
     const blogMainStyle={
       marginBottom: "5vh",
+
     }
           const articleStyle={
             width: "70vw",
-            margin: "20vh auto 0 auto",
+            margin: "20vh auto 0 28vh",
             }
 
                 const imageStyle= {
                   float: "left",
                   padding: "1em 1em 1em 0",
-                  margin: "auto 0 auto -15vw",
+                  margin: "auto 0 auto -5vh",
                   width: "50vw",
                   maxWidth: "25vw",
                 }
@@ -48,6 +50,7 @@ export default class BlogPost extends React.PureComponent {
       bottom: "0",
       width: "100vw",
       zIndex: "9",
+      background: "#FCFAFA",
     }
                 const pStyle={
                   fontFamily: "Cabin",
