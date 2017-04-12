@@ -27,7 +27,7 @@ export default class Home extends
                 flexDirection:"column",
                 overflow: "hidden",
                 textAlign: "justify",
-                zIndex: "-10",
+                zIndex: "-1",
               }
 
                     const mainStyle={
@@ -41,7 +41,7 @@ export default class Home extends
                          background:"#D6E3F8",
                          display: "flex",
                          flexDirection: "row",
-                         zIndex: "3",
+                         zIndex: "2",
                         }
                               const blogGroupStyle={
                                 display: "flex",
@@ -56,7 +56,7 @@ export default class Home extends
                         width: "35%",
                         marginBottom:"10%",
                         display: "flex",
-                        zIndex: "3",
+                        zIndex: "2",
                       }
 
 
@@ -73,7 +73,7 @@ export default class Home extends
               }
 
                 const blogTitleStyle={
-                zIndex: "5",
+                zIndex: "2",
               }
 
                 const aboutTextBlockStyle= {
@@ -83,8 +83,6 @@ export default class Home extends
                const aboutLinkStyle={
                  textDecoration: "none",
                  color: "#266DD3",
-                 zIndex: "5",
-
                }
 
                const blogHeaderStyle={

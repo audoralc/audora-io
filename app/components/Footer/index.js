@@ -16,15 +16,16 @@ class Footer extends React.PureComponent {
 
   render() {
     const footerContainer= {
-      zIndex: "9",
-    }
+      zIndex: "2",
+      background: "#FCFAFA",
+      postion: "fixed",
+      }
+
     const footerStyle={
       background:"#89B6A5",
       display: "flex",
       flexDirection: "column",
-      bottom: "0",
-      width: "50%",
-      height: "auto",
+      width: "50%",    
       margin: "0 auto",
     }
 
@@ -56,7 +57,7 @@ class Footer extends React.PureComponent {
 
                const linkTextStyle={
                color: "#FCFAFA",
-               zIndex: "9999",
+               zIndex: "3",
              }
 
     return (

@@ -37,6 +37,7 @@ export default class Blog extends React.PureComponent {
           flexDirection: "column",
           margin: "20vh auto 10vh 28vh",
           justifyContent: "space-between",
+          zIndex: "2",
         }
 
           const articleStyle={

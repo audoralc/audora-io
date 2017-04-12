@@ -71,8 +71,8 @@ class Header extends React.PureComponent {
       fontSize: "1em",
       display: "flex",
       flexDirection: "column",
-      
     }
+
         const headerShapeStyle= {
           border: "0 solid transparent",
           borderWidth:"100vh",
@@ -80,6 +80,7 @@ class Header extends React.PureComponent {
           position: "fixed",
           zIndex: "1",
           maxHeight: "1vh",
+          position: "absolute",
         }
 
         const headerTextBlockStyle= {
@@ -87,7 +88,7 @@ class Header extends React.PureComponent {
           margin: "auto auto",
           padding: "1em 0 2em 1em",
           maxWidth: "28vw",
-          zIndex: "4",
+          zIndex: "2",
           }
 
           const navBarStyle= {

@@ -27,17 +27,14 @@ export default class BlogPost extends React.PureComponent {
     flexDirection: "column",
     fontFamily: "Raleway",
     background: "#FCFAFA",
-    zIndex: "",
+
     }
 
     const blogMainStyle={
-      marginBottom: "5vh",
-
+      width: "70vw",
+      margin: "18% auto 0 28vh",
+      height: "100vh",
     }
-          const articleStyle={
-            width: "70vw",
-            margin: "20vh auto 0 28vh",
-            }
 
                 const imageStyle= {
                   float: "left",
@@ -50,7 +47,7 @@ export default class BlogPost extends React.PureComponent {
     const footerReset = {
       bottom: "0",
       width: "100vw",
-      zIndex: "9",
+      zIndex: "2",
       background: "#FCFAFA",
     }
                 const pStyle={
@@ -59,14 +56,14 @@ export default class BlogPost extends React.PureComponent {
 
 
     return (
-      <div style={containerReset}>
+      <div>
         <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
         <Header></Header>
 
-        <div style={blogMainStyle}>
+        <div style={containerReset}>
         <main>
-          <article style={articleStyle}>
+          <article style={blogMainStyle}>
 
           <header>
             <h2></h2>
