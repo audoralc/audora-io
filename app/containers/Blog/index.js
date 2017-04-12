@@ -7,6 +7,7 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Header from 'components/Header';
+import Responsive from 'react-responsive';
 import PostPreviews from 'components/PostPreviews';
 import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
@@ -45,6 +46,8 @@ export default class Blog extends React.PureComponent {
             }
 
     return (
+
+    <Responsive minDeviceWidth={1024}>
       <div style={blogStyle}>
         <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
@@ -60,6 +63,7 @@ export default class Blog extends React.PureComponent {
         <Footer><footer></footer></Footer>
 
       </div>
+    </Responsive>
     );
   }
 }

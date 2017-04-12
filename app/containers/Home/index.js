@@ -70,8 +70,6 @@ export default class Home extends
 
                 const linkTextStyle={
                 textDecoration: "none",
-                color: "#E7F4F5",
-
               }
 
                 const blogTitleStyle={

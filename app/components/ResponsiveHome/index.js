@@ -15,7 +15,7 @@ import Footer from 'components/Footer';
 class ResponsiveHome extends React.PureComponent {
   render() {
     const divStyle={
-        background: "#80C5DB",
+        background: "#FCFAFA",
         fontFamily: "Raleway",
         display: "flex",
         flexDirection:"column",
@@ -30,7 +30,7 @@ class ResponsiveHome extends React.PureComponent {
 
                 const blogStyle={
       /*change*/ margin: "20vh 10vh 0 10vh",
-                 background:"#69BAC2",
+                 background:"#D6E3F8",
               /* width: "60%", */
                  display: "flex",
                 }
@@ -47,7 +47,7 @@ class ResponsiveHome extends React.PureComponent {
                             }
 
                 const aboutStyle={
-                background:"#E7F4F5",
+                background:"#C9AFC2",
                 padding: ".5em",
             /*  width: "30%", */
      /*CHANGE*/ margin:"10%",
@@ -56,7 +56,7 @@ class ResponsiveHome extends React.PureComponent {
               }
 
               const footerStyle={
-                background:"#8DE0CA",
+                background:"#89B6A5",
                 display: "flex",
                 flexDirection: "column",
                 bottom: "0",
@@ -74,7 +74,7 @@ class ResponsiveHome extends React.PureComponent {
                        justifyContent: "space-around",
                        margin: "0 0",
                        padding: ".25em 1em",
-                       color: "#E7F4F5",
+                       color: "#FCFAFA",
                      }
 
                      const copyrightStyle= {
@@ -93,7 +93,7 @@ class ResponsiveHome extends React.PureComponent {
 
         const linkTextStyle={
         textDecoration: "none",
-        color: "#E7F4F5",
+        color: "#FCFAFA",
       }
 
         const blogTitleStyle={
@@ -108,7 +108,7 @@ class ResponsiveHome extends React.PureComponent {
          fontFamily: "Cabin",
          justifyContent: "space-between",
          margin: "1em",
-         color: "#669daf",
+         color: "#7A3B69",
        }
 
     return (
