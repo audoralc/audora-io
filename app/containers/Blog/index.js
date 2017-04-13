@@ -48,36 +48,77 @@ export default class Blog extends React.PureComponent {
           height: "100vh",
           display: "flex",
           flexDirection: "column",
-          margin: "20vh auto 10vh 28vh",
+          margin: "20vh auto 10vh 0",
           justifyContent: "space-between",
           zIndex: "2",
         }
 
-          const articleStyle={
-            height: "auto",
-            width: "70vw",
-            background: colors.lightPurple,
+          const articleBlockStyle={
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-around",
+            width: "100%",
+          }
+
+            const articleStyle={
+              background: colors.lightPurple,
+              maxWidth: "72vw",
+
+              }
+
+            const imgStyle={
+              margin: "0 2vw",
+              width: "28vw",
             }
 
     return (
 
-    <Responsive minDeviceWidth={1024}>
-      <div style={blogStyle}>
-        <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+<Responsive minDeviceWidth={1024}>
+  <div style={blogStyle}>
+    <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
-        <Header></Header>
+    <Header></Header>
 
-        <main style={blogMainStyle}>
-          <Paper zDepth={2}><article style={articleStyle}><PostPreviews> </PostPreviews></article></Paper>
-          <Paper zDepth={2}><article style={articleStyle}><PostPreviews></PostPreviews></article></Paper>
-          <Paper zDepth={2}><article style={articleStyle}><PostPreviews></PostPreviews></article></Paper>
-        </main>
+    <main style={blogMainStyle}>
 
 
-        <Footer><footer></footer></Footer>
-
+      <div style={articleBlockStyle}>
+      <img src="http://placehold.it/100x100" style={imgStyle}/>
+          <Paper zDepth={2}>
+            <article style={articleStyle}>
+              <PostPreviews> </PostPreviews>
+            </article>
+          </Paper>
       </div>
-    </Responsive>
+
+      <div style={articleBlockStyle}>
+        <img src="http://placehold.it/100x100" style={imgStyle} />
+          <Paper zDepth={2}>
+            <article style={articleStyle}>
+              <PostPreviews></PostPreviews>
+            </article>
+          </Paper>
+      </div>
+
+
+      <div style={articleBlockStyle}>
+        <img src="http://placehold.it/100x100" style={imgStyle}/>
+          <Paper zDepth={2}>
+            <article style={articleStyle}>
+              <PostPreviews></PostPreviews>
+            </article>
+          </Paper>
+      </div>
+    </main>
+/*
+  FUTURE PAGINATION
+*/
+    <Footer>
+      <footer></footer>
+    </Footer>
+
+  </div>
+</Responsive>
     );
   }
 }

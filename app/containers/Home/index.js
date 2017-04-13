@@ -58,8 +58,17 @@ export default class Home extends
                         }
                               const blogGroupStyle={
                                 display: "flex",
+                                flexDirection: "row",
                                 margin: ".5em 1em 1em 1em",
                               }
+
+                              const imgBlockStyle={
+                                margin: ".5em 1em 1em 1em",
+                              }
+
+                                  const imgStyle={
+                                     
+                                  }
 
 
 
@@ -124,24 +133,32 @@ export default class Home extends
 
       <main style={mainStyle}>
 
-        <Paper style={blogStyle} zDepth={2}>
-          <div>
-            <div>
-              <header>
-                <h2 style={blogHeaderStyle}> Blog
-                <Link to="/blog" style={blogMainLinkStyle}> xyz
-                </Link>
-                </h2>
-              </header>
-            </div>
+      <Paper style={blogStyle} zDepth={2}>
+         <div>
+           <div>
+             <header>
+               <h2 style={blogHeaderStyle}> Blog
+               <Link to="/blog" style={blogMainLinkStyle}> xyz
+               </Link>
+               </h2>
+             </header>
+           </div>
 
-            <div style={blogGroupStyle}>
-              <PostPreviews></PostPreviews>
-              <PostPreviews> </PostPreviews>
-              <PostPreviews> </PostPreviews>
-            </div>
-          </div>
-        </Paper>
+           <div style={blogGroupStyle}>
+             <PostPreviews></PostPreviews>
+             <PostPreviews> </PostPreviews>
+             <PostPreviews> </PostPreviews>
+           </div>
+
+           <div style={imgBlockStyle}>
+                <img src="http://placehold.it/100x100" style={imgStyle} />
+
+                <img src="http://placehold.it/100x100" style={imgStyle} />
+
+                <img src="http://placehold.it/100x100" style={imgStyle} />
+           </div>
+         </div>
+       </Paper>
 
 
 

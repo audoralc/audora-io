@@ -66,10 +66,10 @@ class PostLinkHoverAni extends React.PureComponent {
         if(this.state.blogTitleHover == true)
         {
           return(
-          <Link to="/post" style={blogTitleAni} onMouseLeave={this.leaveHover}> {post.title}  </Link>)
+          <Link to="/blog/post" style={blogTitleAni} onMouseLeave={this.leaveHover}> {post.title} {this.props.children}  </Link>)
         }
         else {
-          return(<Link to="/post" style={linkTextStyle} onMouseEnter={this.enterHover}> {post.title} </Link>
+          return(<Link to="/blog/post" style={linkTextStyle} onMouseEnter={this.enterHover}> {post.title} {this.props.children} </Link>
           )
         }
     }

@@ -45,8 +45,8 @@ export default class BlogPost extends React.PureComponent {
 
     const blogMainStyle={
       width: "70vw",
-      margin: "18% auto 0 28vh",
-      height: "100vh",
+      margin: "15% auto 5vh 28vh",
+      height: "100%",
     }
 
                 const imageStyle= {
@@ -67,6 +67,10 @@ export default class BlogPost extends React.PureComponent {
                   fontFamily: "Cabin",
                 }
 
+                const h2Style={
+                  color: colors.brightBlue,
+                }
+
 
     return (
       <div>
@@ -79,8 +83,8 @@ export default class BlogPost extends React.PureComponent {
           <article style={blogMainStyle}>
 
           <header>
-            <h2></h2>
-            <time></time>
+            <h2 style={h2Style}>Indeed</h2>
+            <time>16:00</time>
           </header>
           <section>
 
