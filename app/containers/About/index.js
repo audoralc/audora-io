@@ -11,18 +11,29 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Paper from 'material-ui/Paper';
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  lightPurple: "#D1C4E9",
+  accentPurple: "#9575CD",
+  deepPurple: "#673AB7",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+}
 
 export default class About extends React.PureComponent {
   render() {
     const divStyle={
-        background: "#FCFAFA",
+        background: "#FASFAFA",
         fontFamily: "Raleway",
         overflow: "hidden",
         }
 
           const aboutMain= {
-            background: "#C9AFC2",
-            maxWidth: "80vw",
+            background: colors.lightPurple,
+            maxWidth: "75vw",
             margin: "20vh auto 10vh 25vh",
             padding: "1.5em",
             zIndex: "2",
@@ -30,7 +41,7 @@ export default class About extends React.PureComponent {
 
               const headingBlock={
                 margin: "1.5em",
-                color: "#fff",
+                color: colors.darkGreen,
                 fontSize: "1.5em",
               }
 

@@ -9,11 +9,15 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+  }
+
+  h1, h2, h3, h4 {
+    font-family: 'Raleway', Arial, Helvetica,  sans-serif;
   }
 
   #app {
@@ -24,7 +28,7 @@ injectGlobal`
 
   p,
   label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Cabin', Helvetica, Arial, sans-serif;
     line-height: 1.5em;
   }
 `;

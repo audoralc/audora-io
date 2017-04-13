@@ -17,6 +17,19 @@ const post= {
   slug: '/about',
 };
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  lightPurple: "#D1C4E9",
+  accentPurple: "#9575CD",
+  deepPurple: "#673AB7",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+}
+
+
 export default class BlogPost extends React.PureComponent {
 
 
@@ -26,7 +39,7 @@ export default class BlogPost extends React.PureComponent {
     display: "flex",
     flexDirection: "column",
     fontFamily: "Raleway",
-    background: "#FCFAFA",
+    background: colors.white,
 
     }
 
@@ -48,7 +61,7 @@ export default class BlogPost extends React.PureComponent {
       bottom: "0",
       width: "100vw",
       zIndex: "2",
-      background: "#FCFAFA",
+      background: colors.white,
     }
                 const pStyle={
                   fontFamily: "Cabin",

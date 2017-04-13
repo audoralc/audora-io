@@ -10,6 +10,17 @@ import Paper from 'material-ui/Paper';
 import SocialHoverAni from 'components/SocialHoverAni';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  lightPurple: "#D1C4E9", 
+  accentPurple: "#9575CD",
+  deepPurple: "#673AB7",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+}
 
 class Footer extends React.PureComponent {
 
@@ -17,23 +28,23 @@ class Footer extends React.PureComponent {
   render() {
     const footerContainer= {
       zIndex: "2",
-      background: "#FCFAFA",
       postion: "fixed",
       }
 
     const footerStyle={
-      background:"#89B6A5",
       display: "flex",
       flexDirection: "column",
-      width: "50%",    
+      width: "50%",
       margin: "0 auto",
+       background: colors.lightGreen,
     }
 
          const footerFontStyle={
            fontFamily: "Cabin",
            justifyContent: "space-between",
-           color: "#7A3B69",
+           color: colors.accentPurple,
            margin: "0 0",
+
          }
 
          const ulstyleReset={
@@ -56,7 +67,6 @@ class Footer extends React.PureComponent {
                }
 
                const linkTextStyle={
-               color: "#FCFAFA",
                zIndex: "3",
              }
 

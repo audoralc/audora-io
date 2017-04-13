@@ -12,10 +12,22 @@ import Header from 'components/Header';
 import PostPreviews from 'components/PostPreviews';
 import Footer from 'components/Footer';
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  lightPurple: "#D1C4E9",
+  accentPurple: "#9575CD",
+  deepPurple: "#673AB7",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+}
+
 class ResponsiveHome extends React.PureComponent {
   render() {
     const divStyle={
-        background: "#FCFAFA",
+        background: colors.white,
         fontFamily: "Raleway",
         display: "flex",
         flexDirection:"column",
@@ -30,7 +42,7 @@ class ResponsiveHome extends React.PureComponent {
 
                 const blogStyle={
       /*change*/ margin: "20vh 10vh 0 10vh",
-                 background:"#D6E3F8",
+                 background: colors.lightBlue,
               /* width: "60%", */
                  display: "flex",
                 }
@@ -47,40 +59,13 @@ class ResponsiveHome extends React.PureComponent {
                             }
 
                 const aboutStyle={
-                background:"#C9AFC2",
+                background: colors.lightPurple,
                 padding: ".5em",
             /*  width: "30%", */
      /*CHANGE*/ margin:"10%",
                 display: "flex",
                 zIndex: "3",
               }
-
-              const footerStyle={
-                background:"#89B6A5",
-                display: "flex",
-                flexDirection: "column",
-                bottom: "0",
-                width: "50%",
-                height: "5em",
-                padding: ".5em",
-                margin: "auto auto",
-
-               }
-
-                   const socialIconStyles= {
-                       display: 'flex',
-                       flexDirection: "row",
-                       listStyleType: "none",
-                       justifyContent: "space-around",
-                       margin: "0 0",
-                       padding: ".25em 1em",
-                       color: "#FCFAFA",
-                     }
-
-                     const copyrightStyle= {
-                       margin: "1.5em auto",
-                       lineHeight: "1.5em",
-                     }
 
 
 
@@ -93,7 +78,7 @@ class ResponsiveHome extends React.PureComponent {
 
         const linkTextStyle={
         textDecoration: "none",
-        color: "#FCFAFA",
+        color: colors.white,
       }
 
         const blogTitleStyle={
@@ -104,12 +89,7 @@ class ResponsiveHome extends React.PureComponent {
           margin: "1em",
        }
 
-       const footerFontStyle={
-         fontFamily: "Cabin",
-         justifyContent: "space-between",
-         margin: "1em",
-         color: "#7A3B69",
-       }
+    
 
     return (
 

@@ -7,6 +7,17 @@
 import React from 'react';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  accentPurple: "#9575CD",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+
+}
+
 class SocialHoverAni extends React.PureComponent {
 
   constructor(props) {
@@ -34,12 +45,12 @@ class SocialHoverAni extends React.PureComponent {
 
     const linkTextStyle={
     textDecoration: "none",
-    color: "#FCFAFA",
+    color: colors.black,
     fontSize: "1.25em",
   }
 
     const aniIcons = {
-      color: "#266DD3",
+      color: colors.brightBlue,
       fontSize: "1.25em",
     }
 

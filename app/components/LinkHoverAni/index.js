@@ -7,6 +7,18 @@
 import React from 'react';
 import {Link} from 'react-router';
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  lightPurple: "#D1C4E9",
+  accentPurple: "#9575CD",
+  deepPurple: "#673AB7",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+}
+
 class PostLinkHoverAni extends React.PureComponent {
   constructor(props) {
     super(props)
@@ -34,13 +46,13 @@ class PostLinkHoverAni extends React.PureComponent {
 
         const linkTextStyle={
         textDecoration: "none",
-        color: "#E7F4F5",
+        color: colors.white,
         zIndex: "2",
       };
 
         const blogTitleAni={
           textDecoration: "none",
-          color: "#000",
+          color: colors.black,
           zIndex: "2",
         };
 

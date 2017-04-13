@@ -11,6 +11,17 @@ import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
 import {FaHome} from 'react-icons/lib/fa';
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  accentPurple: "#9575CD",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+
+}
+
 class Header extends React.PureComponent {
   constructor(props) {
    super(props);
@@ -37,14 +48,14 @@ class Header extends React.PureComponent {
     const navBarStyle= {
       display: "flex",
       justifyContent: "center",
-      color: "#000",
+      color: colors.black,
       margin: "1em 0",
     };
 
     const homeAni = {
       display: "flex",
       justifyContent: "center",
-      color: "#266DD3",
+      color:  colors.brightBlue,
       margin: "1em 0",
       transition: "color .5s",
     }
@@ -52,15 +63,15 @@ class Header extends React.PureComponent {
     if(this.state.homeHover == false)
     {
       return (
-        <div style={navBarStyle} onMouseEnter={this.enterHover}> <FaHome> <Link to="/">
-         </Link></FaHome> </div>
+        <div onMouseEnter={this.enterHover}>  <Link to="/" style={navBarStyle}><FaHome></FaHome>
+        </Link> </div>
       )
     }
     else {
       return(
-        <div style={homeAni} onMouseLeave={this.leaveHover}>
-          <FaHome> <Link to="/" >
-          </Link></FaHome> </div>
+        <div  onMouseLeave={this.leaveHover}>
+           <Link to="/" style={homeAni}><FaHome></FaHome>
+          </Link> </div>
       )
     }
   }
@@ -76,7 +87,7 @@ class Header extends React.PureComponent {
         const headerShapeStyle= {
           border: "0 solid transparent",
           borderWidth:"100vh",
-          borderTop: "15vh solid #828CEC",
+          borderTop: "15vh solid #9575CD",
           position: "fixed",
           zIndex: "1",
           maxHeight: "1vh",
@@ -94,20 +105,19 @@ class Header extends React.PureComponent {
           const navBarStyle= {
             display: "flex",
             justifyContent: "center",
-            color: "#000",
+            color: colors.black,
             margin: "1em 0",
             };
 
             const headerOneStyle={
               fontSize: "2vw",
-              color: "#89B6A5",
               padding: "1vw 1vw 0 1vw",
               lineHeight: "1",
             }
 
             const linkTextStyle={
             textDecoration: "none",
-            color: "#E7F4F5",
+            color: colors.white,
             }
 
     return (

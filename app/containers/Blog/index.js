@@ -20,6 +20,19 @@ const post= {
   slug: '/about',
 };
 
+const colors= {
+  white: "#FAFAFA",
+  black: "#424242",
+  lightPurple: "#D1C4E9",
+  accentPurple: "#9575CD",
+  deepPurple: "#673AB7",
+  lightBlue: "#B3E5FC",
+  brightBlue:"#00B0FF",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#43A047",
+}
+
+
 export default class Blog extends React.PureComponent {
 
 
@@ -43,7 +56,7 @@ export default class Blog extends React.PureComponent {
           const articleStyle={
             height: "auto",
             width: "70vw",
-            background: "#D6E3F8",
+            background: colors.lightPurple,
             }
 
     return (
