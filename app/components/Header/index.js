@@ -91,7 +91,7 @@ class Header extends React.PureComponent {
           position: "fixed",
           zIndex: "1",
           maxHeight: "1vh",
-          position: "absolute",
+
         }
 
         const headerTextBlockStyle= {
