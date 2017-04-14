@@ -26,9 +26,7 @@ const colors= {
 export default class About extends React.PureComponent {
   render() {
     const divStyle={
-        background: "#FASFAFA",
-        fontFamily: "Raleway",
-        overflow: "hidden",
+        background: colors.white,
         }
 
           const aboutMain= {
@@ -46,14 +44,10 @@ export default class About extends React.PureComponent {
               }
 
               const textBlock= {
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "flex-end",
                 margin: "1.5em 1.5em 1.5em 30%",
               }
 
-                  const pFont={
-                    fontFamily: "Cabin",
+                  const pFont={                    
                     fontSize: "1.15em",
                     margin: ".25em 0",
                   }
@@ -63,24 +57,26 @@ export default class About extends React.PureComponent {
                   }
 
     return (
-      <div style={divStyle}>
-      <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
+      <div style={divStyle} className='postRenderPageContainer'>
+        <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
 
         <Header></Header>
+
             <Paper style={aboutMain} zDepth={2}>
               <main>
                 <section>
+
                   <div style={headingBlock}>
                     <h2>about</h2>
                     <img src="http://placehold.it/200x200" />
                   </div>
 
                   <div style={textBlock}>
-                                    
                     <p style={pFont}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     <p style={pFont}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
                     <p style={pFont}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
+
                 </section>
               </main>
             </Paper>

@@ -38,10 +38,6 @@ export default class Home extends
   render() {
             const divStyle={
                 background: colors.white,
-                fontFamily: "Raleway",
-                display: "flex",
-                flexDirection:"column",
-                overflow: "hidden",
                 textAlign: "justify",
                 zIndex: "-1",
               }
@@ -55,8 +51,6 @@ export default class Home extends
                         const blogStyle={
                          margin: "20vh 0 10vh 20%",
                          background: colors.lightBlue,
-                         display: "flex",
-                         flexDirection: "row",
                          zIndex: "2",
                         }
                               const blogGroupStyle={
@@ -78,14 +72,12 @@ export default class Home extends
                         padding: ".5em",
                         width: "35%",
                         marginBottom:"10%",
-                        display: "flex",
                         zIndex: "2",
                       }
 
 
 /* FONT STYLES */
                 const nonHeadingFontStyle={
-                fontFamily: "Cabin",
                 margin: "auto auto",
                 fontSize: "1.15em",
                 marginBottom: ".5em",
@@ -119,7 +111,7 @@ export default class Home extends
 
        return (
 
-<div>
+<div className='pageContainer'>
   <div className="responsiveContainer">
     <Responsive maxDeviceWidth={1023}>
       <ResponsiveHome></ResponsiveHome>
@@ -127,54 +119,55 @@ export default class Home extends
   </div>
 
   <Responsive minDeviceWidth={1024}>
-    <div style={divStyle}>
+    <div style={divStyle} className='regularScreenContainer'>
 
 
       <Header> </Header>
 
       <main style={mainStyle}>
 
-      <Paper style={blogStyle} zDepth={2}>
-         <div>
+        <Paper style={blogStyle} zDepth={2}>
            <div>
-             <header>
-               <h2 style={blogHeaderStyle}>
-               <LinkHoverAni>
-               Blog
-               </LinkHoverAni>
-                </h2>
-             </header>
+
+             <div className='headerBlock'>
+               <header>
+                 <h2 style={blogHeaderStyle}>
+                 <LinkHoverAni>
+                 Blog
+                 </LinkHoverAni>
+                  </h2>
+               </header>
+             </div>
+
+             <div style={blogGroupStyle}>
+               <PostPreviews> <Images> </Images></PostPreviews>
+               <PostPreviews> <Images> </Images></PostPreviews>
+               <PostPreviews> <Images> </Images></PostPreviews>
+             </div>
+
+
            </div>
-
-           <div style={blogGroupStyle}>
-             <PostPreviews> <Images> </Images></PostPreviews>
-             <PostPreviews> <Images> </Images></PostPreviews>
-             <PostPreviews> <Images> </Images></PostPreviews>
-           </div>
-
-
-         </div>
-       </Paper>
+         </Paper>
 
 
 
-        <Paper style={aboutStyle} zDepth={2}>
-          <div>
-            <section style={aboutTextBlockStyle}>
-              <header>
-                <h2>
-                  <LinkHoverAni>
-                  About Me
-                  </LinkHoverAni>
-                </h2>
+          <Paper style={aboutStyle} zDepth={2}>
+            <div className='aboutMeBlock'>
 
-              </header>
-              <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+              <section style={aboutTextBlockStyle}>
+                <header>
+                  <h2>
+                    <LinkHoverAni>
+                    About Me
+                    </LinkHoverAni>
+                  </h2>
 
-            </section>
-          </div>
-        </Paper>
+                </header>
+                <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+
+              </section>
+            </div>
+          </Paper>
 
       </main>
 

@@ -18,7 +18,7 @@ const post= {
   time: 'Feb 2',
   blurb: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.' ,
   body: '',
-  img: '', 
+  img: '',
   slug: '/about',
 };
 
@@ -40,10 +40,7 @@ export default class Blog extends React.PureComponent {
 
   render() {
       const blogStyle={
-        fontFamily: "Raleway",
-        display: "flex",
-        flexDirection:"column",
-        overflow: "hidden",
+           
       }
 
         const blogMainStyle={
@@ -65,7 +62,6 @@ export default class Blog extends React.PureComponent {
             const articleStyle={
               background: colors.lightPurple,
               maxWidth: "72vw",
-
               }
 
             const imgStyle={
@@ -74,6 +70,8 @@ export default class Blog extends React.PureComponent {
             }
 
     return (
+
+
 
 <Responsive minDeviceWidth={1024}>
   <div style={blogStyle}>
