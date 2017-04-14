@@ -13,6 +13,9 @@ import Header from 'components/Header';
 import Paper from 'material-ui/Paper';
 import PostPreviews from 'components/PostPreviews';
 import Footer from 'components/Footer';
+import Images from 'components/Images';
+import LinkHoverAni from 'components/LinkHoverAni';
+
 
 
 const colors= {
@@ -66,9 +69,7 @@ export default class Home extends
                                 margin: ".5em 1em 1em 1em",
                               }
 
-                                  const imgStyle={
-                                     
-                                  }
+
 
 
 
@@ -137,26 +138,21 @@ export default class Home extends
          <div>
            <div>
              <header>
-               <h2 style={blogHeaderStyle}> Blog
-               <Link to="/blog" style={blogMainLinkStyle}> xyz
-               </Link>
-               </h2>
+               <h2 style={blogHeaderStyle}>
+               <LinkHoverAni>
+               Blog
+               </LinkHoverAni>
+                </h2>
              </header>
            </div>
 
            <div style={blogGroupStyle}>
-             <PostPreviews></PostPreviews>
-             <PostPreviews> </PostPreviews>
-             <PostPreviews> </PostPreviews>
+             <PostPreviews> <Images> </Images></PostPreviews>
+             <PostPreviews> <Images> </Images></PostPreviews>
+             <PostPreviews> <Images> </Images></PostPreviews>
            </div>
 
-           <div style={imgBlockStyle}>
-                <img src="http://placehold.it/100x100" style={imgStyle} />
 
-                <img src="http://placehold.it/100x100" style={imgStyle} />
-
-                <img src="http://placehold.it/100x100" style={imgStyle} />
-           </div>
          </div>
        </Paper>
 
@@ -167,9 +163,9 @@ export default class Home extends
             <section style={aboutTextBlockStyle}>
               <header>
                 <h2>
+                  <LinkHoverAni>
                   About Me
-                  <Link to="/about" style={aboutLinkStyle}> xyz
-                  </Link>
+                  </LinkHoverAni>
                 </h2>
 
               </header>

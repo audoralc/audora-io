@@ -6,12 +6,16 @@
 
 import React from 'react';
 import {Link} from 'react-router';
-import PostLinkHoverAni from "components/PostLinkHoverAni";
+import PostLinkHoverAni from 'components/PostLinkHoverAni';
+
+
 
 const post= {
   title: 'Lorem',
   time: 'Feb 2',
   blurb: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.' ,
+  body: '',
+  img: '', 
   slug: '/about',
 };
 
@@ -46,6 +50,7 @@ class PostPreviews extends React.PureComponent {
 
 
 
+
     return (
       <div>
       <article style={blogCardStyle}>
@@ -64,7 +69,7 @@ class PostPreviews extends React.PureComponent {
         </small>
         </footer>
       </article>
-
+        {this.props.children}
       </div>
     );
   }

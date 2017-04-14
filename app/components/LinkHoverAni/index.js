@@ -19,50 +19,50 @@ const colors= {
   darkGreen: "#43A047",
 }
 
-class PostLinkHoverAni extends React.PureComponent {
+class LinkHoverAni extends React.PureComponent {
   constructor(props) {
     super(props)
       super(props);
       this.state = {
-        blogTitleHover:false
+        titleHover:false
       }
     }
 
       enterHover = () => {
         this.setState({
-          blogTitleHover:true
+          titleHover:true
         })
-        console.log(this.state.blogTitleHover);
+        console.log(this.state.titleHover);
       };
 
       leaveHover = () => {
         this.setState({
-          blogTitleHover:false
+          titleHover:false
         })
-        console.log(this.state.blogTitleHover);
+        console.log(this.state.titleHover);
       };
 
       showAni = () => {
 
         const linkTextStyle={
         textDecoration: "none",
-        color: colors.white,
         zIndex: "2",
+        color: colors.deepPurple, 
       };
 
-        const blogTitleAni={
+        const titleAni={
           textDecoration: "none",
-          color: colors.black,
           zIndex: "2",
+          color: colors.black,
         };
 
-        if(this.state.blogTitleHover == true)
+        if(this.state.titleHover == true)
         {
           return(
-          <Link to="/blog" style={blogTitleAni} onMouseLeave={this.leaveHover}>Lorem 1 </Link>)
+          <div style={titleAni} onMouseLeave={this.leaveHover}>{this.props.children} </div>)
         }
         else {
-          return(<Link to="/blog" style={linkTextStyle} onMouseEnter={this.enterHover}>Lorem 1 </Link>
+          return(<div style={linkTextStyle} onMouseEnter={this.enterHover}>{this.props.children} </div>
           )
         }
     }
