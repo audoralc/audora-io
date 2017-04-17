@@ -13,7 +13,7 @@ import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
 const colors= {
   white: "#FAFAFA",
   black: "#424242",
-  lightPurple: "#D1C4E9", 
+  lightPurple: "#D1C4E9",
   accentPurple: "#9575CD",
   deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
@@ -40,15 +40,14 @@ class Footer extends React.PureComponent {
     }
 
          const footerFontStyle={
-           fontFamily: "Cabin",
            justifyContent: "space-between",
            color: colors.accentPurple,
            margin: "0 0",
-
          }
 
          const ulstyleReset={
            paddingLeft: "0px",
+           zIndex: "3",
          }
 
          const iconBlockStyle={

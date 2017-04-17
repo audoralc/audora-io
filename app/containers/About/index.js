@@ -27,7 +27,7 @@ export default class About extends React.PureComponent {
   render() {
     const divStyle={
         background: colors.white,
-        
+        overflow: "hidden",
         }
 
           const aboutMain= {
@@ -45,6 +45,8 @@ export default class About extends React.PureComponent {
               }
 
               const textBlock= {
+                display: "flex",		               flexDirection: "column",
+               justifyContent: "flex-end",
                 margin: "1.5em 1.5em 1.5em 30%",
               }
 

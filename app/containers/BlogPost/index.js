@@ -62,6 +62,7 @@ export default class BlogPost extends React.PureComponent {
       width: "100vw",
       zIndex: "2",
       background: colors.white,
+      fontFamily: "Cabin",
     }
                 const pStyle={
                   fontSize: "1.15em",
