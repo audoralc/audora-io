@@ -47,14 +47,15 @@ class LinkHoverAni extends React.PureComponent {
         const linkTextStyle={
         textDecoration: "none",
         zIndex: "2",
-        color: colors.deepPurple, 
+        color: colors.deepPurple,
       };
 
         const titleAni={
-          textDecoration: "none",
           zIndex: "2",
           color: colors.black,
         };
+
+
 
         if(this.state.titleHover == true)
         {
@@ -62,12 +63,16 @@ class LinkHoverAni extends React.PureComponent {
           <div style={titleAni} onMouseLeave={this.leaveHover}>{this.props.children} </div>)
         }
         else {
-          return(<div style={linkTextStyle} onMouseEnter={this.enterHover}>{this.props.children} </div>
+          return(<div  style={linkTextStyle} onMouseEnter={this.enterHover}>{this.props.children} </div>
           )
         }
     }
 
+
+
   render() {
+
+
 
     return (
       <div>

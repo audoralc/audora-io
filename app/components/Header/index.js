@@ -110,7 +110,7 @@ class Header extends React.PureComponent {
             };
 
             const headerOneStyle={
-              fontSize: "2vw",
+              fontSize: "1.5em",
               padding: "1vw 1vw 0 1vw",
               lineHeight: "1",
             }
