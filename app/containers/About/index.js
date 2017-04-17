@@ -27,6 +27,7 @@ export default class About extends React.PureComponent {
   render() {
     const divStyle={
         background: colors.white,
+        
         }
 
           const aboutMain= {
@@ -47,7 +48,7 @@ export default class About extends React.PureComponent {
                 margin: "1.5em 1.5em 1.5em 30%",
               }
 
-                  const pFont={                    
+                  const pFont={
                     fontSize: "1.15em",
                     margin: ".25em 0",
                   }

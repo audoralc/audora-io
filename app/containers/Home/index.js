@@ -38,6 +38,9 @@ export default class Home extends
   render() {
             const divStyle={
                 background: colors.white,
+                display: "flex",
+                flexDirection:"column",
+                overflow: "hidden",
                 textAlign: "justify",
                 zIndex: "-1",
               }

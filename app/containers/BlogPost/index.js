@@ -39,6 +39,8 @@ export default class BlogPost extends React.PureComponent {
 
   const bodyContainerReset={
     background: colors.white,
+    display: "flex",
+    flexDirection: "column",
     }
 
     const blogMainStyle={

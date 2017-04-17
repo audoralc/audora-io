@@ -40,7 +40,9 @@ export default class Blog extends React.PureComponent {
 
   render() {
       const blogStyle={
-           
+        display: "flex",
+        flexDirection:"column",
+        overflow: "hidden",
       }
 
         const blogMainStyle={

@@ -75,10 +75,10 @@ return response.json();
 //now return error or naw
   .then(function(json) {
    if (json.success) {
-     console.log("Success!");
+     console.log(json.success);
    }
    else if (json.error) {
-     console.log(":(");
+     console.log(json.error);
    }
  })
 }
