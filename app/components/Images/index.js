@@ -15,8 +15,6 @@ class Images extends React.PureComponent {
   }
       return (
       <div>
-
-
         <img src="http://placehold.it/100x100" style={imgStyle} />
       </div>
     );

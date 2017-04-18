@@ -1,8 +1,8 @@
 /*
- *
- * Blog
- *
- */
+*
+* Blog
+*
+*/
 
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -29,8 +29,8 @@ const colors= {
   deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-lightGreen: "#C8E6C9",
-darkGreen: "#00C853",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#00C853",
 }
 
 
@@ -38,89 +38,92 @@ export default class Blog extends React.PureComponent {
 
 
   render() {
-      const blogStyle={
-        display: "flex",
-        flexDirection:"column",
-        overflow: "hidden",
-      }
+    const blogStyle={
+      display: "flex",
+      flexDirection:"column",
+      overflow: "hidden",
+    }
 
-        const blogMainStyle={
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          margin: "20vh auto 10vh 0",
-          justifyContent: "space-between",
-          zIndex: "2",
-        }
+    const blogMainStyle={
+      height: "100%",
+      display: "flex",
+      flexDirection: "column",
+      margin: "20vh auto 10vh 0",
+      justifyContent: "space-between",
+      zIndex: "2",
+    }
 
-          const articleBlockStyle={
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-around",
-            width: "100%",
+    const articleBlockStyle={
+      display: "flex",
+      flexDirection: "row",
+      justifyContent: "space-around",
+      width: "100%",
 
-          }
+    }
 
-            const articleStyle={
-              background: colors.lightPurple,
-              maxWidth: "72vw",
-              marginBottom: "2vh",
-              }
+    const articleStyle={
+      background: colors.lightPurple,
+      maxWidth: "72vw",
+      marginBottom: "2vh",
+    }
 
-            const imgStyle={
-              margin: "0 2vw",
-              width: "28vw",
-              marginBottom: "2vh",
-            }
+    const imgStyle={
+      margin: "0 2vw",
+      width: "28vw",
+      marginBottom: "2vh",
+    }
 
 
 
     return (
 
-  <div style={blogStyle}>
-    <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+      <div style={blogStyle}>
+        <Helmet
+          title="Blog"
+          meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
-    <Header></Header>
+        <Header>
+        </Header>
 
-    <main style={blogMainStyle}>
+        <main style={blogMainStyle}>
 
 
-      <div style={articleBlockStyle}>
-      <img src="http://placehold.it/100x100" style={imgStyle}/>
-          <Paper zDepth={2} style={articleStyle}>
-            <article >
-              <PostPreviews> </PostPreviews>
-            </article>
-          </Paper>
+          <div style={articleBlockStyle}>
+            <img src="http://placehold.it/100x100" style={imgStyle}/>
+            <Paper zDepth={2} style={articleStyle}>
+              <article>
+                <PostPreviews></PostPreviews>
+              </article>
+            </Paper>
+          </div>
+
+          <div style={articleBlockStyle}>
+            <img src="http://placehold.it/100x100" style={imgStyle} />
+            <Paper zDepth={2} style={articleStyle}>
+              <article>
+                <PostPreviews></PostPreviews>
+              </article>
+            </Paper>
+          </div>
+
+
+          <div style={articleBlockStyle}>
+            <img src="http://placehold.it/100x100" style={imgStyle}/>
+            <Paper zDepth={2} style={articleStyle}>
+              <article>
+                <PostPreviews></PostPreviews>
+              </article>
+            </Paper>
+          </div>
+        </main>
+
+
+        /*
+        FUTURE PAGINATION
+        */
+        <Footer><footer></footer></Footer>
+
       </div>
-
-      <div style={articleBlockStyle}>
-        <img src="http://placehold.it/100x100" style={imgStyle} />
-          <Paper zDepth={2} style={articleStyle}>
-            <article>
-              <PostPreviews></PostPreviews>
-            </article>
-          </Paper>
-      </div>
-
-
-      <div style={articleBlockStyle}>
-        <img src="http://placehold.it/100x100" style={imgStyle}/>
-          <Paper zDepth={2} style={articleStyle}>
-            <article>
-              <PostPreviews></PostPreviews>
-            </article>
-          </Paper>
-      </div>
-    </main>
-/*
-  FUTURE PAGINATION
-*/
-    <Footer>
-      <footer></footer>
-    </Footer>
-
-  </div>
 
     );
   }

@@ -1,8 +1,8 @@
 /*
- *
- * About
- *
- */
+*
+* About
+*
+*/
 
 import React from 'react';
 import Helmet from 'react-helmet';
@@ -20,89 +20,102 @@ const colors= {
   deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-lightGreen: "#C8E6C9",
-darkGreen: "#00C853",
+  lightGreen: "#C8E6C9",
+  darkGreen: "#00C853",
 }
 
 export default class About extends React.PureComponent {
   render() {
     const divStyle={
-        background: colors.white,
-        }
+      background: colors.white,
+    }
 
-          const aboutMain= {
-            background: colors.lightPurple,
-            maxWidth: "75vw",
-            margin: "20vh auto 10vh 20vw",
-            padding: "1.5em",
-            zIndex: "2",
-            }
+    const aboutMain= {
+      background: colors.lightPurple,
+      maxWidth: "75vw",
+      margin: "20vh auto 10vh 20vw",
+      padding: "1.5em",
+      zIndex: "2",
+    }
 
-              const headingBlock={
-                margin: "1.5em",
-                color: colors.darkGreen,
-                fontSize: "1.5em",
-              }
+    const headingBlock={
+      margin: "1.5em",
+      color: colors.darkGreen,
+      fontSize: "1.5em",
+    }
 
-              const textBlock= {
-                margin: "1.5em 1.5em 1.5em 30%",
+    const textBlock= {
+      margin: "1.5em 1.5em 1.5em 30%",
 
-              }
+    }
 
-                  const pFont={
-                    fontSize: "1.15em",
-                    margin: ".25em 0",
-                  }
+    const pFont={
+      fontSize: "1.15em",
+      margin: ".25em 0",
+    }
 
-                  const footerReset={
-                    position: "fixed",
-                  }
+    const footerReset={
+      position: "fixed",
+    }
 
 
-  //Mobile Styles
-  const aboutMainMobile= {
-    background: colors.lightPurple,
-    maxWidth: "75vw",
-    margin: "20vh auto 10vh auto",
-    padding: "1.5em",
-    zIndex: "2",
+    //Mobile Styles
+    const aboutMainMobile= {
+      background: colors.lightPurple,
+      maxWidth: "75vw",
+      margin: "20vh auto 10vh auto",
+      padding: "1.5em",
+      zIndex: "2",
     }
 
 
     return (
       <div>
-      <Responsive maxDeviceWidth={1023}>
-        <div style={divStyle} className='postRenderPageContainer'>
-          <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
+        <Responsive maxDeviceWidth={1023}>
+          <div style={divStyle} className='postRenderPageContainer'>
+            <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
 
-          <Header></Header>
+            <Header></Header>
 
-                <main style={aboutMainMobile}>
-                  <section>
+            <main style={aboutMainMobile}>
 
-                    <div style={headingBlock}>
-                      <h2>about</h2>
-                      <img src="http://placehold.it/200x200" />
-                    </div>
+              <section>
 
-                    <div style={textBlock}>
-                      <p style={pFont}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                      <p style={pFont}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                      <p style={pFont}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                      </div>
+                <div style={headingBlock}>
+                  <h2>about</h2>
+                  <img src="http://placehold.it/200x200" />
+                </div>
 
-                  </section>
-                </main>
+                <div style={textBlock}>
+                  <p style={pFont}>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                  </p>
+                  <p style={pFont}>
+                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                  </p>
+                  <p style={pFont}>
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                  </p>
+                </div>
 
-          <Footer style={footerReset}></Footer>
-        </div>
-      </Responsive>
+              </section>
+            </main>
 
-    <Responsive minDeviceWidth={1024}>
-      <div style={divStyle} className='postRenderPageContainer'>
-        <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
+            <Footer style={footerReset}>
+            </Footer>
+          </div>
+        </Responsive>
 
-        <Header></Header>
+        <Responsive minDeviceWidth={1024}>
+          <div
+            style={divStyle}
+            className='postRenderPageContainer'>
+            <Helmet
+              title="About"
+              meta={[ { name: 'description', content: 'Description of About' }]}/>
+
+            <Header>
+            </Header>
 
             <Paper style={aboutMain} zDepth={2}>
               <main>
@@ -114,20 +127,27 @@ export default class About extends React.PureComponent {
                   </div>
 
                   <div style={textBlock}>
-                    <p style={pFont}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-                    <p style={pFont}>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                    <p style={pFont}>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
+                    <p style={pFont}>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    </p>
+                    <p style={pFont}>
+                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    </p>
+                    <p style={pFont}>
+                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    </p>
+                  </div>
 
                 </section>
               </main>
             </Paper>
 
-        <Footer style={footerReset}></Footer>
-      </div>
-    </Responsive>
+            <Footer style={footerReset}></Footer>
+            
+          </div>
+        </Responsive>
 
-</div>
+      </div>
     );
   }
 }

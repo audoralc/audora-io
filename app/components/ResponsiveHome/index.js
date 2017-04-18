@@ -27,67 +27,67 @@ const colors= {
 class ResponsiveHome extends React.PureComponent {
   render() {
     const divStyle={
-        background: colors.white,
-        fontFamily: "Raleway",
-        display: "flex",
-        flexDirection:"column",
-        overflow: "hidden",
-      }
+      background: colors.white,
+      fontFamily: "Raleway",
+      display: "flex",
+      flexDirection:"column",
+      overflow: "hidden",
+    }
 
-            const mainStyle={
-              height: "100%",
-              display: "flex",
-              flexDirection:"column",
-            }
+    const mainStyle={
+      height: "100%",
+      display: "flex",
+      flexDirection:"column",
+    }
 
-                const blogStyle={
+    const blogStyle={
       /*change*/ margin: "20vh 10vh 0 10vh",
-                 background: colors.lightBlue,
-              /* width: "60%", */
-                 display: "flex",
-                }
-                      const blogGroupStyle={
-                        display: "inline-flex",
-                        margin: "-1.25em 1em 1em 1em",
-                        flexWrap: "wrap",
-                        flexDirection: "row",
-                    }
-                            const blogCardStyle={
-                              padding: ".5em",
-                              margin: ".5em",
-                              display: "block",
-                            }
+      background: colors.lightBlue,
+      /* width: "60%", */
+      display: "flex",
+    }
+    const blogGroupStyle={
+      display: "inline-flex",
+      margin: "-1.25em 1em 1em 1em",
+      flexWrap: "wrap",
+      flexDirection: "row",
+    }
+    const blogCardStyle={
+      padding: ".5em",
+      margin: ".5em",
+      display: "block",
+    }
 
-                const aboutStyle={
-                background: colors.lightPurple,
-                padding: ".5em",
-            /*  width: "30%", */
-     /*CHANGE*/ margin:"10%",
-                display: "flex",
-                zIndex: "3",
-              }
-
-
+    const aboutStyle={
+      background: colors.lightPurple,
+      padding: ".5em",
+      /*  width: "30%", */
+      /*CHANGE*/ margin:"10%",
+      display: "flex",
+      zIndex: "3",
+    }
 
 
-/* FONT STYLES */
-        const nonHeadingFontStyle={
-        fontFamily: "Cabin",
-        margin: "auto auto",
-      }
 
-        const linkTextStyle={
-        textDecoration: "none",
-        color: colors.white,
-      }
 
-        const blogTitleStyle={
-        margin: "1em 1em 1em 1.5em",
-      }
+    /* FONT STYLES */
+    const nonHeadingFontStyle={
+      fontFamily: "Cabin",
+      margin: "auto auto",
+    }
 
-        const aboutTextBlockStyle= {
-          margin: "1em",
-       }
+    const linkTextStyle={
+      textDecoration: "none",
+      color: colors.white,
+    }
+
+    const blogTitleStyle={
+      margin: "1em 1em 1em 1.5em",
+    }
+
+    const aboutTextBlockStyle= {
+      margin: "1em",
+    }
 
 
 
@@ -96,40 +96,71 @@ class ResponsiveHome extends React.PureComponent {
 
       <div style={divStyle}>
 
-        <Header> </Header>
+
+        <Header>
+        </Header>
+
 
         <main style={mainStyle}>
 
-            <div style={blogStyle}>
-              <div style={blogTitleStyle}>
-                <header>
-                  <h2> Blog </h2>
-                </header>
-              </div>
-                  <div style={blogGroupStyle}>
-                  <PostPreviews></PostPreviews>
-                  <PostPreviews> </PostPreviews>
-                  <PostPreviews> </PostPreviews>
-              </div>
+
+          <div style={blogStyle}>
+
+            <div style={blogTitleStyle}>
+
+              <header>
+
+                <h2> Blog </h2>
+
+              </header>
+
             </div>
 
+            <div style={blogGroupStyle}>
 
+              <PostPreviews>
+              </PostPreviews>
 
-        <div style={aboutStyle}>
-              <section style={aboutTextBlockStyle}>
-                <header>
-                  <h2> About Me </h2>
-                </header>
-                <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
-                  velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+              <PostPreviews>
+              </PostPreviews>
 
-              </section>
+              <PostPreviews>
+              </PostPreviews>
+
             </div>
-      </main>
 
-      <div>
-        <Footer> </Footer>
-      </div>
+          </div>
+
+
+
+
+          <div style={aboutStyle}>
+
+            <section style={aboutTextBlockStyle}>
+
+              <header>
+
+                <h2> About Me </h2>
+
+              </header>
+
+              <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+
+
+            </section>
+
+          </div>
+
+        </main>
+
+
+        <div>
+          
+          <Footer></Footer>
+
+        </div>
+
 
       </div>
 
