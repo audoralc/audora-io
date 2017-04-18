@@ -28,7 +28,7 @@ const colors= {
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
   lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+  darkGreen: "#00C853",
 }
 
 
@@ -41,13 +41,13 @@ export default class BlogPost extends React.PureComponent {
     background: colors.white,
     display: "flex",
     flexDirection: "column",
-
+    height: "100vh",
     }
 
     const blogMainStyle={
       width: "70vw",
       margin: "10vh auto 5vh 25vw",
-      height: "100vh",
+
     }
 
                 const imageStyle= {

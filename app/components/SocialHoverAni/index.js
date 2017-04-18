@@ -13,8 +13,8 @@ const colors= {
   accentPurple: "#9575CD",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-  lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+lightGreen: "#C8E6C9",
+darkGreen: "#00C853",
 
 }
 

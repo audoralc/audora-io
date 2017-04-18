@@ -29,8 +29,8 @@ const colors= {
   deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-  lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+lightGreen: "#C8E6C9",
+darkGreen: "#00C853",
 }
 
 
@@ -45,7 +45,7 @@ export default class Blog extends React.PureComponent {
       }
 
         const blogMainStyle={
-          height: "100vh",
+          height: "100%",
           display: "flex",
           flexDirection: "column",
           margin: "20vh auto 10vh 0",
@@ -58,17 +58,22 @@ export default class Blog extends React.PureComponent {
             flexDirection: "row",
             justifyContent: "space-around",
             width: "100%",
+
           }
 
             const articleStyle={
               background: colors.lightPurple,
               maxWidth: "72vw",
+              marginBottom: "2vh",
               }
 
             const imgStyle={
               margin: "0 2vw",
               width: "28vw",
+              marginBottom: "2vh",
             }
+
+
 
     return (
 
@@ -82,8 +87,8 @@ export default class Blog extends React.PureComponent {
 
       <div style={articleBlockStyle}>
       <img src="http://placehold.it/100x100" style={imgStyle}/>
-          <Paper zDepth={2}>
-            <article style={articleStyle}>
+          <Paper zDepth={2} style={articleStyle}>
+            <article >
               <PostPreviews> </PostPreviews>
             </article>
           </Paper>
@@ -91,8 +96,8 @@ export default class Blog extends React.PureComponent {
 
       <div style={articleBlockStyle}>
         <img src="http://placehold.it/100x100" style={imgStyle} />
-          <Paper zDepth={2}>
-            <article style={articleStyle}>
+          <Paper zDepth={2} style={articleStyle}>
+            <article>
               <PostPreviews></PostPreviews>
             </article>
           </Paper>
@@ -101,8 +106,8 @@ export default class Blog extends React.PureComponent {
 
       <div style={articleBlockStyle}>
         <img src="http://placehold.it/100x100" style={imgStyle}/>
-          <Paper zDepth={2}>
-            <article style={articleStyle}>
+          <Paper zDepth={2} style={articleStyle}>
+            <article>
               <PostPreviews></PostPreviews>
             </article>
           </Paper>

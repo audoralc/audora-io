@@ -18,8 +18,8 @@ const colors= {
   deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-  lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+  lightGreen: "#B9F6CA",
+  darkGreen: "#00C853",
 }
 
 class Footer extends React.PureComponent {
@@ -85,7 +85,7 @@ class Footer extends React.PureComponent {
         </div>
       </ul>
         <div style={copyrightStyle}>
-        <p style={footerFontStyle}> © 2017 audora chalker. made with ❤️️ & ☕. </p>
+        <p style={footerFontStyle}> © 2017 audora chalker. made with  ❤️&#xFE0E; + ☕. </p>
         </div>
         </Paper>
       </footer>

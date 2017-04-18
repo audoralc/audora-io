@@ -16,7 +16,7 @@ const colors= {
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
   lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+  darkGreen: "#00C853",
 }
 
 class LinkHoverAni extends React.PureComponent {
@@ -53,6 +53,7 @@ class LinkHoverAni extends React.PureComponent {
         const titleAni={
           zIndex: "2",
           color: colors.black,
+
         };
 
 

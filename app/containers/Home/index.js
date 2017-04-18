@@ -26,8 +26,8 @@ const colors= {
   deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-  lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+lightGreen: "#C8E6C9",
+darkGreen: "#00C853",
 }
 
 export default class Home extends
@@ -65,10 +65,6 @@ export default class Home extends
                               const imgBlockStyle={
                                 margin: ".5em 1em 1em 1em",
                               }
-
-
-
-
 
                         const aboutStyle={
                         background:colors.lightPurple,

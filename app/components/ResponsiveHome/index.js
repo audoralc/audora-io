@@ -21,7 +21,7 @@ const colors= {
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
   lightGreen: "#C8E6C9",
-  darkGreen: "#43A047",
+  darkGreen: "#00C853",
 }
 
 class ResponsiveHome extends React.PureComponent {
@@ -89,7 +89,7 @@ class ResponsiveHome extends React.PureComponent {
           margin: "1em",
        }
 
-    
+
 
     return (
 
