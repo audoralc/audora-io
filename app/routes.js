@@ -64,6 +64,28 @@ export default function createRoutes() {
           },
         },
 
+   {
+    path: '/join',
+    name: 'SignUp',
+    getComponent(nextState, cb) {
+      import('containers/SignUp')
+        .then(loadModule(cb))
+        .catch(errorLoading);
+    },
+      },
+
+
+       {
+        path: '/login',
+        name: 'SignIn',
+        getComponent(nextState, cb) {
+          import('containers/SignIn')
+            .then(loadModule(cb))
+            .catch(errorLoading);
+        },
+          },
+
+
      {
       path: '*',
       name: 'notfound',
@@ -72,6 +94,8 @@ export default function createRoutes() {
           .then(loadModule(cb))
           .catch(errorLoading);
       },
-    },
+        },
+
+
   ];
 }
