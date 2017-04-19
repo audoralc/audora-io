@@ -85,7 +85,6 @@ return response.json();
 
   render() {
       const formContainer ={
-        background: 'hsl(231, 15%, 18%)',
         height: "100vh",
         }
 
@@ -99,7 +98,7 @@ return response.json();
 
       const titleStyle={
         color: '#f1fa89',
-        background: '#44475a',
+        background: '#FAFAFA',
         fontWeight: 'bold',
         fontSize: '1.25em',
         height: "1.5em",
@@ -110,7 +109,7 @@ return response.json();
 
       const textAreaStyle={
         color: '#bf95f9',
-        background: '#44475a',
+        background: '#FAFAFA',
         width: "70vw",
         margin: "0 auto 2.5vh auto",
         fontSize: '1.25em',
@@ -131,7 +130,7 @@ return response.json();
       const buttonStyle={
         margin: "auto",
         color: '#ff7ac6',
-        background: '#44475a',
+        background: '#FAFAFA',
       }
 
     return (

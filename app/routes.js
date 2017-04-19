@@ -45,6 +45,7 @@ export default function createRoutes() {
       },
     },
 
+
     {
       path: '/blog',
       name: 'Blog',

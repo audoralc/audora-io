@@ -11,6 +11,65 @@ import FlatButton from 'material-ui/FlatButton';
 import TextField from 'material-ui/TextField';
 
 export default class SignUp extends React.PureComponent {
+
+constructor(props) {
+  super(props);
+  this.state = {
+    email:'',
+    username: '',
+    password: '',
+    }
+  }
+
+  handleEmail = (event) => {
+    this.setState({
+      email: event.target.value
+    })
+    console.log(this.state.email);
+  }
+
+  handleUsername = (event) => {
+    this.setState({
+      username:event.target.value
+    })
+    console.log(this.state.username);
+  }
+
+  handlePassword = (event) => {
+    this.setState({
+      password: event.target.value
+    })
+    console.log(this.state.password)
+  }
+
+storeUser= () => {
+  var data= new FormData();
+  data.append("email", this.state.email);
+  data.append("username", this.state.username);
+  data.append("password", this.state.password);
+/*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://localhost:8000/API/storeArticle")*/
+    fetch("http://localhost:8000/api/storeUser", {
+//getting & posting, body is builtin key of fetch
+        method: "post",
+        body: data,
+    })
+//now backend needs to respond -> error or naw
+// .then runs after fetch goes to backend IS PROMISE
+  .then(function(response) {
+// convert response back to front lang
+return response.json();
+})
+//now return error or naw
+  .then(function(json) {
+   if (json.success) {
+     console.log(json.success);
+   }
+   else if (json.error) {
+     console.log(json.error);
+   }
+ })
+}
+
   render() {
       const divStyle= {
         background: '#ffffff',
@@ -86,11 +145,11 @@ export default class SignUp extends React.PureComponent {
 
 
                   <fieldset style={formStyle}>
-                    <TextField type="email" name="email" placeholder="email" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} />
+                    <TextField type="email" name="email" placeholder="email" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handleEmail}/>
 
-                    <TextField type="text" name="username" placeholder="username" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} />
+                    <TextField type="text" name="username" placeholder="username" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handleUsername}/>
 
-                    <TextField type="password" name="password" placeholder="password" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle}/>
+                    <TextField type="password" name="password" placeholder="password" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handlePassword }/>
 
                     <FlatButton label="Submit" style={buttonStyle} primary={true} hoverColor="rgba(255, 163, 97, .5)">  </FlatButton>
                 </fieldset>
