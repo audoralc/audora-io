@@ -87,7 +87,7 @@ class Header extends React.PureComponent {
         const headerShapeStyle= {
           border: "0 solid transparent",
           borderWidth:"100vh",
-          borderTop: "15vh solid #9575CD",
+          borderTop: "15vh solid rgba(149,117,205,.6)",
           position: "fixed",
           zIndex: "1",
           maxHeight: "1vh",

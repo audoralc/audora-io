@@ -16,7 +16,7 @@ constructor(props) {
   super(props);
   this.state = {
     email:'',
-    username: '',
+    name: '',
     password: '',
     }
   }
@@ -28,11 +28,11 @@ constructor(props) {
     console.log(this.state.email);
   }
 
-  handleUsername = (event) => {
+  handleName = (event) => {
     this.setState({
-      username:event.target.value
+      name:event.target.value
     })
-    console.log(this.state.username);
+    console.log(this.state.name);
   }
 
   handlePassword = (event) => {
@@ -45,7 +45,7 @@ constructor(props) {
 storeUser= () => {
   var data= new FormData();
   data.append("email", this.state.email);
-  data.append("username", this.state.username);
+  data.append("name", this.state.name);
   data.append("password", this.state.password);
 /*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://localhost:8000/API/storeArticle")*/
     fetch("http://localhost:8000/api/storeUser", {
@@ -147,7 +147,7 @@ return response.json();
                   <fieldset style={formStyle}>
                     <TextField type="email" name="email" placeholder="email" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handleEmail}/>
 
-                    <TextField type="text" name="username" placeholder="username" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handleUsername}/>
+                    <TextField type="text" name="username" placeholder="username" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handleName}/>
 
                     <TextField type="password" name="password" placeholder="password" style={inputStyle} underlineStyle={textFieldStyles.underlineStyle} onChange={this.handlePassword }/>
 
