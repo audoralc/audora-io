@@ -86,6 +86,7 @@ return response.json();
   render() {
       const formContainer ={
         height: "100vh",
+        background: "rgba(19,85,197,.5)",
         }
 
       const inputContainer={
@@ -97,8 +98,7 @@ return response.json();
       }
 
       const titleStyle={
-        color: '#f1fa89',
-        background: '#FAFAFA',
+        background: "#FAFAFA",
         fontWeight: 'bold',
         fontSize: '1.25em',
         height: "1.5em",
@@ -108,37 +108,36 @@ return response.json();
       }
 
       const textAreaStyle={
-        color: '#bf95f9',
-        background: '#FAFAFA',
+        background: "#FAFAFA",
         width: "70vw",
         margin: "0 auto 2.5vh auto",
         fontSize: '1.25em',
-        minHeight: "40vh",
+        minHeight: "20vh",
       }
 
       const imgInputStyle={
         margin: "2.5vh auto 2.5vh 20vh",
-        color: "#52fa7c",
         width: "50vw",
       }
 
       const imagePreview={
-        width: "40vw",
-        height: "40 vw",
+        marginLeft:"20vh",
+        width: "20vw",
+        height: "20%",
       }
 
       const buttonStyle={
         margin: "auto",
-        color: '#ff7ac6',
-        background: '#FAFAFA',
+        background: "#FAFAFA",
       }
 
     return (
       <div style={formContainer}>
+
         <Helmet title="Dashboard" meta={[ { name: 'description', content: 'Description of Dashboard' }]}/>
 
         <div style={inputContainer}>
-        <input onChange={this.handleTitle} type="text" placeholder="Title" style={titleStyle}/>
+        <input onChange={this.handleTitle} type="text" style={titleStyle}/>
 
         <textArea onChange={this.handleBody} style={textAreaStyle} > </textArea>
 
