@@ -115,6 +115,9 @@ export default class Home extends
   <Responsive minDeviceWidth={1024}>
     <div style={divStyle} className='regularScreenContainer'>
 
+      <Helmet
+        title="a.chalker"
+        meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
       <Header> </Header>
 
@@ -149,7 +152,9 @@ export default class Home extends
 
           <Paper style={aboutStyle} zDepth={2}>
             <div className='aboutMeBlock'>
-
+              <Helmet
+                title="a.chalker"
+                meta={[ { name: 'description', content: 'Description of Home' }]}/>
               <section style={aboutTextBlockStyle}>
                 <header>
                   <Link to="/about" style={sectionLinkStyle}>

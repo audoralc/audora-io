@@ -73,7 +73,9 @@ export default class About extends React.PureComponent {
       <div>
         <Responsive maxDeviceWidth={1023}>
           <div style={divStyle} className='postRenderPageContainer'>
-            <Helmet title="About" meta={[ { name: 'description', content: 'Description of About' }]}/>
+            <Helmet
+              title="a.chalker"
+              meta={[ { name: 'description', content: 'Description of ' }]}/>
 
             <Header></Header>
 
@@ -110,9 +112,9 @@ export default class About extends React.PureComponent {
           <div
             style={divStyle}
             className='postRenderPageContainer'>
-            <Helmet
-              title="About"
-              meta={[ { name: 'description', content: 'Description of About' }]}/>
+              <Helmet
+                title="a.chalker"
+                meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
             <Header>
             </Header>
@@ -143,7 +145,7 @@ export default class About extends React.PureComponent {
             </Paper>
 
             <Footer style={footerReset}></Footer>
-            
+
           </div>
         </Responsive>
 

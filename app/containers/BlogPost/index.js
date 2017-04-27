@@ -120,7 +120,7 @@ export default class BlogPost extends React.PureComponent {
 
 
       <Responsive minDeviceWidth={1024}>
-        <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+        <Helmet title={post.title} meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
         <Header></Header>
 

@@ -122,7 +122,7 @@ class Header extends React.PureComponent {
 
     return (
       <div className="header">
-      <Helmet title="a.chalker " meta={[ { name: 'description', content: 'Description of Home' }]}/>
+    
         <div style={headerShapeStyle}>
         </div>
         <header style={headerStyle}>
