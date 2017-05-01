@@ -28,12 +28,13 @@ export default class About extends React.PureComponent {
   render() {
     const divStyle={
       background: colors.white,
+      height: "100%",
     }
 
     const aboutMain= {
       background: colors.lightPurple,
       maxWidth: "75vw",
-      margin: "20vh auto 10vh 20vw",
+      margin: "20vh auto 15vh 20vw",
       padding: "1.5em",
       zIndex: "2",
     }
@@ -54,12 +55,7 @@ export default class About extends React.PureComponent {
       margin: ".25em 0",
     }
 
-    const footerReset={
-      position: "fixed",
-    }
-
-
-    //Mobile Styles
+      //Mobile Styles
     const aboutMainMobile= {
       background: colors.lightPurple,
       maxWidth: "75vw",
@@ -103,7 +99,7 @@ export default class About extends React.PureComponent {
               </section>
             </main>
 
-            <Footer style={footerReset}>
+            <Footer>
             </Footer>
           </div>
         </Responsive>
@@ -144,7 +140,7 @@ export default class About extends React.PureComponent {
               </main>
             </Paper>
 
-            <Footer style={footerReset}></Footer>
+            <Footer></Footer>
 
           </div>
         </Responsive>
