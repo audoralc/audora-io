@@ -38,8 +38,8 @@ export default class SignIn extends React.PureComponent {
     var data= new FormData();
     data.append("email", this.state.email);
     data.append("password", this.state.password);
-  /*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://localhost:8000/API/storeArticle")*/
-      fetch("http://localhost:8000/api/userLogin", {
+  /*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://audora.me:8000/API/storeArticle")*/
+      fetch("http://audora.me:8000/api/userLogin", {
   //getting & posting, body is builtin key of fetch
           method: "post",
           body: data,

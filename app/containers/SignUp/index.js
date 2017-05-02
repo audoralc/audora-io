@@ -47,8 +47,8 @@ storeUser= () => {
   data.append("email", this.state.email);
   data.append("name", this.state.name);
   data.append("password", this.state.password);
-/*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://localhost:8000/API/storeArticle")*/
-    fetch("http://localhost:8000/api/storeUser", {
+/*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://audora.me:8000/API/storeArticle")*/
+    fetch("http://audora.me:8000/api/storeUser", {
 //getting & posting, body is builtin key of fetch
         method: "post",
         body: data,

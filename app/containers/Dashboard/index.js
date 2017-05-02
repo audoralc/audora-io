@@ -60,8 +60,8 @@ storeArticle = () => {
   data.append("body", this.state.body);
   data.append("image", this.state.image);
   data.append("preview", this.state.image);
-/*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://localhost:8000/API/storeArticle")*/
-    fetch("http://localhost:8000/api/storeArticle", {
+/*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://audora.me:8000/API/storeArticle")*/
+    fetch("http://audora.me/api/storeArticle", {
 //getting & posting, body is builtin key of fetch
         method: "post",
         body: data,
