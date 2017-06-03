@@ -46,12 +46,12 @@ class LinkHoverAni extends React.PureComponent {
 
         const linkTextStyle={
         textDecoration: "none",
-        zIndex: "2",
+      
         color: colors.deepPurple,
       };
 
         const titleAni={
-          zIndex: "2",
+        
           color: colors.black,
 
         };

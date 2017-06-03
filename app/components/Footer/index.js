@@ -27,8 +27,8 @@ class Footer extends React.PureComponent {
 
   render() {
     const footerContainer= {
-      zIndex: "2",
-      postion: "fixed",
+      gridRow: '5 / 5', 
+      gridColumn: '1 / 6 span', 
     }
 
     const footerStyle={

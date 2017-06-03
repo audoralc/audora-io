@@ -10,9 +10,9 @@ import {Link} from 'react-router';
 import Responsive from 'react-responsive';
 import ResponsiveHome from 'components/ResponsiveHome';
 import Header from 'components/Header';
+import Footer from 'components/Footer';
 import Paper from 'material-ui/Paper';
 import PostPreviews from 'components/PostPreviews';
-import Footer from 'components/Footer';
 import Images from 'components/Images';
 import LinkHoverAni from 'components/LinkHoverAni';
 
@@ -34,45 +34,29 @@ export default class Home extends
  React.PureComponent {
 
 
-
   render() {
-            const divStyle={
-                background: colors.white,
-                display: "flex",
-                flexDirection:"column",
-                overflow: "hidden",
-                textAlign: "justify",
-                zIndex: "-1",
-              }
+   const pageGrid = { 
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr', 
+      gridTemplateRows: '15vh 50vh 50vh 50vh 1fr', 
+      gridRowGap: '5vw', 
+    }
+      
+      const aboutBlock = { 
+        gridRow: '2 / 2', 
+        gridColumn: '1 / 3 span', 
+      }   
 
-                    const mainStyle={
-                      height: "100%",
-                      display: "flex",
-                      flexDirection:"column",
-                    }
+      const workBlock = { 
+        gridRow: '3 / 3', 
+        gridColumn: '2 / 4 span', 
+      }
 
-                        const blogStyle={
-                         margin: "20vh 0 10vh 20%",
-                         background: colors.lightBlue,
-                         zIndex: "2",
-                        }
-                              const blogGroupStyle={
-                                display: "flex",
-                                flexDirection: "row",
-                                margin: ".5em 1em 1em 1em",
-                              }
-
-                              const imgBlockStyle={
-                                margin: ".5em 1em 1em 1em",
-                              }
-
-                        const aboutStyle={
-                        background:colors.lightPurple,
-                        padding: ".5em",
-                        width: "35%",
-                        marginBottom: "10vh",
-                        zIndex: "2",
-                      }
+      const blogBlock = {
+        gridRow: '4 / 4', 
+        gridColumn: '1 / 6', 
+      }
+   
 
 
 /* FONT STYLES */
@@ -85,15 +69,10 @@ export default class Home extends
                 const linkTextStyle={
                 textDecoration: "none",
               }
-
-                const blogTitleStyle={
-                zIndex: "2",
-              }
-
+             
                 const aboutTextBlockStyle= {
                   margin: "1em",
                }
-
 
                const sectionLinkStyle= {
                  textDecoration: "none",
@@ -105,15 +84,7 @@ export default class Home extends
 
        return (
 
-<div className='pageContainer'>
-  <div className="responsiveContainer">
-    <Responsive maxDeviceWidth={1023}>
-      <ResponsiveHome></ResponsiveHome>
-    </Responsive>
-  </div>
-
-  <Responsive minDeviceWidth={1024}>
-    <div style={divStyle} className='regularScreenContainer'>
+    <div style={pageGrid}>
 
       <Helmet
         title="a.chalker"
@@ -121,40 +92,8 @@ export default class Home extends
 
       <Header> </Header>
 
-      <main style={mainStyle}>
-
-        <Paper style={blogStyle} zDepth={2}>
-           <div>
-
-             <div className='headerBlock'>
-               <header>
-               <Link to="/blog" style={sectionLinkStyle}>
-                 <h2 style={blogHeaderStyle}>
-                 <LinkHoverAni>
-                   Blog
-                 </LinkHoverAni>
-                  </h2>
-                  </Link>
-               </header>
-             </div>
-
-             <div style={blogGroupStyle}>
-               <PostPreviews> <Images> </Images></PostPreviews>
-               <PostPreviews> <Images> </Images></PostPreviews>
-               <PostPreviews> <Images> </Images></PostPreviews>
-             </div>
-
-
-           </div>
-         </Paper>
-
-
-
-          <Paper style={aboutStyle} zDepth={2}>
-            <div className='aboutMeBlock'>
-              <Helmet
-                title="a.chalker"
-                meta={[ { name: 'description', content: 'Description of Home' }]}/>
+          <Paper style={aboutBlock} zDepth={2}>
+            <div className='aboutMeBlock'>            
               <section style={aboutTextBlockStyle}>
                 <header>
                   <Link to="/about" style={sectionLinkStyle}>
@@ -171,13 +110,40 @@ export default class Home extends
             </div>
           </Paper>
 
-      </main>
+        <Paper style={workBlock} zDepth={2}> 
+
+          <div> 
+            yes hello this is a work block in progress
+          </div>                
+        
+        </Paper>  
+
+        <Paper  style={blogBlock} zDepth={2}>
+           <div>
+
+             <div className='headerBlock'>
+               <header>
+               <Link to="/blog" style={sectionLinkStyle}>
+                 <h2 style={blogHeaderStyle}>
+                 <LinkHoverAni>
+                   Blog
+                 </LinkHoverAni>
+                  </h2>
+                  </Link>
+               </header>
+             </div>
+
+             <div>
+               <PostPreviews> <Images> </Images></PostPreviews>
+             </div>
+
+
+           </div>
+         </Paper>
+
+  
 
       <Footer> </Footer>
-
-    </div>
-  </Responsive>
-
 </div>
     );
   }

@@ -46,17 +46,11 @@ class Header extends React.PureComponent {
 
   showAni = () => {
     const navBarStyle= {
-      display: "flex",
-      justifyContent: "center",
       color: colors.black,
-      margin: "1em 0",
     };
 
     const homeAni = {
-      display: "flex",
-      justifyContent: "center",
       color:  colors.brightBlue,
-      margin: "1em 0",
       transition: "color .5s",
     }
 
@@ -78,61 +72,30 @@ class Header extends React.PureComponent {
 
   render() {
 
-    const headerStyle={
-      fontSize: "1em",
-      display: "flex",
-      flexDirection: "column",
+    const headerStyle = {
+      gridRow: '1 / 1', 
+      gridColumn: '1 / 6 span', 
+      border: "0 solid transparent",
+      borderWidth:"100vh",
+      position: 'absolute', 
+      borderTop: "10vh solid rgba(149,117,205,.6)",    
+     
     }
+      const titleBlock = { 
+       
+      }
 
-        const headerShapeStyle= {
-          border: "0 solid transparent",
-          borderWidth:"100vh",
-          borderTop: "15vh solid rgba(149,117,205,.6)",
-          position: "fixed",
-          zIndex: "1",
-          maxHeight: "1vh",
-
-        }
-
-        const headerTextBlockStyle= {
-          position: "fixed",
-          margin: "auto auto",
-          padding: "1em 0 2em 1em",
-          maxWidth: "28vw",
-          zIndex: "2",
-          }
-
-          const navBarStyle= {
-            display: "flex",
-            justifyContent: "center",
-            color: colors.black,
-            margin: "1em 0",
-            };
-
-            const headerOneStyle={
-              fontSize: "1.5em",
-              padding: "1vw 1vw 0 1vw",
-              lineHeight: "1",
-            }
-
-            const linkTextStyle={
-            textDecoration: "none",
-            color: colors.white,
-            }
+      const h1Style = { 
+        fontSize: '1.5em', 
+      }
 
     return (
-      <div className="header">
-    
-        <div style={headerShapeStyle}>
-        </div>
-        <header style={headerStyle}>
-            <div style={headerTextBlockStyle}>
-              <h1 style={headerOneStyle}> Audora Chalker </h1>
+      <div style={headerStyle}> 
+        <header style={titleBlock}>            
+              <h1 style={h1Style}> Audora Chalker </h1>
               <nav>
                 {this.showAni()}
-              </nav>
-              </div>
-
+              </nav>              
         </header>
       </div>
     );

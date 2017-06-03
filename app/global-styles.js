@@ -6,6 +6,8 @@ injectGlobal`
   body {
     height: 100%;
     width: 100%;
+    margin: 0;
+    background-color: #fafafa;
   }
 
   body {
@@ -20,12 +22,7 @@ injectGlobal`
     font-family: 'Raleway', Arial, Helvetica,  sans-serif;
   }
 
-  #app {
-    background-color: #fafafa;
-    min-height: 100%;
-    min-width: 100%;
-  }
-
+  
   p,
   label {
     font-family: 'Cabin', Helvetica, Arial, sans-serif;

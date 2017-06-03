@@ -4,6 +4,11 @@
 *
 */
 
+/* 
+TODO 
+create vars/etc so that text will only have to be in one place 
+*/ 
+
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
@@ -86,13 +91,17 @@ export default class About extends React.PureComponent {
 
                 <div style={textBlock}>
                   <p style={pFont}>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                    export default friendship; 
                   </p>
                   <p style={pFont}>
-                    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    So, I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (manily React) & the LEMP stack, but eyeing MERN & MEAN. 
                   </p>
                   <p style={pFont}>
-                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                    Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
+                  </p>
+                  <p style={pFont}> 
+                    Other interests include 
+                    My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay. 
                   </p>
                 </div>
 
@@ -126,13 +135,17 @@ export default class About extends React.PureComponent {
 
                   <div style={textBlock}>
                     <p style={pFont}>
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                      export default friendship; 
                     </p>
                     <p style={pFont}>
-                      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                      I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (manily React) & the LEMP stack, but eyeing MERN & MEAN. 
                     </p>
                     <p style={pFont}>
-                      Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
+                    </p>
+                    <p style={pFont}> 
+                       Other interests include 
+                       My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay. 
                     </p>
                   </div>
 
