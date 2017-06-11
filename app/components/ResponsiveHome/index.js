@@ -64,7 +64,7 @@ class ResponsiveHome extends React.PureComponent {
       /*  width: "30%", */
       /*CHANGE*/ margin:"10%",
       display: "flex",
-      zIndex: "3",
+     
     }
 
 

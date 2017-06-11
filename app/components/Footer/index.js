@@ -7,19 +7,26 @@
 import React from 'react';
 import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
-import SocialHoverAni from 'components/SocialHoverAni';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
+import glamorous from 'glamorous'; 
+
+const StyledIcon = glamorous.a ({
+  fontSize: '1.25em', 
+  color:"#424242",  
+  ':hover':{ 
+    color: "#00B0FF",
+  }
+})
 
 const colors= {
   white: "#FAFAFA",
   black: "#424242",
-  lightPurple: "#D1C4E9",
   accentPurple: "#9575CD",
-  deepPurple: "#673AB7",
   lightBlue: "#B3E5FC",
   brightBlue:"#00B0FF",
-  lightGreen: "#B9F6CA",
+  lightGreen: "#C8E6C9",
   darkGreen: "#00C853",
+
 }
 
 class Footer extends React.PureComponent {
@@ -28,14 +35,12 @@ class Footer extends React.PureComponent {
   render() {
     const footerContainer= {
       gridRow: '5 / 5', 
-      gridColumn: '1 / 6 span', 
+      gridColumn: '3 / 6', 
     }
 
     const footerStyle={
       display: "flex",
       flexDirection: "column",
-      width: "50%",
-      margin: "0 auto",
       background: colors.lightGreen,
     }
 
@@ -47,7 +52,6 @@ class Footer extends React.PureComponent {
 
     const ulstyleReset={
       paddingLeft: "0px",
-      zIndex: "3",
     }
 
     const iconBlockStyle={
@@ -66,7 +70,7 @@ class Footer extends React.PureComponent {
     }
 
     const linkTextStyle={
-      zIndex: "3",
+   
     }
 
     return (
@@ -84,31 +88,31 @@ class Footer extends React.PureComponent {
 
                   <a href="mailto:scribeklio@gmail.com">
 
-                    <SocialHoverAni>
+                    <StyledIcon>
                       <FaEnvelope>
                       </FaEnvelope>
-                    </SocialHoverAni>
+                    </StyledIcon>
                   </a>
 
-                  <a href="https://github.com/scribeklio">
-                    <SocialHoverAni>
+                  <a href="https://github.com/audoralc">
+                    <StyledIcon>
                       <FaGithub>
                       </FaGithub>
-                    </SocialHoverAni>
+                    </StyledIcon>
                   </a>
 
                   <a href="https://www.linkedin.com/in/achalker24">
-                    <SocialHoverAni>
+                    <StyledIcon>
                       <FaLinkedin>
                       </FaLinkedin>
-                    </SocialHoverAni>
+                    </StyledIcon>
                   </a>
 
                   <a href="https://twitter.com/klioonthemoon">
-                    <SocialHoverAni>
+                    <StyledIcon>
                       <FaTwitter>
                       </FaTwitter>
-                    </SocialHoverAni>
+                    </StyledIcon>
                   </a>
 
                 </div>

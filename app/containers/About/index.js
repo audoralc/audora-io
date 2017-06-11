@@ -16,6 +16,21 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import Paper from 'material-ui/Paper';
 import Responsive from 'react-responsive';
+import glamorous from 'glamorous'; 
+
+const StyledHeaderTwo = glamorous.h2 ({ 
+  color: "#673AB7",
+  fontSize: "1.5em",
+})
+
+const StyledSection = glamorous.section ({
+    marginLeft: '20%',
+})
+
+  const StyledHeaderThree = glamorous.h3 ({ 
+    color: "#00B0FF", 
+  })
+
 
 const colors= {
   white: "#FAFAFA",
@@ -31,134 +46,61 @@ const colors= {
 
 export default class About extends React.PureComponent {
   render() {
-    const divStyle={
-      background: colors.white,
-      height: "100%",
-    }
+    const pageGrid = { 
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
+      gridTemplateRows: '10vh 25vh auto auto 1fr', 
+      gridRowGap: '10vh',       
+    }   
+   
 
-    const aboutMain= {
+    const mainStyle = {
       background: colors.lightPurple,
-      maxWidth: "75vw",
-      margin: "20vh auto 15vh 20vw",
+      gridRow: '2 / 5', 
+      gridColumn: '3 / 6 span', 
       padding: "1.5em",
-      zIndex: "2",
+      display: 'flex', 
+      flexDirection: 'column',
+      padding: '2em', 
     }
 
-    const headingBlock={
-      margin: "1.5em",
-      color: colors.darkGreen,
-      fontSize: "1.5em",
-    }
-
-    const textBlock= {
-      margin: "1.5em 1.5em 1.5em 30%",
-
-    }
-
-    const pFont={
-      fontSize: "1.15em",
-      margin: ".25em 0",
-    }
-
-      //Mobile Styles
-    const aboutMainMobile= {
-      background: colors.lightPurple,
-      maxWidth: "75vw",
-      margin: "20vh auto 10vh auto",
-      padding: "1.5em",
-      zIndex: "2",
-    }
+      const headerBlock = {
+       justifyContent: 'flex-start', 
+      }
 
 
     return (
-      <div>
-        <Responsive maxDeviceWidth={1023}>
-          <div style={divStyle} className='postRenderPageContainer'>
-            <Helmet
-              title="a.chalker"
+      <div style={pageGrid}>   
+        <Helmet title="a.chalker"
               meta={[ { name: 'description', content: 'Description of ' }]}/>
 
-            <Header></Header>
+        <Header></Header>
 
-            <main style={aboutMainMobile}>
+        <main style={mainStyle}>           
 
-              <section>
-
-                <div style={headingBlock}>
-                  <h2>about</h2>
-                  <img src="http://placehold.it/200x200" />
-                </div>
-
-                <div style={textBlock}>
-                  <p style={pFont}>
-                    export default friendship; 
-                  </p>
-                  <p style={pFont}>
-                    So, I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (manily React) & the LEMP stack, but eyeing MERN & MEAN. 
-                  </p>
-                  <p style={pFont}>
-                    Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
-                  </p>
-                  <p style={pFont}> 
-                    Other interests include 
-                    My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay. 
-                  </p>
-                </div>
-
-              </section>
-            </main>
-
-            <Footer>
-            </Footer>
+          <div style={headerBlock}>
+            <StyledHeaderTwo>it me</StyledHeaderTwo>
+            <img src="" width="40%" height="60%" />
           </div>
-        </Responsive>
 
-        <Responsive minDeviceWidth={1024}>
-          <div
-            style={divStyle}
-            className='postRenderPageContainer'>
-              <Helmet
-                title="a.chalker"
-                meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+          <StyledSection>
+            <StyledHeaderThree> export default friendship; </StyledHeaderThree>
+            
+            <p>
+              So, I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React) & the LEMP stack, but eyeing MERN & MEAN. 
+            </p>
+            <p>
+              Topics I'm interested in include: creating opportunities &increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
+            </p>
+            <p> 
+              Other interests include XXXXXXXX, YYYYYYYYYY, and ZZZZZZZZ. 
+              My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay. 
+            </p>
+          </StyledSection>              
+        </main>
 
-            <Header>
-            </Header>
-
-            <Paper style={aboutMain} zDepth={2}>
-              <main>
-                <section>
-
-                  <div style={headingBlock}>
-                    <h2>about</h2>
-                    <img src="http://placehold.it/200x200" />
-                  </div>
-
-                  <div style={textBlock}>
-                    <p style={pFont}>
-                      export default friendship; 
-                    </p>
-                    <p style={pFont}>
-                      I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (manily React) & the LEMP stack, but eyeing MERN & MEAN. 
-                    </p>
-                    <p style={pFont}>
-                        Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
-                    </p>
-                    <p style={pFont}> 
-                       Other interests include 
-                       My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay. 
-                    </p>
-                  </div>
-
-                </section>
-              </main>
-            </Paper>
-
-            <Footer></Footer>
-
-          </div>
-        </Responsive>
-
-      </div>
+        <Footer></Footer>
+      </div>     
     );
   }
 }

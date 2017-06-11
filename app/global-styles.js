@@ -22,10 +22,14 @@ injectGlobal`
     font-family: 'Raleway', Arial, Helvetica,  sans-serif;
   }
 
+  a {
+    text-decoration: none;
+  }
   
   p,
   label {
     font-family: 'Cabin', Helvetica, Arial, sans-serif;
     line-height: 1.5em;
+    font-size: 1.15em;
   }
 `;

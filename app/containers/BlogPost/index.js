@@ -9,6 +9,7 @@ import Helmet from 'react-helmet';
 import Responsive from 'react-responsive';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import glamorous from 'glamorous'; 
 
 const post= {
   title: 'Lorem',
@@ -18,6 +19,17 @@ const post= {
   img: '',
   slug: '/about',
 };
+
+const StyledTitle = glamorous.h2 ({
+  color: "#00B0FF", 
+  fontSize: "2.5em",
+  margin: '0',
+})
+
+const StyledTime = glamorous.time ({
+  color: "#00C853",
+  fontWeight: 'bold',
+})
 
 const colors= {
   white: "#FAFAFA",
@@ -37,119 +49,52 @@ export default class BlogPost extends React.PureComponent {
 
   render() {
 
-  const bodyContainerReset={
-    background: colors.white,
-    display: "flex",
-    flexDirection: "column",
-    height: "100vh",
+  const pageGrid = { 
+    display: 'grid',
+    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
+    gridTemplateRows: '15vh auto auto auto 1fr', 
+    gridRowGap: '5vh',       
+  }   
+
+    const bodyStyle = { 
+      gridRow: '2 / 5', 
+      gridColumn: '2 / 7 span',
+      margin: '0 5vw', 
+      height: '75vh',
     }
 
-    const blogMainStyle={
-      width: "70vw",
-      margin: "10vh auto 5vh 25vw",
-
-    }
-
-                const imageStyle= {
-                  float: "left",
-                  padding: "0 1em 1em 0",
-                  margin: "auto 0 auto -5vh",
-                  width: "50vw",
-                  maxWidth: "25vw",
-                }
-
-    const footerReset = {
-      bottom: "0",
-      width: "100vw",
-      zIndex: "2",
-      background: colors.white,
-      fontFamily: "Cabin",
-    }
-                const pStyle={
-                  fontSize: "1.15em",
-                }
-
-                const h2Style={
-                  color: colors.brightBlue,
-                  fontSize: "2.5em",
-                  marginBottom: "0",
-                }
-
-  //mobile styles
-
-  const blogMainStyleMobile={
-    width: "70vw",
-    margin: "10% auto 5vh auto",
-    height: "100vh",
-  }
+      const imageStyle = {
+        float: 'left', 
+        margin: '1em',     
+     }
 
     return (
-      <div className='pageContainer'>
-      <Responsive maxDeviceWidth={1023}>
-            <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
-
-            <Header></Header>
-
-            <div style={bodyContainerReset}>
-                <main style={blogMainStyleMobile}>
-                  <article>
-
-                      <header>
-                        <h2 style={h2Style}>{post.title}</h2>
-                        <time>{post.time}</time>
-                      </header>
-
-                      <section>
-                          <p style={pStyle}> {post.blurb}</p>
-
-                          <img src="http://placehold.it/300x300" style={imageStyle} />
-
-                          <p style={pStyle}> {post.body}</p>
-
-                      </section>
-                  </article>
-                </main>
-
-                </div>
-
-              <div style={footerReset}>
-                <Footer></Footer>
-              </div>
-
-      </Responsive>
-
-
-      <Responsive minDeviceWidth={1024}>
-        <Helmet title={post.title} meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+      <div style={pageGrid}>
+  
+        <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
         <Header></Header>
 
-        <div style={bodyContainerReset}>
-            <main style={blogMainStyle}>
-              <article >
+        <div style={bodyStyle}>
+          <main>
+            <article>
 
-                  <header>
-                    <h2 style={h2Style}>{post.title}</h2>
-                    <time>{post.time}</time>
-                  </header>
+                <header>
+                  <StyledTitle>{post.title}</StyledTitle>
+                  <StyledTime>{post.time}</StyledTime>
+                </header>            
 
-                  <section>
+                <section>
+                    <p> {post.blurb}</p>                   
+                    <img src="http://placehold.it/300x300" style={imageStyle}  />
+                    <p> {post.body}</p>                        
+                </section>
+            </article>
+          </main>
 
-                      <p style={pStyle}> {post.blurb} </p>
-
-                      <img src="http://placehold.it/300x300" style={imageStyle} />
-
-                      <p style={pStyle}> {post.body}</p>
-                  </section>
-              </article>
-            </main>
-
-            </div>
-
-          <div style={footerReset}>
-            <Footer></Footer>
-          </div>
-        </Responsive>
+        </div>
+              
+        <Footer></Footer>                
 
       </div>
     );

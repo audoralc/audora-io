@@ -7,14 +7,17 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import {Link} from 'react-router';
-import Responsive from 'react-responsive';
-import ResponsiveHome from 'components/ResponsiveHome';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
 import Paper from 'material-ui/Paper';
-import PostPreviews from 'components/PostPreviews';
-import Images from 'components/Images';
-import LinkHoverAni from 'components/LinkHoverAni';
+import Responsive from 'react-responsive';
+import Header from 'components/Header';
+import HomeAboutMe from 'components/HomeAboutMe'; 
+import Skills from 'components/Skills'; 
+import Projects from 'components/Projects'; 
+import BlogPreview from 'components/BlogPreview';
+import Footer from 'components/Footer';
+
+import LaravelTest from 'components/LaravelTest'; 
+
 
 
 
@@ -37,52 +40,12 @@ export default class Home extends
   render() {
    const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr', 
-      gridTemplateRows: '15vh 50vh 50vh 50vh 1fr', 
-      gridRowGap: '5vw', 
-    }
-      
-      const aboutBlock = { 
-        gridRow: '2 / 2', 
-        gridColumn: '1 / 3 span', 
-      }   
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
+      gridTemplateRows: '15vh auto auto auto 1fr', 
+      gridRowGap: '10vh',       
+    }     
 
-      const workBlock = { 
-        gridRow: '3 / 3', 
-        gridColumn: '2 / 4 span', 
-      }
-
-      const blogBlock = {
-        gridRow: '4 / 4', 
-        gridColumn: '1 / 6', 
-      }
-   
-
-
-/* FONT STYLES */
-                const nonHeadingFontStyle={
-                margin: "auto auto",
-                fontSize: "1.15em",
-                marginBottom: ".5em",
-              }
-
-                const linkTextStyle={
-                textDecoration: "none",
-              }
-             
-                const aboutTextBlockStyle= {
-                  margin: "1em",
-               }
-
-               const sectionLinkStyle= {
-                 textDecoration: "none",
-               }
-
-               const blogHeaderStyle={
-                 margin: "1em 1em -.5em 1em",
-                }
-
-       return (
+  return (
 
     <div style={pageGrid}>
 
@@ -90,58 +53,14 @@ export default class Home extends
         title="a.chalker"
         meta={[ { name: 'description', content: 'Description of Home' }]}/>
 
-      <Header> </Header>
+      <Header></Header> 
 
-          <Paper style={aboutBlock} zDepth={2}>
-            <div className='aboutMeBlock'>            
-              <section style={aboutTextBlockStyle}>
-                <header>
-                  <Link to="/about" style={sectionLinkStyle}>
-                    <h2>
-                      <LinkHoverAni>
-                         About Me
-                      </LinkHoverAni>
-                    </h2>
-                  </Link>
-                </header>
-                <p style={nonHeadingFontStyle}> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+      <HomeAboutMe></HomeAboutMe>  
+      <Skills></Skills>
 
-              </section>
-            </div>
-          </Paper>
+      <Projects></Projects>
 
-        <Paper style={workBlock} zDepth={2}> 
-
-          <div> 
-            yes hello this is a work block in progress
-          </div>                
-        
-        </Paper>  
-
-        <Paper  style={blogBlock} zDepth={2}>
-           <div>
-
-             <div className='headerBlock'>
-               <header>
-               <Link to="/blog" style={sectionLinkStyle}>
-                 <h2 style={blogHeaderStyle}>
-                 <LinkHoverAni>
-                   Blog
-                 </LinkHoverAni>
-                  </h2>
-                  </Link>
-               </header>
-             </div>
-
-             <div>
-               <PostPreviews> <Images> </Images></PostPreviews>
-             </div>
-
-
-           </div>
-         </Paper>
-
-  
+      <BlogPreview></BlogPreview>  
 
       <Footer> </Footer>
 </div>

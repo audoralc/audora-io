@@ -7,19 +7,30 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 import Header from 'components/Header';
-import PostPreviews from 'components/PostPreviews';
 import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import Footer from 'components/Footer';
+import glamorous from 'glamorous'; 
 
-const post= {
-  title: 'Lorem',
-  time: 'Feb 2',
-  blurb: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.' ,
-  body: '',
-  img: '',
-  slug: '/about',
-};
+const StyledArticle = glamorous.section ({ 
+  display: 'flex', 
+  flexDirection: 'row',  
+})
+
+const StyledTitle = glamorous.h2 ({
+  color: "#424242", 
+   ':hover' : { 
+    color: "#00B0FF", 
+  },
+  margin: '0', 
+  
+})
+
+const StyledTime = glamorous.time ({
+  color: "#00C853",
+  fontWeight: 'bold',
+})
+
 
 const colors= {
   white: "#FAFAFA",
@@ -38,93 +49,84 @@ export default class Blog extends React.PureComponent {
 
 
   render() {
-    const blogStyle={
-      display: "flex",
-      flexDirection:"column",
-      overflow: "hidden",
-    }
+    const pageGrid = { 
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
+      gridTemplateRows: '15vh auto auto auto 1fr', 
+      gridRowGap: '5vh',       
+    }   
 
-    const blogMainStyle={
-      height: "100%",
-      display: "flex",
-      flexDirection: "column",
-      margin: "20vh auto 10vh 0",
-      justifyContent: "space-between",
-      zIndex: "2",
-    }
 
-    const articleBlockStyle={
-      display: "flex",
-      flexDirection: "row",
-      justifyContent: "space-around",
-      width: "100%",
+      const blogStyle= {
+        display: "flex",
+        flexDirection:"column",
+        gridRow: '2 / 5',
+        gridColumn: '1 / 7 span',
+        margin: '0 2.5vw', 
+      }
 
-    }
+        const textBlock = { 
+          background: "#D1C4E9",
+          marginBottom: "5%",
+          width: '75%',
+          padding: '1em',
+        }
 
-    const articleStyle={
-      background: colors.lightPurple,
-      maxWidth: "72vw",
-      marginBottom: "2vh",
-    }
-
-    const imgStyle={
-      margin: "0 2vw",
-      width: "28vw",
-      marginBottom: "2vh",
-    }
-
+        const imageStyle = {
+          margin: "0 5% 5% 0",
+          width: '25%',
+        }
 
 
     return (
 
-      <div style={blogStyle}>
+      <div style={pageGrid}>
         <Helmet
           title="Blog"
           meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
-        <Header>
-        </Header>
+        <Header> </Header>
 
-        <main style={blogMainStyle}>
+        <main style={blogStyle}>
 
-
-          <div style={articleBlockStyle}>
-            <img src="http://placehold.it/100x100" style={imgStyle}/>
-            <Paper zDepth={2} style={articleStyle}>
+          <StyledArticle> 
+            <img src="http://placehold.it/100x100" style={imageStyle}/>
+            <Paper zDepth={2} style={textBlock}>
+              <a href="/blog/post"><StyledTitle>  Article 1 </StyledTitle></a>
               <article>
-                <PostPreviews></PostPreviews>
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <StyledTime>17:00</StyledTime>
               </article>
             </Paper>
-          </div>
+          </StyledArticle> 
 
-          <div style={articleBlockStyle}>
-            <img src="http://placehold.it/100x100" style={imgStyle} />
-            <Paper zDepth={2} style={articleStyle}>
+          <StyledArticle> 
+            <img src="http://placehold.it/100x100" style={imageStyle}/>
+            <Paper zDepth={2} style={textBlock}>
+              <a href="/blog/post"><StyledTitle>  Article 2 </StyledTitle></a>
               <article>
-                <PostPreviews></PostPreviews>
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <StyledTime>16:00</StyledTime>
               </article>
             </Paper>
-          </div>
+          </StyledArticle>         
 
-
-          <div style={articleBlockStyle}>
-            <img src="http://placehold.it/100x100" style={imgStyle}/>
-            <Paper zDepth={2} style={articleStyle}>
+          <StyledArticle> 
+            <img src="http://placehold.it/100x100" style={imageStyle}/>
+            <Paper zDepth={2} style={textBlock}>
+              <a href="/blog/post"><StyledTitle>  Article 3 </StyledTitle></a>
               <article>
-                <PostPreviews></PostPreviews>
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <StyledTime> 02:00</StyledTime>
               </article>
             </Paper>
-          </div>
+          </StyledArticle> 
+          
         </main>
 
-
-        /*
-        FUTURE PAGINATION
-        */
-        <Footer><footer></footer></Footer>
+        <Footer></Footer>
 
       </div>
-
     );
   }
 }
