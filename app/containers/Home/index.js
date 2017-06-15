@@ -11,6 +11,7 @@ import Paper from 'material-ui/Paper';
 import Responsive from 'react-responsive';
 import Header from 'components/Header';
 import HomeAboutMe from 'components/HomeAboutMe'; 
+import ForHire from 'components/ForHire'; 
 import Skills from 'components/Skills'; 
 import Projects from 'components/Projects'; 
 import BlogPreview from 'components/BlogPreview';
@@ -41,7 +42,7 @@ export default class Home extends
    const pageGrid = { 
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
-      gridTemplateRows: '15vh auto auto auto 1fr', 
+      gridTemplateRows: '15vh auto auto auto auto 1fr', 
       gridRowGap: '10vh',       
     }     
 
@@ -55,7 +56,8 @@ export default class Home extends
 
       <Header></Header> 
 
-      <HomeAboutMe></HomeAboutMe>  
+      <HomeAboutMe></HomeAboutMe>
+      <ForHire> </ForHire>  
       <Skills></Skills>
 
       <Projects></Projects>

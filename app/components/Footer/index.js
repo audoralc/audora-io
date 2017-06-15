@@ -8,7 +8,8 @@ import React from 'react';
 import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
 import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
-import glamorous from 'glamorous'; 
+import glamorous from 'glamorous';
+import ReactTooltip from 'react-tooltip'; 
 
 const StyledIcon = glamorous.a ({
   fontSize: '1.25em', 
@@ -34,7 +35,7 @@ class Footer extends React.PureComponent {
 
   render() {
     const footerContainer= {
-      gridRow: '5 / 5', 
+      gridRow: '6 / 6', 
       gridColumn: '3 / 6', 
     }
 
@@ -86,35 +87,37 @@ class Footer extends React.PureComponent {
 
                 <div style={iconBlockStyle}>
 
-                  <a href="mailto:scribeklio@gmail.com">
-
+                  <a data-tip="Email"  href="mailto:scribeklio@gmail.com">
                     <StyledIcon>
                       <FaEnvelope>
                       </FaEnvelope>
                     </StyledIcon>
                   </a>
 
-                  <a href="https://github.com/audoralc">
+                  <a data-tip="Github" href="https://github.com/audoralc">
                     <StyledIcon>
                       <FaGithub>
                       </FaGithub>
                     </StyledIcon>
+                    
                   </a>
 
-                  <a href="https://www.linkedin.com/in/achalker24">
+                  <a data-tip="LinkedIn"  href="https://www.linkedin.com/in/achalker24">
                     <StyledIcon>
                       <FaLinkedin>
                       </FaLinkedin>
                     </StyledIcon>
                   </a>
 
-                  <a href="https://twitter.com/klioonthemoon">
+                  <a data-tip="Twitter"  href="https://twitter.com/klioonthemoon">
                     <StyledIcon>
                       <FaTwitter>
                       </FaTwitter>
                     </StyledIcon>
+                   
                   </a>
 
+                  
                 </div>
 
               </div>

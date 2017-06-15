@@ -30,14 +30,18 @@ class HomeAboutMe extends React.PureComponent {
 
       const aboutBlock = { 
         gridRow: '2 / 2', 
-        gridColumn: '1 / 3 span',
-        marginTop: '5vh',      
+        gridColumn: '1 / 5 span',
+            
       }   
         const aboutTextBlockStyle= {
                padding: "1em",
                background: colors.lightPurple,
-               }
-
+              }
+              
+      const intro = { 
+        color: colors.deepPurple, 
+        fontSize: '1.5em',
+      }
             
 
     return (
@@ -45,9 +49,13 @@ class HomeAboutMe extends React.PureComponent {
         <Paper  zDepth={2} style={aboutTextBlockStyle}>                 
           <section>              
             
-              <StyledHeader> Hi! </StyledHeader>           
+              <StyledHeader> ✨ Hi! ✨ </StyledHeader>           
              
-              <p> I'm Audora and I love making sites & apps for the web. Also a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React) & the LEMP stack, but eyeing MERN & MEAN.  </p>
+              <p style={intro}> I'm Audora, a Helper & Maker of Things. </p> 
+              
+              <p> Also a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React <img src="http://i.imgur.com/DTGywL1.png" title="source: imgur.com" height='24px' width='24px' />
+                
+                 &nbsp;) & the LEMP stack, but eyeing MERN & MEAN.  </p>
 
               <Link to="/about"> </Link>
           </section>            

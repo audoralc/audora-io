@@ -10,14 +10,21 @@ import glamorous from 'glamorous';
 
 const StyledHeader = glamorous.h3 ({ 
   color: "#FAFAFA",
-  borderBottom: "2px solid #D1C4E9", 
+  textAlign: 'center',
+  margin: '0', 
 })
 
 const StyledSection = glamorous.section ({ 
   display: 'flex',
-  flexDirection: 'column', 
-  color: '#D1C4E9', 
-  margin: '1em',
+  flexDirection: 'column',
+  color: '#673AB7', 
+  fontWeight: '600', 
+  width: "40%",
+})
+
+const StyledUL = glamorous.ul({ 
+  listStyle: "none",
+  padding: '0',
 })
 
 const colors= {
@@ -35,64 +42,79 @@ const colors= {
 class Skills extends React.PureComponent {
   render() {
     const skillsStyle = {
-      gridRow: '2 / 2', 
-      gridColumn: '4 / 7 span',
-      marginTop: '15vh', 
+      gridRow: '3 / 3', 
+      gridColumn: '4 / 7 span',       
       marginLeft: '5vw',
     }
 
       const skillsBlock = {
         display: 'flex', 
         flexDirection: 'column',
-         padding: '1em', 
-          background: "#686868",
+        padding: '1em', 
+        background: "#BDBDBD",
+        
       }
 
-        const skills = {
-          display: 'flex', 
-          flexDirection: 'row',
-          margin: '0 1em',          
-        }
+      const skillGrouping = {
+        display: 'flex', 
+        flexDirection: 'row',
+        justifyContent: 'space-around',
+        
+      }
 
     return (
       <div style={skillsStyle}>
         
         <Paper zDepth={2} style={skillsBlock}>      
 
-            <h2>Skills</h2> 
+            <h2>🎒 Skills</h2> 
             
-            <div style={skills}> 
+            <div style={skillGrouping}> 
               <StyledSection> 
                 <StyledHeader>Front-end</StyledHeader>
               
-                <ul> 
+                <StyledUL> 
                   <li>Javascript - React (JSX), ES6</li>
                   <li>HTML & CSS - Flexbox, CSS Grid & Bootstrap</li>
                   <li>Responsive Design</li>
                   <li>Cross-browser Compatability</li>
-                </ul>
+                </StyledUL>
               
-              </StyledSection>
+              </StyledSection> 
 
               <StyledSection> 
                 <StyledHeader>Backend</StyledHeader>
-                <ul> 
+                <StyledUL> 
                   <li>PHP - Laravel </li>
                   <li>MySQL</li>
-                </ul>
+                </StyledUL>
               </StyledSection>
+              </div> 
 
+              <div style={skillGrouping}>
               <StyledSection> 
                 <StyledHeader>Dev Tools</StyledHeader>
-                <ul>
+                <StyledUL>
                   <li>Git & Github</li>
                   <li>RESTful APIS</li>
                   <li>Linux & Nginx</li>
                   <li>Chrome Developer Tools</li>
                   <li>Postman</li>
                   <li>XAMPP</li>
-                </ul> 
+                </StyledUL> 
               </StyledSection>
+
+              <StyledSection>
+                <StyledHeader>Learning</StyledHeader> 
+                <StyledUL> 
+                  <li> Javascript - always</li>
+                  <li> Agile Development </li>
+                  <li> UX/UI Principles </li>                    
+                  <li>Test Driven Development </li> 
+                  <li> More PHP </li>
+                  <li> More MySQL</li>
+                </StyledUL>
+              </StyledSection> 
             </div> 
         </Paper>
       </div>

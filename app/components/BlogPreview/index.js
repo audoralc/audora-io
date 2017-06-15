@@ -27,14 +27,11 @@ const StyledTitle = glamorous.h3 ({
   color: "#424242", 
    ':hover' : { 
     color: "#00B0FF",
-    borderLeft: '2px solid #424242',
-    borderBottom: '2px solid #424242', 
+   
   },
   lineHeight: '1.2',
   margin: '0', 
   padding: '2px',
-  borderLeft: '2px solid #00B0FF',
-  borderBottom:'2px solid #00B0FF',
 })
 
 const StyledTime = glamorous.time ({ 
@@ -58,8 +55,8 @@ class BlogPreview extends React.PureComponent {
   render() {
 
     const blogBlock = {
-        gridRow: '4 / 4', 
-        gridColumn: '3 / 7 span',        
+        gridRow: '5 / 5', 
+        gridColumn: '1 / 5 span',        
       }
 
       const bgColor = {
@@ -81,7 +78,7 @@ class BlogPreview extends React.PureComponent {
 
           <header>
           <Link to="/blog" >
-            <StyledHeader> Blog </StyledHeader>
+            <StyledHeader> 📒Blog  </StyledHeader>
           </Link>
           </header>
 

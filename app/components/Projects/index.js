@@ -7,12 +7,11 @@
 import React from 'react';
 import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
-import {Card, CardActions, CardHeader, CardMedia, CardTitle, CardText} from 'material-ui/Card';
 import glamorous from 'glamorous'; 
 
 const StyledHeader = glamorous.h2 ({
   color: "#673AB7", 
-  
+  textAlign: "center",
 })
 
 const colors= {
@@ -32,7 +31,7 @@ class Projects extends React.PureComponent {
   render() {
 
     const projectBlock = { 
-        gridRow: '3 / 3', 
+        gridRow: '4 / 4', 
         gridColumn: '2 / 5 span', 
         
       }
@@ -52,28 +51,12 @@ class Projects extends React.PureComponent {
     return (
       <div style={projectBlock}>
         <Paper zDepth={2} style={theStuff}> 
-          <StyledHeader> My Work </StyledHeader>
+          <StyledHeader> 💻 My Work </StyledHeader>
 
           <section style={cardBlock}>
-
-            <Card>
-              <CardHeader></CardHeader>
-              <CardMedia ></CardMedia>             
-              <CardText></CardText>
-            </Card>
-
-           <Card>
-              <CardHeader></CardHeader>
-              <CardMedia ></CardMedia>              
-              <CardText></CardText>
-            </Card>
-
-
-            <Card>
-              <CardHeader></CardHeader>
-              <CardMedia></CardMedia>              
-              <CardText></CardText>
-            </Card>
+              <div> </div>
+              <div> </div>
+              <div> </div>
 
           </section>
         </Paper>
