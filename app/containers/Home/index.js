@@ -17,7 +17,7 @@ import Projects from 'components/Projects';
 import BlogPreview from 'components/BlogPreview';
 import Footer from 'components/Footer';
 
-import LaravelTest from 'components/LaravelTest'; 
+
 
 
 
@@ -61,8 +61,7 @@ export default class Home extends
       <Skills></Skills>
 
       <Projects></Projects>
-
-      <BlogPreview></BlogPreview>  
+ 
 
       <Footer> </Footer>
 </div>

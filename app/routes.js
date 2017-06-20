@@ -65,6 +65,60 @@ export default function createRoutes() {
           },
         },
 
+        {
+          path: '/sumo-redo',
+          name: 'SRL Redesign',
+          getComponent(nextState, cb) {
+            import('containers/SumoRedesign')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+        {
+          path: '/Pyxis',
+          name: 'Pyxis Static Demo',
+          getComponent(nextState, cb) {
+            import('containers/Pyxis')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+          {
+            path: '/pyxis-study',
+            name: 'Pyxis Study',
+            getComponent(nextState, cb) {
+              import('containers/PyxisStudy')
+                .then(loadModule(cb))
+                .catch(errorLoading);
+            },
+          },
+        {
+          path: '/this-site',
+          name: 'About audora.me',
+          getComponent(nextState, cb) {
+            import('containers/ThisSite')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+        {
+          path: '/semper-disco',
+          name: 'Semper Disco',
+          getComponent(nextState, cb) {
+            import('containers/SemperDisco')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
+            {
+          path: '/semper-study',
+          name: 'About Semper Disco',
+          getComponent(nextState, cb) {
+            import('containers/SemperStudy')
+              .then(loadModule(cb))
+              .catch(errorLoading);
+          },
+        },
    {
     path: '/join',
     name: 'SignUp',

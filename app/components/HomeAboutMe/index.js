@@ -36,6 +36,7 @@ class HomeAboutMe extends React.PureComponent {
         const aboutTextBlockStyle= {
                padding: "1em",
                background: colors.lightPurple,
+               lineHeight: '24px'
               }
               
       const intro = { 

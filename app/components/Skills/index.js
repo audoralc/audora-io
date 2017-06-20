@@ -9,15 +9,16 @@ import Paper from 'material-ui/Paper';
 import glamorous from 'glamorous'; 
 
 const StyledHeader = glamorous.h3 ({ 
-  color: "#FAFAFA",
+  color: "#B3E5FC",
   textAlign: 'center',
   margin: '0', 
+  fontWeight: '700',
 })
 
 const StyledSection = glamorous.section ({ 
   display: 'flex',
   flexDirection: 'column',
-  color: '#673AB7', 
+  color: "#FAFAFA",
   fontWeight: '600', 
   width: "40%",
 })
@@ -51,7 +52,7 @@ class Skills extends React.PureComponent {
         display: 'flex', 
         flexDirection: 'column',
         padding: '1em', 
-        background: "#BDBDBD",
+        background: "#909090",
         
       }
 
