@@ -14,12 +14,21 @@ import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
 import 'react-bootstrap-carousel/dist/bootstrap.min.css';
 import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';  
 
+const HeaderLink = glamorous.a({
+    ':hover': { 
+     color: "#00B0FF",
+     textDecoration: 'none', 
+    },  
+    color:  "#00C853",
+    textDecoration: 'none', 
+})
+
 
 export default class SemperStudy extends React.PureComponent {
   render() {
     const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr', 
       gridRowGap: '10vh',       
     }     
@@ -38,9 +47,24 @@ export default class SemperStudy extends React.PureComponent {
           height: '100%',         
         }
 
-       const carouselStyle = { 
-  
-        }
+          const textBlock = {
+            padding: '2em 2em 0 2em', 
+            fontSize: '1.15em',  
+            textAlign: 'center', 
+          }  
+            const explainBlock = {
+              width: '85%', 
+              margin: '5% auto',
+            }
+
+              const h4Style = {
+                color: "#673AB7",
+                fontSize: '1.25em',
+              }
+          const carouselStyle = { 
+            height:'90%',
+            margin:'5%',
+          }
     return (
      
       <div style={pageGrid}>
@@ -50,25 +74,31 @@ export default class SemperStudy extends React.PureComponent {
           <Paper zDepth={2}> 
             <div style={content}>
 
-             <div> 
-                <h2> <a href="/semper-disco"> Semper Disco </a> </h2>
-                <h3> </h3>
-                <p>  </p>
+            <div style={textBlock}>         
+                 <h2> <HeaderLink href="/semper-disco"> Semper Disco </HeaderLink> </h2>
+
+                <div style={explainBlock}>
+                  <h4 style={h4Style}> </h4>
+                </div>              
+
+                 <a href="https://github.com/audoralc/semper-disco" style={h4Style}><h4> SD README.md on Github</h4></a>
+
               </div> 
 
-                <div style={{height:'90%',margin:'5%'}}>
+
+                <div style={carouselStyle}>
           <React_Bootstrap_Carousel
             animation={true}
             onSelect={this.onSelect}
             className="carousel-fade"
           >
-            <div style={{height:"80%",width:"100%"}}>
+            <div style={{height:"80%",width:"100%", margin:'0 auto'}}>
              <img src="http://i.imgur.com/W3MgJCp.jpg" width="100%"/>  
             </div>
-            <div style={{height:"80%",width:"80%"}}>
+            <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
                <img src="http://i.imgur.com/ZdVozMV.jpg" width="100%" />  
             </div>
-            <div style={{height:"80%",width:"80%"}}>
+            <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
              <img src="http://i.imgur.com/68wPR5I.jpg" width="100%" />
             </div>
           </React_Bootstrap_Carousel>

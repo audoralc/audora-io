@@ -17,6 +17,7 @@ const StyledHeader = glamorous.nav ({
   color:"#424242",  
   ':hover':{ 
     color: "#00B0FF",
+    textDecoration: 'none',
   },
   fontSize: '.75em',
 })
@@ -48,13 +49,13 @@ class Header extends React.PureComponent {
 
       const navBlock = { 
         gridColumn: '1 / 2', 
-        margin: '5vh 1em',
+        margin: '5vh 1em',        
       }
 
         const navbar = {
           display: 'flex', 
           flexDirection: 'row',
-          margin: '0 1em', 
+          margin: '1em 0 0 0', 
           justifyContent: 'space-around', 
           width: '100%',
           fontSize: '1.15em',
@@ -62,13 +63,14 @@ class Header extends React.PureComponent {
 
         const h1Style = { 
           margin: '0',
+          fontSize: '24px',
         }
 
 
     return (
       <div style={headerStyle}>
         <nav style={navBlock}>
-          <Link to="/">
+          <Link to="/" style={{textDecoration: 'none'}}>
           <StyledHeader>            
             <h1 style={h1Style}> Audora Chalker </h1>
             </StyledHeader>

@@ -8,7 +8,8 @@ import React from 'react';
 import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import glamorous from 'glamorous'; 
-import { FaCode } from 'react-icons/lib/fa'; 
+import { FaCode } from 'react-icons/lib/fa';
+import ReactTooltip from 'react-tooltip'; 
 
 const StyledHeader = glamorous.h2 ({
   color: "#673AB7", 
@@ -17,7 +18,6 @@ const StyledHeader = glamorous.h2 ({
 const StyledProjectHeader = glamorous.h3 ({ 
   color: "#424242", 
   textAlign: 'center',
-  marginTop: '15%', 
 })
 
 const StyledLink = glamorous.a ({ 
@@ -25,6 +25,10 @@ const StyledLink = glamorous.a ({
   marginBottom: '1em', 
   fontWeight: '600',
   lineHeight: '1.5em',
+})
+
+const Card = glamorous.div ({ 
+  margin: '2.5% 5%',
 })
 
 const colors= {
@@ -44,7 +48,7 @@ class Projects extends React.PureComponent {
   render() {
 
     const projectBlock = { 
-        gridRow: '4 / 4', 
+        gridRow: '5 / 5', 
         gridColumn: '2 / 5 span', 
         
       }
@@ -58,6 +62,7 @@ class Projects extends React.PureComponent {
           display: 'flex',
           flexDirection: 'row', 
           justifyContent: 'space-around',
+          margin: '0 0 3vh 0',
         }
           const specialProject = {
             textAlign: 'center',
@@ -68,7 +73,7 @@ class Projects extends React.PureComponent {
            display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
-          justifyContent: 'space-around',
+          justifyContent: 'space-between',
           alignContent: 'stretch', 
         }
       
@@ -97,7 +102,7 @@ class Projects extends React.PureComponent {
 
           <section style={cardBlock}> 
                     
-              <div> 
+              <Card> 
                <StyledProjectHeader>   <StyledLink href="http://sumorobotleague.com">sumorobotleague.com </StyledLink>Redesign </StyledProjectHeader> 
                <div style={linkBlock}> 
                  <StyledLink href="https://github.com/audoralc/sumorobot-store-clientside">  Github <FaCode></FaCode> </StyledLink>
@@ -109,23 +114,23 @@ class Projects extends React.PureComponent {
                   <img src="http://i.imgur.com/ILUXgj0.png" height="500px" width="350px" />
                 </Paper>
                </Link>
-              </div>   
+              </Card>   
 
-              <div> 
+              <Card> 
                <StyledProjectHeader> pyxis </StyledProjectHeader> 
                <div style={linkBlock}> 
                  <StyledLink href="https://github.com/audoralc/pyxis">  Github <FaCode></FaCode> </StyledLink>
-                 <StyledLink href="/pyxis"> 👀Front Page Demo </StyledLink>
+                 <StyledLink href="/pyxis" data-tip="Desktop Only Please"> 👀Front Page Demo </StyledLink>
                  <StyledLink href="/pyxis-study"> 🌠Case Study </StyledLink>                
                </div>
                <Link href="/pyxis"> 
-                  <Paper zDepth={3}> 
-                    <img src="" height="500px" width="350px" />
+                  <Paper zDepth={3} > 
+                    <img src="http://i.imgur.com/ZEmPcI8.png"  height="500px" width="350px"/>
                   </Paper>
                 </Link>
-              </div>       
+              </Card>       
 
-               <div> 
+               <Card> 
                <StyledProjectHeader> semper-disco </StyledProjectHeader> 
                <p style={statusStyle}>📐In Progress</p>  
                <div style={linkBlock}> 
@@ -137,7 +142,7 @@ class Projects extends React.PureComponent {
                   <img src="http://i.imgur.com/W3MgJCp.jpg" height="500px" width="350px" />
                 </Paper>
                </Link>   
-              </div> 
+              </Card> 
 
           </section>
         </Paper>

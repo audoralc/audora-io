@@ -30,15 +30,17 @@ const colors= {
 
 }
 
+
 class Footer extends React.PureComponent {
 
 
   render() {
     const footerContainer= {
       gridRow: '6 / 6', 
-      gridColumn: '3 / 6', 
+      gridColumn: '2 / 7', 
     }
 
+  
     const footerStyle={
       display: "flex",
       flexDirection: "column",
@@ -66,7 +68,7 @@ class Footer extends React.PureComponent {
     }
 
     const copyrightStyle= {
-      margin: "0 auto",
+      textAlign: 'center',
       lineHeight: "1em",
     }
 
@@ -75,8 +77,10 @@ class Footer extends React.PureComponent {
     }
 
     return (
-      <div style={footerContainer}>
+      <div style={footerContainer}> 
 
+       
+       
         <footer>
 
           <Paper style={footerStyle} zDepth={2}>
@@ -133,6 +137,7 @@ class Footer extends React.PureComponent {
           </Paper>
 
         </footer>
+      
 
       </div>
     );

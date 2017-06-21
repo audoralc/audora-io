@@ -11,8 +11,14 @@ import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import Footer from 'components/Footer';
 import glamorous from 'glamorous'; 
+import Responsive from 'react-responsive';
 
 const StyledArticle = glamorous.section ({ 
+  display: 'flex', 
+  flexDirection: 'row',  
+})
+
+const MobileStyledArticle = glamorous.section ({ 
   display: 'flex', 
   flexDirection: 'row',  
 })
@@ -44,6 +50,8 @@ const colors= {
   darkGreen: "#00C853",
 }
 
+const Default = ({ children }) => <Responsive minWidth={768} children={children} />;
+const Mobile = ({ children }) => <Responsive maxWidth={768} children={children} />;
 
 export default class Blog extends React.PureComponent {
 
@@ -52,7 +60,7 @@ export default class Blog extends React.PureComponent {
     const pageGrid = { 
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
-      gridTemplateRows: '15vh auto auto auto 1fr', 
+      gridTemplateRows: '15vh auto auto auto auto 1fr', 
       gridRowGap: '5vh',       
     }   
 
@@ -64,6 +72,7 @@ export default class Blog extends React.PureComponent {
         gridColumn: '1 / 7 span',
         margin: '0 2.5vw', 
       }
+
 
         const textBlock = { 
           background: "#D1C4E9",
@@ -77,14 +86,63 @@ export default class Blog extends React.PureComponent {
           width: '25%',
         }
 
+        const mobileImageStyle = {
+          margin: "0 5% 5% 0",
+          width: '60%',
+        }
+
 
     return (
 
-      <div style={pageGrid}>
+      <div>
         <Helmet
           title="Blog"
           meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
+      <Mobile style={pageGrid}> 
+          <Header> </Header>
+
+        <main style={blogStyle}>
+
+          <div> 
+            <img src="http://placehold.it/100x100" style={mobileImageStyle}/>
+            <Paper zDepth={2} style={textBlock}>
+              <a href="/blog/post"><StyledTitle>  Article 1 </StyledTitle></a>
+              <article>
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <StyledTime>17:00</StyledTime>
+              </article>
+            </Paper>
+          </div> 
+
+          <div> 
+            <img src="http://placehold.it/100x100" style={mobileImageStyle}/>
+            <Paper zDepth={2} style={textBlock}>
+              <a href="/blog/post"><StyledTitle>  Article 2 </StyledTitle></a>
+              <article>
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <StyledTime>16:00</StyledTime>
+              </article>
+            </Paper>
+          </div>         
+
+          <div> 
+            <img src="http://placehold.it/100x100" style={mobileImageStyle}/>
+            <Paper zDepth={2} style={textBlock}>
+              <a href="/blog/post"><StyledTitle>  Article 3 </StyledTitle></a>
+              <article>
+                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+                <StyledTime> 02:00</StyledTime>
+              </article>
+              </Paper> 
+            </div> 
+          
+        </main>
+
+        <Footer></Footer>
+      </Mobile>
+
+      <Default style={pageGrid}>
         <Header> </Header>
 
         <main style={blogStyle}>
@@ -125,6 +183,7 @@ export default class Blog extends React.PureComponent {
         </main>
 
         <Footer></Footer>
+      </Default> 
 
       </div>
     );

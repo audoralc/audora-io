@@ -48,16 +48,16 @@ export default class About extends React.PureComponent {
   render() {
     const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
-      gridTemplateRows: '10vh 25vh auto auto 1fr', 
-      gridRowGap: '10vh',       
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+      gridTemplateRows: '8h 25vh auto auto 1fr', 
+      gridRowGap: '5vh',       
     }   
    
 
     const mainStyle = {
       background: colors.lightPurple,
       gridRow: '2 / 5', 
-      gridColumn: '3 / 6 span', 
+      gridColumn: '2 / 6 span', 
       padding: "1.5em",
       display: 'flex', 
       flexDirection: 'column',
@@ -80,7 +80,7 @@ export default class About extends React.PureComponent {
 
           <div style={headerBlock}>
             <StyledHeaderTwo>it me</StyledHeaderTwo>
-            <img src="" width="40%" height="60%" />
+            <img src="http://i.imgur.com/WRTsxRz.jpg" width="40%" height="60%" />
           </div>
 
           <StyledSection>
@@ -93,7 +93,7 @@ export default class About extends React.PureComponent {
               Topics I'm interested in include: creating opportunities &increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
             </p>
             <p> 
-              Other interests include XXXXXXXX, YYYYYYYYYY, and ZZZZZZZZ. 
+              Other interests include hoarding developer resources, making my home as comfy as possible, and pretty much any kind of media. 
               My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay. 
             </p>
           </StyledSection>              

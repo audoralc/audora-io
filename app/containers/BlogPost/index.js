@@ -52,7 +52,7 @@ export default class BlogPost extends React.PureComponent {
   const pageGrid = { 
     display: 'grid',
     gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
-    gridTemplateRows: '15vh auto auto auto 1fr', 
+    gridTemplateRows: '15vh 100% auto auto 1fr', 
     gridRowGap: '5vh',       
   }   
 
@@ -71,7 +71,7 @@ export default class BlogPost extends React.PureComponent {
     return (
       <div style={pageGrid}>
   
-        <Helmet title="Blog" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+        <Helmet title="Blog Post" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
         <Header></Header>
 

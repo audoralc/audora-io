@@ -24,9 +24,8 @@ export default class ThisSite extends React.PureComponent {
         gridRow: '2 / 5', 
         gridColumn: '1 / 7 span',
         width: '90vw',     
-        margin: '0 auto',   
+        margin: '5vh',
       }
-
         const content = {
           background: "#D1C4E9",
           display: "flex", 
@@ -63,11 +62,13 @@ export default class ThisSite extends React.PureComponent {
                 <li> Readability - Many sites have become unreadable for me (someone with a medium strength glasses perscription)so I can only imagine how bad it must be for folks with worse eyesight. Font sizes are thus probably a little larger than web standards. </li>
                 <li> Components - Components are one of my favorite parts of React; it's element semantics! All of the major elements on these pages are components, and especially those in the home page, which can be removed or added back as needed.</li>
                 <li> CSS Grid - I'm super excited about CSS Grid & jumped at the opportunity to use it. As such there are still a few issues with the Edge browser, which is a to do below.</li>
+                <li> Performance - basic review was done using Google's Lighthouse extension. A more in depth dive is to do</li>
               </ul>
 
               <h3> Still Left To Do: </h3>
               <ul style={ulStyle}> 
                 <li>CSS Grid fallbacks for older browsers. </li> 
+                <li> Performance - super important!</li>
                 <li> ARIA/A11y refactoring</li>
                 <li> Write! - I've always been a writer and am eager to start on dev topics.</li>                
               </ul>

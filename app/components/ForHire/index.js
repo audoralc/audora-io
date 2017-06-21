@@ -9,12 +9,13 @@ import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import glamorous from 'glamorous'; 
 
+
 class ForHire extends React.PureComponent {
   render() {
 
     const forHire = {
       gridRow: '3 / 3', 
-      gridColumn: '1 / 4',
+      gridColumn: '1 / 5',
     }
 
       const hireContent = {
@@ -41,6 +42,9 @@ class ForHire extends React.PureComponent {
 
     return (
       <div style={forHire}>
+     
+
+      
       <Paper zDepth={2}> 
         <div style={hireContent}> 
         <p> 🚨🌟🚨</p>
@@ -49,6 +53,8 @@ class ForHire extends React.PureComponent {
         <Link href="/resume.pdf" style={linkStyle}> 🔥 Resume 🔥 </Link>
         </div>
       </Paper>
+  
+
       </div>
     );
   }

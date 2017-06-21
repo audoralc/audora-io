@@ -43,8 +43,8 @@ const colors= {
 class Skills extends React.PureComponent {
   render() {
     const skillsStyle = {
-      gridRow: '3 / 3', 
-      gridColumn: '4 / 7 span',       
+      gridRow: '4 / 4', 
+      gridColumn: '2 / 7 span',       
       marginLeft: '5vw',
     }
 
