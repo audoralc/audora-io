@@ -54,7 +54,7 @@ class HomeAboutMe extends React.PureComponent {
              
               <p style={intro}> I'm Audora, a Helper & Maker of Things. </p> 
               
-              <p> Also a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React <img src="http://i.imgur.com/DTGywL1.png" height='24px' width='24px' />
+              <p> Also a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React <img src="http://audora.me/img/react-logo.png" height='24px' width='24px' />
                 
                  &nbsp;) & the LEMP stack, but eyeing MERN & MEAN.  </p>
               <Link to="/about"> </Link>

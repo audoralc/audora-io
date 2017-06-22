@@ -80,7 +80,7 @@ export default class About extends React.PureComponent {
 
           <div style={headerBlock}>
             <StyledHeaderTwo>it me</StyledHeaderTwo>
-            <img src="http://i.imgur.com/WRTsxRz.jpg" width="40%" height="60%" />
+            <img src="http://audora.me/img/my-pic.jpg" width="40%" height="60%" />
           </div>
 
           <StyledSection>

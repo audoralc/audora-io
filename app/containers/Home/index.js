@@ -39,8 +39,8 @@ export default class Home extends
    const pageGrid = { 
       display: 'grid',
       gridTemplateColumns: '1fr auto auto auto auto auto 1fr', 
-      gridTemplateRows: '18vh auto auto auto auto 1fr', 
-      gridRowGap: '10vh',       
+      gridTemplateRows: 'auto auto auto auto auto 1fr', 
+      gridRowGap: '5vh',       
     }     
 
    

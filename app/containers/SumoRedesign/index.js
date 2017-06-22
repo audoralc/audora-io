@@ -130,16 +130,16 @@ export default class SumoRedesign extends React.PureComponent {
             className="carousel-fade"
           >
             <div style={{height:"80%",width:"100%"}}>
-              <img src="http://i.imgur.com/ILUXgj0.png" width="100%" /> 
+              <img src="http://audora.me/img/srl-home.png" width="100%" /> 
             </div>
             <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-               <img src="http://i.imgur.com/Hj5KnF4.png" width="100%"/>  
+               <img src="http://audora.me/img/srl-about.png" width="100%"/>  
             </div>
             <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-              <img src="http://i.imgur.com/KVviOfz.png" width="100%"/>
+              <img src="http://audora.me/img/srl-contact.png" width="100%"/>
             </div>
             <div>
-              <img src="http://i.imgur.com/mWU1Aob.gif" width="100%"/>
+              <img src="http://audora.me/img/dash-example.gif" width="100%"/>
             </div>
           </React_Bootstrap_Carousel>
         </div>

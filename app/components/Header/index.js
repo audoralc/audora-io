@@ -43,8 +43,8 @@ class Header extends React.PureComponent {
       display: 'grid', 
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       width: '100%',    
-      backgroundImage: 'url(http://i.imgur.com/MfgeDM1.png', 
-      backgroundSize: '100vw 15vh',    
+      backgroundImage: 'url(http://audora.me/img/header.png', 
+      backgroundSize: '100vw 15vh', 
     }
 
       const navBlock = { 

@@ -22,7 +22,7 @@ class ForHire extends React.PureComponent {
         background: '#673AB7', 
         textAlign: 'center', 
         color: '0', 
-        marginTop: '-8vh',
+        
         padding: '1em',
       }
 
@@ -50,7 +50,7 @@ class ForHire extends React.PureComponent {
         <p> 🚨🌟🚨</p>
         <h2 style={headerStyle}> For Hire</h2>
         <p style={textStyle}> I'm currently looking for a team that needs an entry-level front-end or fullstack developer. Ideally I would do a lot of Javascript work & y'all have a UI developer I could gleam some design knowledge from. 😉</p>
-        <Link href="/resume.pdf" style={linkStyle}> 🔥 Resume 🔥 </Link>
+        <Link href="http://audora.me/storage/chalker-resume.pdf" style={linkStyle}> 🔥 Resume 🔥 </Link>
         </div>
       </Paper>
   

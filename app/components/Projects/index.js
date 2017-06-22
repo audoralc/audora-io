@@ -60,21 +60,24 @@ class Projects extends React.PureComponent {
       }
         const headerBlock ={
           display: 'flex',
-          flexDirection: 'row', 
+          flexDirection: 'column', 
           justifyContent: 'space-around',
-          margin: '0 0 3vh 0',
+          padding: '0 0 3vh 0',
         }
           const specialProject = {
+            padding: '.5em', 
+            width: '200px',
             textAlign: 'center',
             border: '2px solid #673AB7',
-            padding: '0 .5em .5em .5em',
+            marginTop: '2%',            
           }
         const cardBlock ={ 
            display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
           justifyContent: 'space-between',
-          alignContent: 'stretch', 
+          alignContent: 'flex-end',
+          paddingTop: '1em', 
         }
       
       const linkBlock = { 
@@ -94,7 +97,7 @@ class Projects extends React.PureComponent {
           
           <div style={headerBlock}> 
             <StyledHeader> 💻 My Work </StyledHeader>
-            <div style={specialProject}> 
+              <div style={specialProject}> 
               <h3>This Site</h3>  
               <a href="/this-site">🌠Case Study & To Do 🌠 </a> 
             </div>  
@@ -111,7 +114,7 @@ class Projects extends React.PureComponent {
 
                <Link href="/sumo-redo">
                 <Paper zDepth={3}> 
-                  <img src="http://i.imgur.com/ILUXgj0.png" height="500px" width="350px" />
+                  <img src="http://audora.me/img/srl-home.png" height="400px" width="300px" />
                 </Paper>
                </Link>
               </Card>   
@@ -124,8 +127,8 @@ class Projects extends React.PureComponent {
                  <StyledLink href="/pyxis-study"> 🌠Case Study </StyledLink>                
                </div>
                <Link href="/pyxis"> 
-                  <Paper zDepth={3} > 
-                    <img src="http://i.imgur.com/ZEmPcI8.png"  height="500px" width="350px"/>
+                  <Paper zDepth={3} style={{width:'300px'}}> 
+                    <img src="http://audora.me/img/cropped-pyxis.png"  height="400px" width="300px"/>
                   </Paper>
                 </Link>
               </Card>       
@@ -139,11 +142,11 @@ class Projects extends React.PureComponent {
                </div> 
                <Link href="/semper-study">
                 <Paper zDepth={3}> 
-                  <img src="http://i.imgur.com/W3MgJCp.jpg" height="500px" width="350px" />
+                  <img src="http://audora.me/img/semper-one.jpg" height="400px" width="300px" />
                 </Paper>
                </Link>   
               </Card> 
-
+              
           </section>
         </Paper>
       </div>

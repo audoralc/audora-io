@@ -40,13 +40,12 @@ export default class PyxisStudy extends React.PureComponent {
         margin: '0 auto',   
       }
 
-        const content = {
+        const content = { 
           background: "#D1C4E9",
           display: "flex", 
           flexDirection: 'column',
           height: '100%',         
-        }
-
+        } 
            const textBlock = {
             padding: '2em 2em 0 2em', 
             fontSize: '1.15em',  
@@ -124,13 +123,13 @@ export default class PyxisStudy extends React.PureComponent {
             className="carousel-fade"
           >
             <div style={{height:"80%",width:"100%", margin:'0 auto'}}>
-             <img src="http://i.imgur.com/RT9JCKX.png" width="100%"/>  
+             <img src="http://audora.me/img/pyxis-home.png" width="100%"/>  
             </div>
             <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-               <img src="http://i.imgur.com/UkZ7fAp.png"  width="100%" />  
+               <img src="http://audora.me/img/pyxis-about.png"  width="100%" />  
             </div>
             <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-             <img src="http://i.imgur.com/8Gmi4fB.png" width="100%" />
+             <img src="http://audora.me/img/pyxis-faq.png" width="100%" />
             </div>
           </React_Bootstrap_Carousel>
         </div>

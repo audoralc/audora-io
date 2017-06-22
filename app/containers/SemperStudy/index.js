@@ -93,13 +93,13 @@ export default class SemperStudy extends React.PureComponent {
             className="carousel-fade"
           >
             <div style={{height:"80%",width:"100%", margin:'0 auto'}}>
-             <img src="http://i.imgur.com/W3MgJCp.jpg" width="100%"/>  
+             <img src="http://audora.me/img/semper-one.jpg" width="100%"/>  
             </div>
             <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-               <img src="http://i.imgur.com/ZdVozMV.jpg" width="100%" />  
+               <img src="http://audora.me/img/semper-two.jpg" width="100%" />  
             </div>
             <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-             <img src="http://i.imgur.com/68wPR5I.jpg" width="100%" />
+             <img src="http://audora.me/img/semper-three.jpg" width="100%" />
             </div>
           </React_Bootstrap_Carousel>
         </div>

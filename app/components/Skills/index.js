@@ -51,15 +51,17 @@ class Skills extends React.PureComponent {
       const skillsBlock = {
         display: 'flex', 
         flexDirection: 'column',
-        padding: '1em', 
-        background: "#909090",
-        
+        minWidth: '350px',
+        padding: '.5em', 
+        background: "#909090",        
       }
 
       const skillGrouping = {
         display: 'flex', 
         flexDirection: 'row',
+        flexWrap: 'wrap',
         justifyContent: 'space-around',
+        width: '85%',
         
       }
 
