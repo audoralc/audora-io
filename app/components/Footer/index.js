@@ -37,7 +37,8 @@ class Footer extends React.PureComponent {
   render() {
     const footerContainer= {
       gridRow: '6 / 6', 
-      gridColumn: '2 / 7', 
+      gridColumn: '3 / 6', 
+      minWidth: '350px',
     }
 
   
@@ -45,6 +46,7 @@ class Footer extends React.PureComponent {
       display: "flex",
       flexDirection: "column",
       background: colors.lightGreen,
+      padding: '.5em 1em',
     }
 
     const footerFontStyle={

@@ -13,6 +13,8 @@ import ReactTooltip from 'react-tooltip';
 
 const StyledHeader = glamorous.h2 ({
   color: "#673AB7", 
+  textAlign: 'center',
+  padding: '0 1em',
 })
 
 const StyledProjectHeader = glamorous.h3 ({ 
@@ -28,7 +30,10 @@ const StyledLink = glamorous.a ({
 })
 
 const Card = glamorous.div ({ 
-  margin: '2.5% 5%',
+  backgroundImage: 'url(http://i.imgur.com/jxZe93K.png)',
+  backgroundPosition: 'cover',
+  margin: '0 2em 5% 2em',
+  minWidth: '350px',
 })
 
 const colors= {
@@ -50,14 +55,10 @@ class Projects extends React.PureComponent {
     const projectBlock = { 
         gridRow: '5 / 5', 
         gridColumn: '2 / 5 span', 
-        
+        margin: '0 auto',       
       }
 
-      const theStuff ={         
-        background: colors.lightGreen,
-        padding: "1em", 
-        
-      }
+    
         const headerBlock ={
           display: 'flex',
           flexDirection: 'column', 
@@ -65,39 +66,45 @@ class Projects extends React.PureComponent {
           padding: '0 0 3vh 0',
         }
           const specialProject = {
-            padding: '.5em', 
-            width: '200px',
+            width: '300px',
             textAlign: 'center',
-            border: '2px solid #673AB7',
-            marginTop: '2%',            
+            margin: '1.5em auto', 
+            backgroundImage: 'url(http://i.imgur.com/o1nYwKa.png)', 
+            backgroundPosition: 'cover',         
           }
+
+
         const cardBlock ={ 
-           display: 'flex',
+          display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
-          justifyContent: 'space-between',
           alignContent: 'flex-end',
           paddingTop: '1em', 
+          width: '100%',
         }
-      
-      const linkBlock = { 
-        display: 'flex',
-        flexDirection: 'row',
-        flexWrap: 'wrap', 
-        justifyContent: 'space-around',
-      }
+          const cardHeader = {
 
-      const statusStyle = {
-        textAlign: 'center',
-      }
+          }
+
+          const linkBlock = { 
+            display: 'flex',
+            flexDirection: 'row',
+            flexWrap: 'wrap', 
+            justifyContent: 'space-around',
+          }   
+
+          const picStyle = {
+            margin: '0 auto',
+          }             
 
     return (
       <div style={projectBlock}>
-        <Paper zDepth={2} style={theStuff}> 
+        
           
           <div style={headerBlock}> 
-            <StyledHeader> 💻 My Work </StyledHeader>
-              <div style={specialProject}> 
+             <StyledHeader> 💻 My Work </StyledHeader> 
+            
+            <div style={specialProject}> 
               <h3>This Site</h3>  
               <a href="/this-site">🌠Case Study & To Do 🌠 </a> 
             </div>  
@@ -105,18 +112,24 @@ class Projects extends React.PureComponent {
 
           <section style={cardBlock}> 
                     
-              <Card> 
+              <Card>
+               <div style={cardHeader}>  
                <StyledProjectHeader>   <StyledLink href="http://sumorobotleague.com">sumorobotleague.com </StyledLink>Redesign </StyledProjectHeader> 
+               </div> 
+
                <div style={linkBlock}> 
                  <StyledLink href="https://github.com/audoralc/sumorobot-store-clientside">  Github <FaCode></FaCode> </StyledLink>
                  <StyledLink href="/sumo-redo"> 🌠Case Study </StyledLink>
                </div> 
 
+               <div style={picStyle}>
                <Link href="/sumo-redo">
-                <Paper zDepth={3}> 
+                <Paper zDepth={3} style={{width:'300px'}}> 
                   <img src="http://audora.me/img/srl-home.png" height="400px" width="300px" />
                 </Paper>
                </Link>
+               </div>
+
               </Card>   
 
               <Card> 
@@ -134,21 +147,25 @@ class Projects extends React.PureComponent {
               </Card>       
 
                <Card> 
-               <StyledProjectHeader> semper-disco </StyledProjectHeader> 
-               <p style={statusStyle}>📐In Progress</p>  
+              
+               <StyledProjectHeader> semper-disco (📐In Progress)</StyledProjectHeader>
+                
+            
+               
                <div style={linkBlock}> 
+                 
                  <StyledLink href="https://github.com/audoralc/semper-disco">  Github <FaCode></FaCode> </StyledLink>
                  <StyledLink href="/semper-study"> 🌠Design Plan </StyledLink>                
                </div> 
                <Link href="/semper-study">
-                <Paper zDepth={3}> 
+                <Paper zDepth={3} style={{width:'300px'}}> 
                   <img src="http://audora.me/img/semper-one.jpg" height="400px" width="300px" />
                 </Paper>
                </Link>   
               </Card> 
               
           </section>
-        </Paper>
+       
       </div>
     );
   }

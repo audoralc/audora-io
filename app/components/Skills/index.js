@@ -9,23 +9,22 @@ import Paper from 'material-ui/Paper';
 import glamorous from 'glamorous'; 
 
 const StyledHeader = glamorous.h3 ({ 
-  color: "#B3E5FC",
+  color: "#00C853",
   textAlign: 'center',
   margin: '0', 
   fontWeight: '700',
 })
 
 const StyledSection = glamorous.section ({ 
-  display: 'flex',
-  flexDirection: 'column',
-  color: "#FAFAFA",
-  fontWeight: '600', 
-  width: "40%",
+  color: "#424242",
+  fontWeight: '600',
+  maxWidth: '200px' 
 })
 
 const StyledUL = glamorous.ul({ 
   listStyle: "none",
-  padding: '0',
+  padding: '1em',
+  fontSize: '.85em',
 })
 
 const colors= {
@@ -44,35 +43,35 @@ class Skills extends React.PureComponent {
   render() {
     const skillsStyle = {
       gridRow: '4 / 4', 
-      gridColumn: '2 / 7 span',       
-      marginLeft: '5vw',
+      gridColumn: '1 / 7 span',
+           
     }
 
       const skillsBlock = {
         display: 'flex', 
-        flexDirection: 'column',
+        flexDirection: 'row',
+        justifyContent: 'space-around', 
+        flexWrap: 'wrap',
         minWidth: '350px',
-        padding: '.5em', 
-        background: "#909090",        
+        padding: '.75em', 
+        background: "rgba(66,66,66, .25)",               
       }
 
-      const skillGrouping = {
+      const skillLists = { 
         display: 'flex', 
         flexDirection: 'row',
+        justifyContent: 'space-between', 
         flexWrap: 'wrap',
-        justifyContent: 'space-around',
-        width: '85%',
-        
       }
-
+  
     return (
       <div style={skillsStyle}>
         
-        <Paper zDepth={2} style={skillsBlock}>      
-
+        <div style={skillsBlock}>      
+        
             <h2>🎒 Skills</h2> 
-            
-            <div style={skillGrouping}> 
+       
+            <div style={skillLists}> 
               <StyledSection> 
                 <StyledHeader>Front-end</StyledHeader>
               
@@ -92,9 +91,7 @@ class Skills extends React.PureComponent {
                   <li>MySQL</li>
                 </StyledUL>
               </StyledSection>
-              </div> 
-
-              <div style={skillGrouping}>
+                      
               <StyledSection> 
                 <StyledHeader>Dev Tools</StyledHeader>
                 <StyledUL>
@@ -111,6 +108,7 @@ class Skills extends React.PureComponent {
                 <StyledHeader>Learning</StyledHeader> 
                 <StyledUL> 
                   <li> Javascript - always</li>
+                  <li> Node & Express </li>
                   <li> Agile Development </li>
                   <li> UX/UI Principles </li>                    
                   <li>Test Driven Development </li> 
@@ -118,8 +116,8 @@ class Skills extends React.PureComponent {
                   <li> More MySQL</li>
                 </StyledUL>
               </StyledSection> 
-            </div> 
-        </Paper>
+          </div>
+        </div>
       </div>
     );
   }

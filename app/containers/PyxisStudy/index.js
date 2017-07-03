@@ -89,7 +89,7 @@ export default class PyxisStudy extends React.PureComponent {
                <Paper zDepth={2} style={objStyle}>
                  <div> 
                   <h3>📌 Objective:</h3>
-                  <p style={explainBlock}> Create a website for a subscription box based on marketing proposal from local agency. Integrate as many features & as much marketing know-how as possible. Design elements & assets were not provided. 
+                  <p style={explainBlock}> Create a website for a subscription box service based on marketing proposal from local agency. Integrate as many features & as much marketing know-how as possible. Design elements & assets were not provided. 
                   </p>
                 </div>
                 </Paper>
@@ -102,16 +102,16 @@ export default class PyxisStudy extends React.PureComponent {
 
                   <p>Color palette was inspired by the 14th cen frescos of Giotto de Bondone (an example of which is on Slide 3 the FAQ page). The warm neutrals were complimented by rich, saturated colors where appropriate. The major call to action colors were blue & green, but other colors, each historically associated with a specific deadly sin were used in the backgrounds/ mouseover backgrounds on <a href="/pyxis"> the front page.</a></p>
 
-                  <p> All flat icons other than social icons are in svg format.</p>
+                  <p> All flat icons & images, other than social icons, are in svg format.</p>
 
-                  <p> Without design elements I tried to get as creaive as possible with plain CSS. </p>
+                  <p> Without graphic design elements I tried to get as creaive as possible with plain CSS. </p>
 
                 </div> 
 
                 <div style={explainBlock}>
                   <h4 style={h4Style}> 💾 Server-side Improvements (handled by project partner & all around amazing backend guy Austin):</h4>
                   <p> Payment system mockup via Stripe's API, which has nifty options for reoccuring subscription charges. </p> 
-                  <p> Invoice PDF generation for every charge. </p> 
+                  <p> Invoice PDF generation for every order. </p> 
                 </div> 
               
               </div> 

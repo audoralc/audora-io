@@ -84,7 +84,7 @@ export default class About extends React.PureComponent {
           </div>
 
           <StyledSection>
-            <StyledHeaderThree> export default friendship; </StyledHeaderThree>
+            <StyledHeaderThree> export default friendship; 🌈 </StyledHeaderThree>
             
             <p>
               So, I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React) & the LEMP stack, but eyeing MERN & MEAN. 

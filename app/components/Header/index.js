@@ -48,8 +48,8 @@ class Header extends React.PureComponent {
     }
 
       const navBlock = { 
-        gridColumn: '1 / 2', 
-        margin: '5vh 1em',        
+        gridColumn: '1 / 2 span', 
+        margin: '7vh 5vw 5vh .5em',        
       }
 
         const navbar = {
@@ -57,7 +57,6 @@ class Header extends React.PureComponent {
           flexDirection: 'row',
           margin: '1em 0 0 0', 
           justifyContent: 'space-around', 
-          width: '100%',
           fontSize: '1.15em',
         }
 
@@ -80,7 +79,7 @@ class Header extends React.PureComponent {
              🏠 </Link> </a>
              <ReactTooltip place="bottom" type="dark" effect="float"/>
              </p>
-             <p><a data-tip="blog"><Link to="/blog">  ✍ </Link></a>
+             <p><a data-tip="blog"><Link to="/blog">  <img src="http://i.imgur.com/PcaagN6.png"  height="24px" width="24px" /> </Link></a>
                <ReactTooltip place="bottom" type="dark" effect="float"/>
              </p>
              <p> <a data-tip="about"><Link to="/about">  👩‍💻 </Link></a>

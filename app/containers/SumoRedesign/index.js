@@ -109,17 +109,17 @@ export default class SumoRedesign extends React.PureComponent {
                 <div style={explainBlock}> 
                 <h4 style={h4Style}>📏 Design thinking:</h4>
 
-                <p>  The original site to me was a little too dark & strong for any appeal to young people, so I softened the dark neutrals, added a few primary colors and more whitespace.</p>
+                <p>  In my opinion, the original site was a little too dark & strong for a site with young people in mind, so I softened the dark neutrals, added a few primary colors and more whitespace.</p>
 
-                <p> The monospace font used in the navigation & for headers was chosen to invoke the programming element of the Robot League, and happened to have the perfect name Share Tech Mono. </p>
+                <p> The monospace font used in the navigation & for headers was chosen to invoke the programming element of the Robot League, and happened to have the perfect name: Share Tech Mono. </p>
 
-                <p> Photos were chosen carefully to display the diversity of the teams, so that any potential student, or teacher thinking of their students, could find themselves represented. </p>
+                <p> Photos were chosen carefully to display the diversity of the teams, so that any potential student, or teacher thinking of their students, could find representation. </p>
                 </div>
 
                 <div style={explainBlock}>
                 <h4 style={h4Style}> 💾 Server-side Improvements:</h4>
 
-                <p> Administrative duties made easier via CRUD-based dashboards. Multiple tasks grouped together on the same using components within Material UI tabs.  </p>  
+                <p> Administrative duties made easier via CRUD-based dashboards. Multiple tasks grouped together on the same page using components within Material UI tabs.  </p>  
                 </div> 
               </div> 
 
