@@ -13,47 +13,33 @@ import glamorous from 'glamorous';
 
 const DetailGroup = glamorous.div({
     display: 'flex', 
-    flexDirection: 'column',
-    alignItems: 'flex-end',       
-    flexWrap: 'wrap',       
-    margin: '.5em 0',
-    color: "#FFECDB", 
+    flexDirection: 'row',      
+    flexWrap: 'wrap',  
+    justifyContent: 'space-between',                
+    margin: '1em 0',
+    textAlign: 'center', 
+    alignItems: 'center',
 })
-    const StyledHeader = glamorous.h3 ({
-        minWidth: '80px', 
-        color: "#FAFAFA",
-        borderTop: '4px solid #434343',
-        paddingTop: '.5em',   
-        fontFamily: 'Lato, sans serif',
-        fontSize: '1.15em',
-        marginTop: '-.5em',    
+    const StyledHeader = glamorous.h2 ({
+        minWidth: '80px',
     })
 
     const SmallBlock = glamorous.div ({ 
     background: '#0c3a7f',
-    height: '14vw', 
-    width: '14vw',
-    textAlign: 'center',
-    fontSize: '1.15em',
-    fontWeight: 'bold',
+    height: '5vw', 
+    width: '30vw',
   })
 
     const MediumBlock = glamorous.div({
-          height: '16vw', 
-          width: '16vw', 
+          height: '5vw', 
+          width: '50vw', 
           background: '#0c3a7f',
-          textAlign: 'center',
-          fontSize: '1.15em',
-          fontWeight: 'bold',
     })
 
     const LargeBlock = glamorous.div({
-          height: '20vw', 
-          width: '20vw', 
+          height: '5vw', 
+          width: '70vw', 
           background: '#0c3a7f',
-          textAlign: 'center',
-          fontSize: '1.15em',
-          fontWeight: 'bold',
     })
 
 
@@ -64,57 +50,50 @@ class TierSystem extends React.PureComponent {
     const tierRibbon = { 
         background: '#f6edeb',
         gridRow: '3 / 3', 
-        gridColumn: '1 / 6 span',
-        padding: '5% 0',       
+        gridColumn: '1 / 6 span',       
       }
+
+        const headerStyle = {
+          textAlign: 'center', 
+          fontFamily: 'Crimson Text, serif', 
+          color: '#017B63',
+          fontSize: '2em',
+        }
     
-        const tierDetails = {             
+        const tierDetails = {                
           display: 'flex', 
-          flexDirection: 'row',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
+          flexDirection: 'column',
+          justifyContent: 'space-between',  
           margin: '0 auto', 
-          paddingBottom: '5%',     
+          padding: '2.5% 5%', 
+          width: '80vw',  
         }
 
-        const h2Style = {
-          margin: '1em',
-          fontSize: '1.75em',
+        const pStyle = {
+          color: '#FAFAFA',
         }
 
     return (
 
       <div style={tierRibbon}> 
-
-        <h2 style={h2Style}> Choose your level</h2>
+          <h3 style={headerStyle}> choose a level</h3>
 
         <div style={tierDetails}>    
           
 
-          <DetailGroup>           
-            <SmallBlock>              
-             <p> 3 items  </p>
-             <p> 3 x $39</p>
-              <StyledHeader> Small </StyledHeader> 
-            </SmallBlock>   
+          <DetailGroup>            
+            <SmallBlock> <p style={pStyle}> 3 items $39 </p></SmallBlock> 
+            <StyledHeader> Small </StyledHeader>  
           </DetailGroup> 
 
           <DetailGroup>
-           
-            <MediumBlock>
-               <p>5 items </p>
-               <p>3 x $59</p>
-               <StyledHeader> Medium </StyledHeader>
-              </MediumBlock> 
+            <MediumBlock><p style={pStyle}>5 items $59</p></MediumBlock> 
+            <StyledHeader> Medium </StyledHeader>            
           </DetailGroup> 
 
           <DetailGroup>
-            
-           <LargeBlock>
-              <p>7 items </p>
-              <p>3 x $79</p>
-              <StyledHeader> Large </StyledHeader>
-              </LargeBlock>     
+            <LargeBlock><p style={pStyle}>7 items $79</p></LargeBlock>  
+            <StyledHeader> Large </StyledHeader>            
           </DetailGroup> 
         
 

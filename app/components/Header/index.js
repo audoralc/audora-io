@@ -79,7 +79,7 @@ class Header extends React.PureComponent {
              🏠 </Link> </a>
              <ReactTooltip place="bottom" type="dark" effect="float"/>
              </p>
-             <p><a data-tip="blog"><Link to="/blog">  <img src="http://i.imgur.com/PcaagN6.png"  height="24px" width="24px" /> </Link></a>
+             <p><a data-tip="blog"><Link to="/blog">  <img src="http://audora.me/img/writing-hand.png"  height="24px" width="24px" /> </Link></a>
                <ReactTooltip place="bottom" type="dark" effect="float"/>
              </p>
              <p> <a data-tip="about"><Link to="/about">  👩‍💻 </Link></a>
