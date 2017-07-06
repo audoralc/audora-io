@@ -15,8 +15,9 @@ class ForHire extends React.PureComponent {
 
     const forHire = {
       gridRow: '3 / 3', 
-      gridColumn: '1 / 4',
-      minWidth: '300px',     
+      gridColumn: '1 / 3',
+      minWidth: '300px',
+      maxWidth: '800px',     
     }
 
       const hireContent = {
@@ -37,7 +38,8 @@ class ForHire extends React.PureComponent {
 
       const linkStyle = {
         fontSize: '1.25em', 
-        color: '#FAFAFA', 
+        color: '#FAFAFA',
+        marginLeft: '.5em', 
       }
 
     return (
@@ -50,7 +52,9 @@ class ForHire extends React.PureComponent {
         <p> 🚨🌟🚨</p>
         <h2 style={headerStyle}> For Hire</h2>
         <p style={textStyle}> I'm currently looking for a team that needs an entry-level front-end or fullstack developer. Ideally I would do a lot of Javascript work & y'all have a UI developer I could glean some design knowledge from. 😉</p>
-        <Link href="http://audora.me/storage/chalker-resume.pdf" style={linkStyle}> 🔥 Resume 🔥 </Link>
+        <Link href="http://audora.me/storage/chalker-resume.pdf" style={linkStyle}> 🔥 Resume  </Link>
+        <Link href="mailto:audoralc@gmail.com" style={linkStyle}> 📧 Email  </Link>
+        <Link href="https://github.com/audoralc" style={linkStyle}> 🗃 Github  </Link>
         </div>
       </Paper>
   

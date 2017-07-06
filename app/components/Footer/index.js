@@ -37,8 +37,7 @@ class Footer extends React.PureComponent {
   render() {
     const footerContainer= {
       gridRow: '6 / 6', 
-      gridColumn: '3 / 6', 
-      minWidth: '350px',
+      gridColumn: '1 / 4 span', 
     }
 
   
@@ -63,6 +62,8 @@ class Footer extends React.PureComponent {
       display: "flex",
       flexDirection: "row",
       justifyContent: "space-around",
+      width: '50vw',
+      margin: '0 auto',
     }
 
     const iconListStyle= {

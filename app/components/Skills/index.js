@@ -43,7 +43,7 @@ class Skills extends React.PureComponent {
   render() {
     const skillsStyle = {
       gridRow: '4 / 4', 
-      gridColumn: '1 / 7 span',
+      gridColumn: '1 / 4 span',
            
     }
 

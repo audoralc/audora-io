@@ -32,8 +32,8 @@ const StyledLink = glamorous.a ({
 const Card = glamorous.div ({ 
   backgroundImage: 'url(http://i.imgur.com/jxZe93K.png)',
   backgroundPosition: 'cover',
-  margin: '0 2em 5% 2em',
-  minWidth: '350px',
+  margin: '2vw 0', 
+  minWidth: '350px', 
 })
 
 const colors= {
@@ -54,16 +54,12 @@ class Projects extends React.PureComponent {
 
     const projectBlock = { 
         gridRow: '5 / 5', 
-        gridColumn: '2 / 5 span', 
-        margin: '0 auto',       
+        gridColumn: '1 / 4 span',        
       }
 
     
         const headerBlock ={
-          display: 'flex',
-          flexDirection: 'column', 
-          justifyContent: 'space-around',
-          padding: '0 0 3vh 0',
+         margin: '0 auto',
         }
           const specialProject = {
             width: '300px',
@@ -78,9 +74,9 @@ class Projects extends React.PureComponent {
           display: 'flex',
           flexDirection: 'row',
           flexWrap: 'wrap',
-          alignContent: 'flex-end',
-          paddingTop: '1em', 
-          width: '100%',
+          justifyContent: 'space-around', 
+
+         
         }
           const cardHeader = {
 
@@ -145,7 +141,9 @@ class Projects extends React.PureComponent {
                   </Paper>
                 </Link>
               </Card>       
+</section>
 
+<section style={cardBlock}> 
                <Card> 
               
                <StyledProjectHeader> semper-disco (📐In Progress)</StyledProjectHeader>
@@ -163,8 +161,8 @@ class Projects extends React.PureComponent {
                 </Paper>
                </Link>   
               </Card> 
-              
-          </section>
+           </section>   
+          
        
       </div>
     );

@@ -48,7 +48,7 @@ export default class About extends React.PureComponent {
   render() {
     const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+      gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '8h 25vh auto auto 1fr', 
       gridRowGap: '5vh',       
     }   
@@ -90,7 +90,7 @@ export default class About extends React.PureComponent {
               So, I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React) & the LEMP stack, but eyeing MERN & MEAN. 
             </p>
             <p>
-              Topics I'm interested in include: creating opportunities &increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
+              Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health. 
             </p>
             <p> 
               Other interests include hoarding developer resources, making my home as comfy as possible, and pretty much any kind of media. 

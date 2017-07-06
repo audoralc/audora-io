@@ -36,7 +36,7 @@ export default class SumoRedesign extends React.PureComponent {
 
     const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+      gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr', 
       gridRowGap: '10vh', 
           
@@ -71,6 +71,7 @@ export default class SumoRedesign extends React.PureComponent {
             const explainBlock = {
               width: '85%', 
               margin: '5% auto',
+              padding: '2%',
             }
 
               const h4Style = {

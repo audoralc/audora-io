@@ -15,14 +15,14 @@ export default class ThisSite extends React.PureComponent {
   render() {
     const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
+      gridTemplateColumns: '1fr 1fr 1fr 1fr', 
       gridTemplateRows: '15vh auto auto auto auto 1fr', 
       gridRowGap: '10vh',       
     }     
 
       const bodyWrapper = {
         gridRow: '2 / 5', 
-        gridColumn: '1 / 7 span',
+        gridColumn: '1 / 4 span',
         width: '90vw',     
         margin: '5vh',
       }
