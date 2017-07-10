@@ -19,6 +19,9 @@ constructor(props) {
     body: "",
     image:"",
     preview:"",
+    blurb: "", 
+    slug: "", 
+    date: "", 
     }
 }
 // handle functions
@@ -34,6 +37,18 @@ handleTitle = (event) => {
 handleBody = (event) => {
   this.setState({
     body: event.target.value
+  })
+}
+
+handleBlurb = (event) => { 
+  this.setState({ 
+    blurb: event.target.value
+  })
+}
+
+handleSlug = (event) => { 
+  this.setState({ 
+    slug: event.target.value
   })
 }
 
@@ -55,13 +70,16 @@ handleImage = (event) => {
 
 //take temp stored to backend, condense states into one var
 storeArticle = () => {
-  var data= new FormData();
+  var data = new FormData();
   data.append("title", this.state.title);
   data.append("body", this.state.body);
+  data.append("blurb", this.state.blurb);
+  data.append("slug", this.state.slug);
+  data.append("date", this.state.date);
   data.append("image", this.state.image);
   data.append("preview", this.state.image);
 /*another JS func used to send & recieve, will put API point -an URL- in quotes  ex= fetch("http://audora.me:8000/API/storeArticle")*/
-    fetch("http://audora.me/api/storeArticle", {
+    fetch("http://localhost:8000/api/storeArticle", {
 //getting & posting, body is builtin key of fetch
         method: "post",
         body: data,
@@ -140,6 +158,10 @@ return response.json();
         <input onChange={this.handleTitle} type="text" style={titleStyle}/>
 
         <textArea onChange={this.handleBody} style={textAreaStyle} > </textArea>
+
+        <input onChange={this.handleBlurb} type="text" />
+
+        <input onChange={this.handleSlug} type="text" />
 
         <input onChange={this.handleImage} type="file" style={imgInputStyle}/>
 

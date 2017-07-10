@@ -16,6 +16,8 @@ import Responsive from 'react-responsive';
 const StyledArticle = glamorous.section ({ 
   display: 'flex', 
   flexDirection: 'row',  
+  justifyContent: 'space-between',
+  width: '90vw',  
 })
 
 const MobileStyledArticle = glamorous.section ({ 
@@ -54,41 +56,62 @@ const Default = ({ children }) => <Responsive minWidth={768} children={children}
 const Mobile = ({ children }) => <Responsive maxWidth={768} children={children} />;
 
 export default class Blog extends React.PureComponent {
+  constructor(props){
+    super(props); 
+    this.state={
+      articles:[], 
+    }
+  }
 
+ componentWillMount(){
+    fetch('http://localhost:8000/api/getArticles')
+
+    .then(function(response) {
+      return response.json();
+    })
+    .then(function(json) {
+      this.setState({
+        articles:json
+      })
+    }.bind(this))
+  }
 
   render() {
     const pageGrid = { 
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
-      gridTemplateRows: '15vh auto auto auto auto 1fr', 
-      gridRowGap: '5vh',       
+      gridTemplateColumns: '1fr 1fr 1fr 1fr', 
+      gridTemplateRows: '15vh 1fr 1fr', 
+      gridRowGap: '5vh',     
     }   
-
 
       const blogStyle= {
         display: "flex",
         flexDirection:"column",
-        gridRow: '2 / 5',
-        gridColumn: '1 / 7 span',
+        gridRow: '2 / 3',
+        gridColumn: '1 / 4 span',
         margin: '0 2.5vw', 
+        minHeight: '85vh',  
       }
+        const blogRow ={ 
+          display: 'flex',
+          flexDirection: 'row',
+               
+        }
 
-
-        const textBlock = { 
+        const textBlock = {          
           background: "#D1C4E9",
-          marginBottom: "5%",
-          width: '75%',
+          margin: "5%",
           padding: '1em',
+          width: '70vw',
         }
 
         const imageStyle = {
-          margin: "0 5% 5% 0",
-          width: '25%',
+          margin: "5%",
         }
 
         const mobileImageStyle = {
           margin: "0 5% 5% 0",
-          width: '60%',
+      
         }
 
 
@@ -104,41 +127,28 @@ export default class Blog extends React.PureComponent {
 
         <main style={blogStyle}>
 
-          <div> 
-            <img src="http://placehold.it/100x100" style={mobileImageStyle}/>
-            <Paper zDepth={2} style={textBlock}>
-              <a href="/blog/post"><StyledTitle>  Article 1 </StyledTitle></a>
-              <article>
-                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <StyledTime>17:00</StyledTime>
-              </article>
-            </Paper>
-          </div> 
+                     
+              {this.state.articles.map((a, i) => (
+            <div>  
+              <Link to={'/${a.id}'} style={imageStyle}>
+                <img src={a.image} />
+                </Link>  
 
-          <div> 
-            <img src="http://placehold.it/100x100" style={mobileImageStyle}/>
-            <Paper zDepth={2} style={textBlock}>
-              <a href="/blog/post"><StyledTitle>  Article 2 </StyledTitle></a>
-              <article>
-                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <StyledTime>16:00</StyledTime>
-              </article>
-            </Paper>
-          </div>         
+              <Paper zDepth={2} style={textBlock} key={i}>       
+                <Link to={'/${a.id}'}>
+                <StyledTitle> {a.title} </StyledTitle>
+                </Link>
 
-          <div> 
-            <img src="http://placehold.it/100x100" style={mobileImageStyle}/>
-            <Paper zDepth={2} style={textBlock}>
-              <a href="/blog/post"><StyledTitle>  Article 3 </StyledTitle></a>
-              <article>
-                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <StyledTime> 02:00</StyledTime>
-              </article>
-              </Paper> 
-            </div> 
-          
+                <article>
+                  {a.body}                 
+                </article>
+                 <StyledTime>17:00</StyledTime>
+              </Paper>
+              </div>              
+              ))}
+
+                    
         </main>
-
         <Footer></Footer>
       </Mobile>
 
@@ -147,41 +157,29 @@ export default class Blog extends React.PureComponent {
 
         <main style={blogStyle}>
 
-          <StyledArticle> 
-            <img src="http://placehold.it/100x100" style={imageStyle}/>
-            <Paper zDepth={2} style={textBlock}>
-              <a href="/blog/post"><StyledTitle>  Article 1 </StyledTitle></a>
-              <article>
-                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <StyledTime>17:00</StyledTime>
-              </article>
-            </Paper>
-          </StyledArticle> 
+         
+                        
+              {this.state.articles.map((a, i) => (
+                <StyledArticle> 
+              <Link to={'/blog/${a.id}'} style={imageStyle}>
+                <img src={a.image} />
+                </Link> 
 
-          <StyledArticle> 
-            <img src="http://placehold.it/100x100" style={imageStyle}/>
-            <Paper zDepth={2} style={textBlock}>
-              <a href="/blog/post"><StyledTitle>  Article 2 </StyledTitle></a>
-              <article>
-                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <StyledTime>16:00</StyledTime>
-              </article>
-            </Paper>
-          </StyledArticle>         
+              <Paper zDepth={2} style={textBlock} key={i}>         
+                <Link to={'/blog/${a.id}'}>
+                <StyledTitle> {a.title} </StyledTitle>
+                </Link>
 
-          <StyledArticle> 
-            <img src="http://placehold.it/100x100" style={imageStyle}/>
-            <Paper zDepth={2} style={textBlock}>
-              <a href="/blog/post"><StyledTitle>  Article 3 </StyledTitle></a>
-              <article>
-                <p> Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
-                <StyledTime> 02:00</StyledTime>
-              </article>
-            </Paper>
-          </StyledArticle> 
+                <article>
+                  {a.body}
+                </article>
+                 <StyledTime>17:00</StyledTime>
+              </Paper>
+            </StyledArticle>              
+              ))}           
           
+                           
         </main>
-
         <Footer></Footer>
       </Default> 
 
