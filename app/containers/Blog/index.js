@@ -161,19 +161,19 @@ export default class Blog extends React.PureComponent {
                         
               {this.state.articles.map((a, i) => (
                 <StyledArticle> 
-              <Link to={'/blog/${a.id}'} style={imageStyle}>
+              <Link to={'/blog/${a.slug}'} style={imageStyle}>
                 <img src={a.image} />
                 </Link> 
 
               <Paper zDepth={2} style={textBlock} key={i}>         
-                <Link to={'/blog/${a.id}'}>
+                <Link to={'/blog/${a.slug}'}>
                 <StyledTitle> {a.title} </StyledTitle>
                 </Link>
 
                 <article>
-                  {a.body}
+                  {a.blurb}
                 </article>
-                 <StyledTime>17:00</StyledTime>
+                 <StyledTime>{a.time}</StyledTime>
               </Paper>
             </StyledArticle>              
               ))}           

@@ -7,7 +7,7 @@
 import React from 'react';
 import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
-import {FaEnvelope,FaGithub,FaLinkedin,FaTwitter} from 'react-icons/lib/fa';
+
 import glamorous from 'glamorous';
 import ReactTooltip from 'react-tooltip'; 
 
@@ -96,30 +96,26 @@ class Footer extends React.PureComponent {
 
                   <a data-tip="Email"  href="mailto:scribeklio@gmail.com">
                     <StyledIcon>
-                      <FaEnvelope>
-                      </FaEnvelope>
+                   <img src="http://audora.me/img/envelope.png"/>
                     </StyledIcon>
                   </a>
 
                   <a data-tip="Github" href="https://github.com/audoralc">
                     <StyledIcon>
-                      <FaGithub>
-                      </FaGithub>
+                      <img src="http://audora.me/img/github.png"/>
                     </StyledIcon>
                     
                   </a>
 
                   <a data-tip="LinkedIn"  href="https://www.linkedin.com/in/achalker24">
                     <StyledIcon>
-                      <FaLinkedin>
-                      </FaLinkedin>
+                    <img src="http://audora.me/img/linkedin.png"/>
                     </StyledIcon>
                   </a>
 
                   <a data-tip="Twitter"  href="https://twitter.com/klioonthemoon">
                     <StyledIcon>
-                      <FaTwitter>
-                      </FaTwitter>
+                  <img src="http://audora.me/img/twitter.png"/>
                     </StyledIcon>
                    
                   </a>

@@ -4,11 +4,11 @@
 *
 */
 
+
 import React from 'react';
 import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import glamorous from 'glamorous'; 
-import { FaCode } from 'react-icons/lib/fa';
 import ReactTooltip from 'react-tooltip'; 
 
 const StyledHeader = glamorous.h2 ({
@@ -95,8 +95,8 @@ class Projects extends React.PureComponent {
 
     return (
       <div style={projectBlock}>
-        
-          
+      
+     
           <div style={headerBlock}> 
              <StyledHeader> 💻 My Work </StyledHeader> 
             
@@ -114,14 +114,14 @@ class Projects extends React.PureComponent {
                </div> 
 
                <div style={linkBlock}> 
-                 <StyledLink href="https://github.com/audoralc/sumorobot-store-clientside">  Github <FaCode></FaCode> </StyledLink>
+                 <StyledLink href="https://github.com/audoralc/sumorobot-store-clientside">  Github  <img src="http://audora.me/img/code.png"/></StyledLink>
                  <StyledLink href="/sumo-redo"> 🌠Case Study </StyledLink>
                </div> 
 
                <div style={picStyle}>
                <Link href="/sumo-redo">
                 <Paper zDepth={3} style={{width:'300px'}}> 
-                  <img src="http://audora.me/img/srl-home.png" height="400px" width="300px" />
+                  <img src="http://audora.me/img/srl-front.png" height="400px" width="300px" />
                 </Paper>
                </Link>
                </div>
@@ -131,13 +131,14 @@ class Projects extends React.PureComponent {
               <Card> 
                <StyledProjectHeader> pyxis </StyledProjectHeader> 
                <div style={linkBlock}> 
-                 <StyledLink href="https://github.com/audoralc/pyxis">  Github <FaCode></FaCode> </StyledLink>
+                 <StyledLink href="https://github.com/audoralc/pyxis">  Github 
+                 <img src="http://audora.me/img/code.png"/> </StyledLink>
                  <StyledLink href="/pyxis" data-tip="Desktop Only Please"> 👀Front Page Demo </StyledLink>
                  <StyledLink href="/pyxis-study"> 🌠Case Study </StyledLink>                
                </div>
                <Link href="/pyxis"> 
                   <Paper zDepth={3} style={{width:'300px'}}> 
-                    <img src="http://audora.me/img/cropped-pyxis.png"  height="400px" width="300px"/>
+                    <img src="http://audora.me/img/pyxis-front.png"  height="400px" width="300px"/>
                   </Paper>
                 </Link>
               </Card>       
@@ -152,18 +153,19 @@ class Projects extends React.PureComponent {
                
                <div style={linkBlock}> 
                  
-                 <StyledLink href="https://github.com/audoralc/semper-disco">  Github <FaCode></FaCode> </StyledLink>
+                 <StyledLink href="https://github.com/audoralc/semper-disco">  Github 
+                 <img src="http://audora.me/img/code.png"/>
+                  </StyledLink>
                  <StyledLink href="/semper-study"> 🌠Design Plan </StyledLink>                
                </div> 
                <Link href="/semper-study">
                 <Paper zDepth={3} style={{width:'300px'}}> 
-                  <img src="http://audora.me/img/semper-one.jpg" height="400px" width="300px" />
+                  <img src="http://audora.me/img/semper-front.png" height="400px" width="300px" />
                 </Paper>
                </Link>   
               </Card> 
            </section>   
-          
-       
+  
       </div>
     );
   }

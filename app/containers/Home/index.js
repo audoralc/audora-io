@@ -17,6 +17,7 @@ import Projects from 'components/Projects';
 import BlogPreview from 'components/BlogPreview';
 import Footer from 'components/Footer';
 
+
 const colors= {
   white: "#FAFAFA",
   black: "#424242",
@@ -56,8 +57,9 @@ export default class Home extends
           <HomeAboutMe></HomeAboutMe>
           <ForHire> </ForHire>  
           <Skills></Skills>
+          
           <Projects></Projects>
-
+       
           <Footer> </Footer>
         </div>
 

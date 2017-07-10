@@ -23,7 +23,7 @@ export default function createRoutes() {
           .catch(errorLoading);
       },
     },
-
+/*
     {
       path: '/dashboard',
       name: 'Dashboard',
@@ -33,7 +33,7 @@ export default function createRoutes() {
           .catch(errorLoading);
       },
     },
-
+*/ 
 
     {
       path: '/about',
@@ -55,7 +55,7 @@ export default function createRoutes() {
           .catch(errorLoading);
       },
     },
-        {
+ /*       {
           path: '/blog/post',
           name: 'BlogPost',
           getComponent(nextState, cb) {
@@ -64,7 +64,7 @@ export default function createRoutes() {
               .catch(errorLoading);
           },
         },
-
+*/
         {
           path: '/sumo-redo',
           name: 'SRL Redesign',

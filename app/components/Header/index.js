@@ -9,7 +9,6 @@ import { Link } from "react-router";
 import Helmet from "react-helmet";
 import Responsive from "react-responsive";
 import Paper from "material-ui/Paper";
-import { FaHome } from "react-icons/lib/fa";
 import glamorous from "glamorous";
 import ReactTooltip from "react-tooltip";
 
@@ -83,8 +82,8 @@ class Header extends React.PureComponent {
               <ReactTooltip place="bottom" type="dark" effect="float" />
             </p>
             <p>
-              <a data-tip="blog">
-                <Link to="/blog">
+              <a data-tip="coming soon!">
+                <Link to="">
                   <img
                     src="http://audora.me/img/writing-hand.png"
                     height="24px"

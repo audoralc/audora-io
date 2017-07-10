@@ -5,7 +5,6 @@
 */
 
 import React from 'react';
-import { FaFacebookSquare, FaTwitterSquare,FaInstagram } from 'react-icons/lib/fa'; 
 import glamorous from 'glamorous'; 
 
 const NavLink = glamorous.a({ 
@@ -115,9 +114,9 @@ class Footer extends React.PureComponent {
             <h3 style={h3Style}>Connect</h3>
 
             <div style={socialIconBlock}> 
-              <SocialIcon href=""><FaFacebookSquare ></FaFacebookSquare></SocialIcon>
-              <SocialIcon href=""><FaTwitterSquare ></FaTwitterSquare></SocialIcon>
-              <SocialIcon href=""><FaInstagram > </FaInstagram></SocialIcon>
+              <SocialIcon href=""><img src="http://audora.me/img/twitter-square.png"/></SocialIcon>
+              <SocialIcon href=""><img src="http://audora.me/img/instagram.png"/></SocialIcon>
+              <SocialIcon href=""><img src="http://audora.me/img/facebook-square.png"/></SocialIcon>
             </div>
           </div>
 
