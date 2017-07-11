@@ -9,7 +9,7 @@ import Paper from 'material-ui/Paper';
 import glamorous from 'glamorous'; 
 
 const StyledHeader = glamorous.h3 ({ 
-  color: "#00C853",
+  color: "#673AB7",
   textAlign: 'center',
   margin: '0', 
   fontWeight: '700',

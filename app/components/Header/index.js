@@ -71,45 +71,60 @@ class Header extends React.PureComponent {
             </StyledHeader>
           </Link>
           <nav style={navbar}>
-            <p>
+            <p aria-label="homepage link">
               <a data-tip="home">
-                <Link to="/"><img
-                    src="http://audora.me/img/house.png"
+                <Link to="/">
+                  <img
+                    src="http://audora.me/img/emoji/house.png"
                     height="24px"
                     width="24px"
-                  /> </Link>{" "}
+                    alt="house emoji"/>
+                </Link>
+                {" "}
               </a>
-              <ReactTooltip place="bottom" type="dark" effect="float" />
+              <ReactTooltip
+                place="bottom"
+                type="dark"
+                effect="float" />
             </p>
-            <p>
+            <p aria-label="blog link">
               <a data-tip="coming soon!">
                 <Link to="">
                   <img
-                    src="http://audora.me/img/writing-hand.png"
+                    src="http://audora.me/img/emoji/writing-hand.png"
                     height="24px"
                     width="24px"
-                  />
+                    alt="writing hand emoji"
+                    />
                 </Link>
               </a>
-              <ReactTooltip place="bottom" type="dark" effect="float" />
+              <ReactTooltip
+                place="bottom"
+                type="dark"
+                effect="float" />
             </p>
-            <p>
+            <p aria-label="about page link">
               <a data-tip="about">
-                <Link to="/about"> 
-                   <img
-                    src="http://audora.me/img/female-technologist.png"
+                <Link to="/about">
+                  <img
+                    src="http://audora.me/img/emoji/female-technologist.png"
+                    alt="female technologist emoji"
                     height="24px"
                     width="24px"
-                  />
-                
-                 </Link>
+                    />
+
+                </Link>
               </a>
-              <ReactTooltip place="bottom" type="dark" effect="float" />
+              <ReactTooltip
+                place="bottom"
+                type="dark"
+                effect="float" />
             </p>
           </nav>
         </nav>
 
-        <div> </div>
+        <div>
+        </div>
       </div>
     );
   }

@@ -10,10 +10,10 @@ import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import MediaQuery from 'react-responsive';
 import Header from 'components/Header';
-import HomeAboutMe from 'components/HomeAboutMe'; 
-import ForHire from 'components/ForHire'; 
-import Skills from 'components/Skills'; 
-import Projects from 'components/Projects'; 
+import HomeAboutMe from 'components/HomeAboutMe';
+import ForHire from 'components/ForHire';
+import Skills from 'components/Skills';
+import Projects from 'components/Projects';
 import BlogPreview from 'components/BlogPreview';
 import Footer from 'components/Footer';
 
@@ -37,29 +37,27 @@ export default class Home extends
 
 
   render() {
-   const pageGrid = { 
+   const pageGrid = {
       display: 'grid',
-      gridTemplateColumns: 'auto auto auto auto', 
+      gridTemplateColumns: 'auto auto auto auto',
       gridTemplateRows: 'auto auto auto auto auto 1fr',
-      gridGap: '5vh',    
-    }     
+      gridGap: '5vh',
+    }
 
-   
+
 
   return (
 
     <div>
       <Helmet
         title="a.chalker"
-        meta={[ { name: 'description', content: 'Description of Home' }]}/>   
-        <div style={pageGrid}> 
-          <Header></Header> 
+        meta={[ { name: 'description', content: 'Description of Home' }]}/>
+        <div style={pageGrid}>
+          <Header></Header>
           <HomeAboutMe></HomeAboutMe>
-          <ForHire> </ForHire>  
+          <ForHire> </ForHire>
           <Skills></Skills>
-          
-          <Projects></Projects>
-       
+          <Projects></Projects>       
           <Footer> </Footer>
         </div>
 

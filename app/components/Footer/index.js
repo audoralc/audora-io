@@ -9,12 +9,12 @@ import Responsive from 'react-responsive';
 import Paper from 'material-ui/Paper';
 
 import glamorous from 'glamorous';
-import ReactTooltip from 'react-tooltip'; 
+import ReactTooltip from 'react-tooltip';
 
 const StyledIcon = glamorous.a ({
-  fontSize: '1.25em', 
-  color:"#424242",  
-  ':hover':{ 
+  fontSize: '1.25em',
+  color:"#424242",
+  ':hover':{
     color: "#00B0FF",
   }
 })
@@ -36,11 +36,11 @@ class Footer extends React.PureComponent {
 
   render() {
     const footerContainer= {
-      gridRow: '6 / 6', 
-      gridColumn: '1 / 4 span', 
+      gridRow: '6 / 6',
+      gridColumn: '1 / 4 span',
     }
 
-  
+
     const footerStyle={
       display: "flex",
       flexDirection: "column",
@@ -50,7 +50,7 @@ class Footer extends React.PureComponent {
 
     const footerFontStyle={
       justifyContent: "space-between",
-      color: colors.accentPurple,
+      color: "#673AB7",
       margin: "0 0",
     }
 
@@ -76,14 +76,12 @@ class Footer extends React.PureComponent {
     }
 
     const linkTextStyle={
-   
+
     }
 
     return (
-      <div style={footerContainer}> 
+      <div style={footerContainer}>
 
-       
-       
         <footer>
 
           <Paper style={footerStyle} zDepth={2}>
@@ -94,33 +92,59 @@ class Footer extends React.PureComponent {
 
                 <div style={iconBlockStyle}>
 
-                  <a data-tip="Email"  href="mailto:scribeklio@gmail.com">
-                    <StyledIcon>
-                   <img src="http://audora.me/img/envelope.png"/>
+                  <a
+                    data-tip="Email"
+                    href="mailto:scribeklio@gmail.com">
+
+                    <StyledIcon aria-label="email icon">
+
+                      <img
+                        src="http://audora.me/img/envelope.png"
+                        alt="email envelope"/>
+
                     </StyledIcon>
                   </a>
 
-                  <a data-tip="Github" href="https://github.com/audoralc">
-                    <StyledIcon>
-                      <img src="http://audora.me/img/github.png"/>
+
+                  <a
+                    data-tip="Github"
+                    href="https://github.com/audoralc">
+
+                    <StyledIcon aria-label="Github icon">
+
+                      <img
+                        src="http://audora.me/img/github.png"
+                        alt="Github logo"/>
+
                     </StyledIcon>
-                    
                   </a>
 
-                  <a data-tip="LinkedIn"  href="https://www.linkedin.com/in/achalker24">
-                    <StyledIcon>
-                    <img src="http://audora.me/img/linkedin.png"/>
+
+                  <a
+                    data-tip="LinkedIn"
+                    href="https://www.linkedin.com/in/achalker24">
+
+                    <StyledIcon aria-label="LinkedIn icon">
+
+                      <img
+                        src="http://audora.me/img/linkedin.png"
+                        alt="LinkedIn Logo"/>
+
+                    </StyledIcon>
+                  </a>                  
+
+                  <a
+                    data-tip="Twitter"
+                    href="https://twitter.com/klioonthemoon">
+
+                    <StyledIcon aria-label="twitter icon">
+
+                      <img
+                        src="http://audora.me/img/twitter.png"
+                        alt="twitter logo"/>
                     </StyledIcon>
                   </a>
 
-                  <a data-tip="Twitter"  href="https://twitter.com/klioonthemoon">
-                    <StyledIcon>
-                  <img src="http://audora.me/img/twitter.png"/>
-                    </StyledIcon>
-                   
-                  </a>
-
-                  
                 </div>
 
               </div>
@@ -129,15 +153,19 @@ class Footer extends React.PureComponent {
 
             <div style={copyrightStyle}>
 
-              <p style={footerFontStyle}> © 2017 audora chalker. made with  ❤️&#xFE0E; + ☕. </p>
-
+              <p style={footerFontStyle}> © 2017 audora chalker. made with&nbsp; <img
+                src="http://audora.me/img/emoji/heart.png"
+                height="24px"
+                width="24px"
+                alt="heart emoji"/>&nbsp; + &nbsp; <img
+                src="http://audora.me/img/emoji/coffee.png"
+                height="24px"
+                width="24px"
+                alt="coffee emoji"/>. </p>
             </div>
 
           </Paper>
-
         </footer>
-      
-
       </div>
     );
   }

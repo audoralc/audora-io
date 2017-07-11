@@ -1,15 +1,15 @@
 /*
- *
- * BlogPost
- *
- */
+*
+* BlogPost
+*
+*/
 
 import React from 'react';
 import Helmet from 'react-helmet';
 import Responsive from 'react-responsive';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
-import glamorous from 'glamorous'; 
+import glamorous from 'glamorous';
 
 const post= {
   title: 'Lorem',
@@ -21,7 +21,7 @@ const post= {
 };
 
 const StyledTitle = glamorous.h2 ({
-  color: "#00B0FF", 
+  color: "#00B0FF",
   fontSize: "2.5em",
   margin: '0',
 })
@@ -49,52 +49,66 @@ export default class BlogPost extends React.PureComponent {
 
   render() {
 
-  const pageGrid = { 
-    display: 'grid',
-    gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr', 
-    gridTemplateRows: '15vh 100% auto auto 1fr', 
-    gridRowGap: '5vh',       
-  }   
+    const pageGrid = {
+      display: 'grid',
+      gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+      gridTemplateRows: '15vh 100% auto auto 1fr',
+      gridRowGap: '5vh',
+    }
 
-    const bodyStyle = { 
-      gridRow: '2 / 5', 
+    const bodyStyle = {
+      gridRow: '2 / 5',
       gridColumn: '2 / 7 span',
-      margin: '0 5vw', 
+      margin: '0 5vw',
       height: '75vh',
     }
 
-      const imageStyle = {
-        float: 'left', 
-        margin: '1em',     
-     }
+    const imageStyle = {
+      float: 'left',
+      margin: '1em',
+    }
 
     return (
       <div style={pageGrid}>
-  
-        <Helmet title="Blog Post" meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
-        <Header></Header>
+        <Helmet
+          title="Blog Post"
+          meta={[ { name: 'description', content: 'Description of Blog' }]}/>
+
+        <Header>
+        </Header>
 
         <div style={bodyStyle}>
           <main>
             <article>
 
-                <header>
-                  <StyledTitle>{post.title}</StyledTitle>
-                  <StyledTime>{post.time}</StyledTime>
-                </header>            
+              <header>
+                <StyledTitle>
+                  {post.title}
+                </StyledTitle>
+                <StyledTime>
+                  {post.time}
+                </StyledTime>
+              </header>
 
-                <section>
-                    <p> {post.blurb}</p>                   
-                    <img src="http://placehold.it/300x300" style={imageStyle}  />
-                    <p> {post.body}</p>                        
-                </section>
+              <section>
+                <p>
+                  {post.blurb}
+                </p>
+                <img
+                  src="http://placehold.it/300x300"
+                  style={imageStyle}  />
+                <p>
+                  {post.body}
+                </p>
+              </section>
             </article>
           </main>
 
         </div>
-              
-        <Footer></Footer>                
+
+        <Footer>
+        </Footer>
 
       </div>
     );

@@ -10,28 +10,28 @@ import Header from 'components/Header';
 import {Link} from 'react-router';
 import Paper from 'material-ui/Paper';
 import Footer from 'components/Footer';
-import glamorous from 'glamorous'; 
+import glamorous from 'glamorous';
 import Responsive from 'react-responsive';
 
-const StyledArticle = glamorous.section ({ 
-  display: 'flex', 
-  flexDirection: 'row',  
+const StyledArticle = glamorous.section ({
+  display: 'flex',
+  flexDirection: 'row',
   justifyContent: 'space-between',
-  width: '90vw',  
+  width: '90vw',
 })
 
-const MobileStyledArticle = glamorous.section ({ 
-  display: 'flex', 
-  flexDirection: 'row',  
+const MobileStyledArticle = glamorous.section ({
+  display: 'flex',
+  flexDirection: 'row',
 })
 
 const StyledTitle = glamorous.h2 ({
-  color: "#424242", 
-   ':hover' : { 
-    color: "#00B0FF", 
+  color: "#424242",
+   ':hover' : {
+    color: "#00B0FF",
   },
-  margin: '0', 
-  
+  margin: '0',
+
 })
 
 const StyledTime = glamorous.time ({
@@ -57,9 +57,9 @@ const Mobile = ({ children }) => <Responsive maxWidth={768} children={children} 
 
 export default class Blog extends React.PureComponent {
   constructor(props){
-    super(props); 
+    super(props);
     this.state={
-      articles:[], 
+      articles:[],
     }
   }
 
@@ -77,28 +77,28 @@ export default class Blog extends React.PureComponent {
   }
 
   render() {
-    const pageGrid = { 
+    const pageGrid = {
       display: 'grid',
-      gridTemplateColumns: '1fr 1fr 1fr 1fr', 
-      gridTemplateRows: '15vh 1fr 1fr', 
-      gridRowGap: '5vh',     
-    }   
+      gridTemplateColumns: '1fr 1fr 1fr 1fr',
+      gridTemplateRows: '15vh 1fr 1fr',
+      gridRowGap: '5vh',
+    }
 
       const blogStyle= {
         display: "flex",
         flexDirection:"column",
         gridRow: '2 / 3',
         gridColumn: '1 / 4 span',
-        margin: '0 2.5vw', 
-        minHeight: '85vh',  
+        margin: '0 2.5vw',
+        minHeight: '85vh',
       }
-        const blogRow ={ 
+        const blogRow ={
           display: 'flex',
           flexDirection: 'row',
-               
+
         }
 
-        const textBlock = {          
+        const textBlock = {
           background: "#D1C4E9",
           margin: "5%",
           padding: '1em',
@@ -111,7 +111,7 @@ export default class Blog extends React.PureComponent {
 
         const mobileImageStyle = {
           margin: "0 5% 5% 0",
-      
+
         }
 
 
@@ -122,32 +122,32 @@ export default class Blog extends React.PureComponent {
           title="Blog"
           meta={[ { name: 'description', content: 'Description of Blog' }]}/>
 
-      <Mobile style={pageGrid}> 
+      <Mobile style={pageGrid}>
           <Header> </Header>
 
         <main style={blogStyle}>
 
-                     
+
               {this.state.articles.map((a, i) => (
-            <div>  
+            <div>
               <Link to={'/${a.id}'} style={imageStyle}>
                 <img src={a.image} />
-                </Link>  
+                </Link>
 
-              <Paper zDepth={2} style={textBlock} key={i}>       
+              <Paper zDepth={2} style={textBlock} key={i}>
                 <Link to={'/${a.id}'}>
                 <StyledTitle> {a.title} </StyledTitle>
                 </Link>
 
                 <article>
-                  {a.body}                 
+                  {a.body}
                 </article>
                  <StyledTime>17:00</StyledTime>
               </Paper>
-              </div>              
+              </div>
               ))}
 
-                    
+
         </main>
         <Footer></Footer>
       </Mobile>
@@ -157,15 +157,15 @@ export default class Blog extends React.PureComponent {
 
         <main style={blogStyle}>
 
-         
-                        
+
+
               {this.state.articles.map((a, i) => (
-                <StyledArticle> 
+                <StyledArticle>
               <Link to={'/blog/${a.slug}'} style={imageStyle}>
                 <img src={a.image} />
-                </Link> 
+                </Link>
 
-              <Paper zDepth={2} style={textBlock} key={i}>         
+              <Paper zDepth={2} style={textBlock} key={i}>
                 <Link to={'/blog/${a.slug}'}>
                 <StyledTitle> {a.title} </StyledTitle>
                 </Link>
@@ -175,13 +175,13 @@ export default class Blog extends React.PureComponent {
                 </article>
                  <StyledTime>{a.time}</StyledTime>
               </Paper>
-            </StyledArticle>              
-              ))}           
-          
-                           
+            </StyledArticle>
+              ))}
+
+
         </main>
         <Footer></Footer>
-      </Default> 
+      </Default>
 
       </div>
     );
