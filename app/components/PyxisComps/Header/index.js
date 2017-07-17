@@ -70,7 +70,7 @@ class Header extends React.PureComponent {
       gridTemplateRows: '1fr', 
       gridTemplateColumns: '1fr 1fr',
       height: 'auto', 
-           
+      maxWidth: '100vw',
     }   
         const logoBlock = {
           gridRow: '1 / 1', 

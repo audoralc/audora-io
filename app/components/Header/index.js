@@ -39,9 +39,10 @@ class Header extends React.PureComponent {
       textDecoration: "none",
       display: "grid",
       gridTemplateColumns: "1fr 1fr 1fr 1fr",
-      width: "100%",
+      maxWidth: "100vw",
       backgroundImage: "url(http://audora.me/img/header.png",
-      backgroundSize: "100vw 15vh"
+      backgroundSize: "100vw 15vh",
+      height: '15vh',
     };
 
     const navBlock = {
@@ -58,7 +59,7 @@ class Header extends React.PureComponent {
     };
 
     const h1Style = {
-      margin: " .25em 0",
+      margin: " .75em .25em",
       fontSize: "24px"
     };
 

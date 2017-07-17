@@ -39,7 +39,7 @@ export default class SumoRedesign extends React.PureComponent {
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr', 
       gridRowGap: '10vh', 
-          
+      maxWidth: '100vw',
     }     
 
       const bodyWrapper = {
@@ -95,7 +95,7 @@ export default class SumoRedesign extends React.PureComponent {
             <div style={content}>
 
              <div style={textBlock}> 
-                <h2 style={headerStyle}> <HeaderLink href="http://sumorobotleague.com"> Sumo Robot League Site</HeaderLink> Redesign </h2>
+                <h2 style={headerStyle}> <HeaderLink href="http://sumorobotleague.com" target="_blank" > Sumo Robot League Site</HeaderLink> Redesign </h2>
 
                 <Paper zDepth={2} style={olStyle}> 
                 <div > 

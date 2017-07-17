@@ -48,9 +48,10 @@ class TierSystem extends React.PureComponent {
   render() {
 
     const tierRibbon = {
-      background: '#f6edeb',
+      background: '#FFECDB',
       gridRow: '3 / 3',
       gridColumn: '1 / 6 span',
+      padding: '15vh 0'
     }
 
     const headerStyle = {

@@ -33,7 +33,7 @@ class HomeSignUpRib extends React.PureComponent {
       gridRow: '5 / 5',
       gridColumn: '1 / 6 span',
       textAlign: 'center',
-      padding: '10%',
+      padding: '25vh',
     }
 
     const pStyle = {

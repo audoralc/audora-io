@@ -109,18 +109,13 @@ export default class SemperStudy extends React.PureComponent {
 
                   </h4>
 
+                    <p>Semper disco is Latin for "always, I learn". Going through a coding bootcamp makes you viscerally aware of the sheer amount of things you can learn (or at least be introduced to) in one day. I decided to start recording what I'd learned inside & outside of the classroom, and then, make something out of it. I've planned & am actively developing a one-page React web app that uses animation & page transitions to produce a mind map-like visualization.</p>
 
                 </div>
 
 
 
-                <a
-                  href="https://github.com/audoralc/semper-disco"
-                  style={h4Style}>
-
-                  <h4> SD README.md on Github</h4>
-
-                </a>
+            
 
 
 
@@ -143,7 +138,7 @@ export default class SemperStudy extends React.PureComponent {
 
 
                     <img
-                      src="http://audora.me/img/semper-one.jpg"
+                      src="http://audora.me/img/semper-wire.png"
                       width="100%"/>
 
 

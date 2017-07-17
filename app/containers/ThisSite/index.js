@@ -18,6 +18,8 @@ export default class ThisSite extends React.PureComponent {
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr',
       gridRowGap: '10vh',
+            maxWidth: '100vw',
+
     }
 
     const bodyWrapper = {

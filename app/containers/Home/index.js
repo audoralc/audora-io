@@ -40,8 +40,9 @@ export default class Home extends
    const pageGrid = {
       display: 'grid',
       gridTemplateColumns: 'auto auto auto auto',
-      gridTemplateRows: 'auto auto auto auto auto 1fr',
-      gridGap: '5vh',
+      gridTemplateRows: '20vh auto auto auto auto 1fr',
+      gridGap: '20vh',
+      maxWidth: '100vw',
     }
 
 

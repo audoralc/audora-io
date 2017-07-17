@@ -11,15 +11,23 @@ injectGlobal`
   }
 
   body {
-    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
   }
 
   body.fontLoaded {
-    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
   }
 
   h1, h2, h3, h4 {
-    font-family: 'Raleway', Arial, Helvetica,  sans-serif;
+    font-family: 'Raleway', Arial, Helvetica,  sans-serif;    
+  }
+
+  h4 {
+   color: #0091EA; 
+  }
+
+  h5 {
+    color: #00C853;  
   }
 
   a {
@@ -28,8 +36,9 @@ injectGlobal`
   
   p,
   label {
-    font-family: 'Cabin', Helvetica, Arial, sans-serif;
+    font-family: 'Roboto', Helvetica, Arial, sans-serif;
     line-height: 1.5em;
     font-size: 1.15em;
+    font-weight: 300; 
   }
 `;

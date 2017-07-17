@@ -13,16 +13,16 @@ class ForHire extends React.PureComponent {
   render() {
     const forHire = {
       gridRow: "3 / 3",
-      gridColumn: "1 / 3",
-      minWidth: "300px",
-      maxWidth: "800px"
+      gridColumn: "1 / 4 span",
+      maxWidth: '800px',
+      width: '100vw',
     };
 
     const hireContent = {
       background: "#B3E5FC",
       textAlign: "center",
       color: "0",
-      padding: "1em"
+      padding: "1em",
     };
 
     const headerStyle = {
@@ -30,14 +30,22 @@ class ForHire extends React.PureComponent {
     };
 
     const textStyle = {
-      fontSize: "1.25em"
+      fontSize: "1.25em",
+      
     };
 
     const linkStyle = {
       fontSize: "1.25em",
       color: "#673AB7",
-      marginLeft: ".5em"
+      marginLeft: ".75em"
     };
+
+    const linkBlock ={ 
+      display: 'flex', 
+      flexDirection: 'row', 
+      flexWrap: 'wrap',
+      justifyContent: 'center',
+    }
 
     return (
       <div style={forHire}>
@@ -75,21 +83,32 @@ class ForHire extends React.PureComponent {
 
             <h2 style={headerStyle}> For Hire</h2>
 
-            <p style={textStyle}>
-
+              <p style={textStyle}>
               I'm currently looking for a team that needs an entry-level
-              front-end or fullstack developer. Ideally I would do a lot of
+              front-end or fullstack developer. I'm open to remote & non-remote opportunities; with the later I prefer the Southern US, but for the right fit I'm open to any adventure. 
+              </p>
+              <p style={textStyle}>
+               I'd like to bring the writing experience, soft skills & ethusiasm for creative work from my previous work experience to your team. 
+              </p>
+              <p style={textStyle}>
+              Ideally I would do a lot of
               Javascript work & y'all have a UI developer I could glean some
-              design knowledge from.{" "}
+              design knowledge from.  &nbsp; 
               <img
                 src="http://audora.me/img/emoji/wink.png"
                 height="24px"
                 width="24px"
                 alt="winking face emoji"
                 />
+              </p> 
 
-            </p>
+            
+                
+              
 
+           
+
+        <div style={linkBlock}> 
             <Link
               href="http://audora.me/storage/chalker-resume.pdf"
               style={linkStyle}
@@ -100,7 +119,7 @@ class ForHire extends React.PureComponent {
                 width="24px"
                 alt="fire emoji"
                 />
-              Resume
+              <p>Resume</p>
             </Link>
 
 
@@ -115,7 +134,7 @@ class ForHire extends React.PureComponent {
                 alt="email emoji"
                 />
 
-              Email
+             <p> audoralc@gmail.com </p>
             </Link>
 
 
@@ -129,9 +148,10 @@ class ForHire extends React.PureComponent {
                 width="24px"
                 alt="file box emoji"
                 />
-              Github
+              <p>Github</p>
             </Link>
 
+            </div>
           </div>
 
         </Paper>       

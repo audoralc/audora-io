@@ -13,6 +13,7 @@ import glamorous from 'glamorous';
 import {React_Bootstrap_Carousel} from 'react-bootstrap-carousel';
 import 'react-bootstrap-carousel/dist/bootstrap.min.css';
 import 'react-bootstrap-carousel/dist/react-bootstrap-carousel.css';  
+import ReactTooltip from 'react-tooltip';
 
 const HeaderLink = glamorous.a({
     ':hover': { 
@@ -85,7 +86,7 @@ export default class PyxisStudy extends React.PureComponent {
 
             
              <div style={textBlock}> 
-               <h2> Pyxis - <HeaderLink href="/pyxis-home"> 👀Front Page Demo </HeaderLink>  </h2> 
+               <h2> Pyxis - <HeaderLink href="/pyxis-home" data-tip="Desktop Only Please"> 👀Front Page Demo </HeaderLink>  </h2> 
                
                <Paper zDepth={2} style={objStyle}>
                  <div> 
@@ -101,7 +102,7 @@ export default class PyxisStudy extends React.PureComponent {
 
                   <p>Standard stacked ribbon layout paired with shapes that split the page into halves using CSS Grid.</p> 
 
-                  <p>Color palette was inspired by the 14th cen frescos of Giotto de Bondone (an example of which is on Slide 3 the FAQ page). The warm neutrals were complimented by rich, saturated colors where appropriate. The major call to action colors were blue & green, but other colors, each historically associated with a specific deadly sin were used in the backgrounds/ mouseover backgrounds on <a href="/pyxis"> the front page.</a></p>
+                  <p>Color palette was inspired by the 14th cen frescos of Giotto de Bondone (an example of which is on Slide 3 the FAQ page). The warm neutrals were complimented by rich, saturated colors where appropriate. The major call to action colors were blue & green, but other colors, each historically associated with a specific deadly sin were used in the backgrounds/ mouseover backgrounds on <a href="/pyxis" data-tip="Desktop Only Please"> the front page.</a></p>
 
                   <p> All flat icons & images, other than social icons, are in svg format.</p>
 
