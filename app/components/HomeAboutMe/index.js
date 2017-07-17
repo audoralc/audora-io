@@ -36,12 +36,12 @@ class HomeAboutMe extends React.PureComponent {
         gridColumn: '1 / 4 span',        
         display: 'flex',
         flexWrap: 'wrap', 
-        marginTop: '-12vh', 
+        marginTop: '-14vh', 
         maxWidth: '100vw',        
       }
 
         const greeting = {
-            margin: '0 5%',
+            margin: '0 5% 2.5% 5%',
             width: '100%',
         }
 
@@ -49,7 +49,7 @@ class HomeAboutMe extends React.PureComponent {
                padding: "2.5%",
                background: colors.lightPurple,
                lineHeight: '24px', 
-               maxWidth: '750px', 
+               maxWidth: '800px', 
                minWidth: '300px',
                justifyContent: 'flex-end',
                marginLeft: 'auto',

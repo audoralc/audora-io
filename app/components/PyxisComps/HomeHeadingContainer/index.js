@@ -148,7 +148,7 @@ class HomeHeadingContainer extends React.PureComponent {
                   <Overlay1>
                     <div style={currentBoxDes}>
                       <h3> Midsummer (Late June - Early July) </h3>
-                      <h4> GREED </h4>
+                      <h4 style={{color: '#fafafa'}}> GREED </h4>
                       <p style={pStyle}>All that glitters lies within this box. Luxurious items made of luxurious materials. </p>
                       </div>
                     </Overlay1>

@@ -9,6 +9,17 @@ import { Link } from "react-router";
 import Paper from "material-ui/Paper";
 import glamorous from "glamorous";
 
+
+const StyledLink = glamorous.a ({ 
+  fontSize: "1.25em",
+  color: "#673AB7",
+  marginLeft: ".75em", 
+  ':hover' : { 
+    color: '#FAFAFA',
+  }, 
+})
+
+
 class ForHire extends React.PureComponent {
   render() {
     const forHire = {
@@ -32,12 +43,6 @@ class ForHire extends React.PureComponent {
     const textStyle = {
       fontSize: "1.25em",
       
-    };
-
-    const linkStyle = {
-      fontSize: "1.25em",
-      color: "#673AB7",
-      marginLeft: ".75em"
     };
 
     const linkBlock ={ 
@@ -109,9 +114,8 @@ class ForHire extends React.PureComponent {
            
 
         <div style={linkBlock}> 
-            <Link
+            <StyledLink
               href="http://audora.me/storage/chalker-resume.pdf"
-              style={linkStyle}
               >
               <img
                 src="http://audora.me/img/emoji/fire.png"
@@ -120,12 +124,11 @@ class ForHire extends React.PureComponent {
                 alt="fire emoji"
                 />
               <p>Resume</p>
-            </Link>
+            </StyledLink>
 
 
-            <Link
-              href="mailto:audoralc@gmail.com"
-              style={linkStyle}>
+            <StyledLink
+              href="mailto:audoralc@gmail.com">
 
               <img
                 src="http://audora.me/img/emoji/email.png"
@@ -135,12 +138,11 @@ class ForHire extends React.PureComponent {
                 />
 
              <p> audoralc@gmail.com </p>
-            </Link>
+            </StyledLink>
 
 
-            <Link
-              href="https://github.com/audoralc"
-              style={linkStyle}>
+            <StyledLink
+              href="https://github.com/audoralc">
 
               <img
                 src="http://audora.me/img/emoji/file-box.png"
@@ -149,7 +151,7 @@ class ForHire extends React.PureComponent {
                 alt="file box emoji"
                 />
               <p>Github</p>
-            </Link>
+            </StyledLink>
 
             </div>
           </div>

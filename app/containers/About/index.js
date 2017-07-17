@@ -24,6 +24,8 @@ const StyledSection = glamorous.section ({
 
   const StyledHeaderThree = glamorous.h3 ({
     color: "#00B0FF",
+    float: 'right',
+    fontSize: '1.5em',
   })
 
 
@@ -52,11 +54,13 @@ export default class About extends React.PureComponent {
     const mainStyle = {
       background: colors.lightPurple,
       gridRow: '2 / 5',
-      gridColumn: '2 / 6 span',
-      padding: "1.5em",
+      gridColumn: '1 / 4 span',
       display: 'flex',
       flexDirection: 'column',
       padding: '2em',
+      margin: '15vh 0 0 auto',
+      width: '85vw',
+      
     }
 
       const headerBlock = {
@@ -76,19 +80,21 @@ export default class About extends React.PureComponent {
           <div style={headerBlock}>
             <StyledHeaderTwo>it me</StyledHeaderTwo>
             <img src="http://audora.me/img/my-pic.jpg" width="40%" height="60%" />
+            <StyledHeaderThree> export default friendship; 🌈 </StyledHeaderThree>
           </div>
 
           <StyledSection>
-            <StyledHeaderThree> export default friendship; 🌈 </StyledHeaderThree>
+            
 
             <p>
-              So, I'm Audora (sometimes LeeAnn) Chalker, a bootcamp grad & wannabe UI developer. Currently I work with Javascript (mainly React) & the LEMP stack, but eyeing MERN & MEAN.
+              So, I'm Audora and to be completely honest, that name is a bit weird; for most of my life I've gone by LeeAnn. Don't worry though: It's my middle name & I have no real preference. 
+            </p>
+            <p> My life philosophy is that the world is tough enough without adding to it by being an asshole. I believe compassion, empathy & radical candor can change the world, not just the tech industry. I want to reach a place where I'm established enough to give back, to put bread upon the waters so to speak. Small things in life are important because they form foundations. I care (maybe too much) about making sure everyone has safety & support. </p>
+            <p>
+              Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities (I'm a bootcamp grad thanks to the Workforce Investment Act), how the backgrounds of career switchers can make software even better (mine is history & journalism), web performance/a11y, and mental health.
             </p>
             <p>
-              Topics I'm interested in include: creating opportunities & increasing diversity by bringing tech to underprivileged communities, how the backgrounds of career switchers can make software even better, web performance and mental health.
-            </p>
-            <p>
-              Other interests include hoarding developer resources, making my home as comfy as possible, and pretty much any kind of media.
+              Other interests include hoarding developer resources, making my home as comfy as possible (ridiculous amounts of candles), and pretty much any kind of media.
               My aesthetic is bayou witchery, 80s neon Miami, 60s all black Parisian chic, and all that is light & gay.
             </p>
           </StyledSection>

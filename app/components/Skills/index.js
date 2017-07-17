@@ -18,6 +18,7 @@ const StyledHeader = glamorous.h3 ({
 const StyledSection = glamorous.section ({ 
   color: "#424242",
   fontWeight: '600',
+  fontSize: '1.15em',
   margin: '0 auto 5% auto',
   display: 'flex', 
   flexDirection: 'row',
@@ -34,13 +35,12 @@ const Skill = glamorous.div ({
 
 const SkillDiv = glamorous.div ({ 
     listStyle: 'none',
-    fontSize: '.75em',
     margin: '1em auto',
     display: 'flex', 
     flexDirection: 'row',
     justifyContent: 'space-between',
     flexWrap: 'wrap', 
-    width: '80%',
+    width: '90%',
 })
 
 
@@ -177,7 +177,7 @@ class Skills extends React.PureComponent {
                   <SkillDiv> 
                     <h4>Responsive Design</h4>
                     <h4>Cross-browser Compatability</h4>
-                    <h4>RESTful APIS</h4>
+                    <h4>RESTful APIs</h4>
                     <h4> Postman</h4>
                     <h4>XAMPP</h4>
                   </SkillDiv> 

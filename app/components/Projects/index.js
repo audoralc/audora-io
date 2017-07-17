@@ -24,6 +24,9 @@ const StyledLink = glamorous.a ({
   color: '#0091EA',
   fontWeight: '600',
   lineHeight: '1.5em',
+  ':hover' : { 
+    color: "#673AB7",
+  }
 })
 
 const Card = glamorous.div ({
@@ -68,7 +71,7 @@ class Projects extends React.PureComponent {
     const specialProject = {
       textAlign: 'center',
       maxWidth: '50vw',
-      margin: '0 auto',
+      margin: '5% auto 0 auto',
     }
 
 
@@ -92,6 +95,7 @@ const cardHeader ={}
       flexDirection: 'row',
       flexWrap: 'wrap',
       justifyContent: 'space-between',
+      minHeight: '150px',
     }
 
     const picStyle = {
@@ -120,7 +124,7 @@ const cardHeader ={}
             <h3>
               This Site
             </h3>
-            <a href="/this-site"><img
+            <StyledLink href="/this-site"><img
                 src="http://audora.me/img/emoji/shooting-star.png"
                 height="24px"
                 width="24px"
@@ -130,7 +134,7 @@ const cardHeader ={}
                 height="24px"
                 width="24px"
                 alt="shooting star emoji"
-                /> </a>
+                /> </StyledLink>
           </div>
         </div>
 
@@ -173,9 +177,7 @@ const cardHeader ={}
             </div>
 
             <p> 
-              Revamp of existing website with modern React front & Laravel backend. Allows
-administrators to fully control inventory & categorize customers to better track
-trends relating to educators & students.
+              Revamp of existing website with modern React front & Laravel backend. Design from scratch. Allows administrators to fully control inventory & categorize customers to better track trends relating to educators &students via CRUD-based dashboards. Multiple tasks grouped together on the same page using components within Material UI tabs.
             </p>
           </div>
           </Card>

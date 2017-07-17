@@ -25,13 +25,18 @@ const HeaderLink = glamorous.a({
     fontSize: '.75em', 
 })
 
+const Paragraph = glamorous.p ({ 
+    fontSize: '1.15em', 
+    fontWeight: '400',
+})
+
 export default class PyxisStudy extends React.PureComponent {
   render() {
     const pageGrid = { 
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr', 
-      gridRowGap: '10vh',       
+      gridRowGap: '20vh',       
     }     
 
       const bodyWrapper = {
@@ -60,8 +65,8 @@ export default class PyxisStudy extends React.PureComponent {
             
             const explainBlock = {
               width: '85%', 
-              margin: '2.5% auto',
-                padding: '2%',
+              margin: '0 auto',
+              padding: '2%',
              
             }
 
@@ -91,29 +96,29 @@ export default class PyxisStudy extends React.PureComponent {
                <Paper zDepth={2} style={objStyle}>
                  <div> 
                   <h3>📌 Objective:</h3>
-                  <p style={explainBlock}> Create a website for a subscription box service based on marketing proposal from local agency. Integrate as many features & as much marketing know-how as possible. Design elements & assets were not provided. 
-                  </p>
+                  <Paragraph style={explainBlock}> Create a website for a subscription box service based on marketing proposal from local agency. Integrate as many features & as much marketing know-how as possible. Design elements & assets were not provided. 
+                  </Paragraph>
                 </div>
                 </Paper>
 
-                <div style={explainBlock}> 
+                <div style={explainBlock}>
 
                   <h4 style={h4Style}>📏 Design thinking:</h4>
 
-                  <p>Standard stacked ribbon layout paired with shapes that split the page into halves using CSS Grid.</p> 
+                  <Paragraph>Standard stacked ribbon layout paired with shapes that split the page into halves using CSS Grid.</Paragraph> 
 
-                  <p>Color palette was inspired by the 14th cen frescos of Giotto de Bondone (an example of which is on Slide 3 the FAQ page). The warm neutrals were complimented by rich, saturated colors where appropriate. The major call to action colors were blue & green, but other colors, each historically associated with a specific deadly sin were used in the backgrounds/ mouseover backgrounds on <a href="/pyxis" data-tip="Desktop Only Please"> the front page.</a></p>
+                  <Paragraph>Color palette was inspired by the 14th cen frescos of Giotto de Bondone (an example of which is on Slide 3 the FAQ page). The warm neutrals were complimented by rich, saturated colors where appropriate. The major call to action colors were blue & green, but other colors, each historically associated with a specific deadly sin were used in the backgrounds/ mouseover backgrounds on <a href="/pyxis" data-tip="Desktop Only Please"> the front page.</a></Paragraph>
 
-                  <p> All flat icons & images, other than social icons, are in svg format.</p>
+                  <Paragraph> All flat icons & images, other than social icons, are in svg format.</Paragraph>
 
-                  <p> Without graphic design elements I tried to get as creaive as possible with plain CSS. </p>
+                  <Paragraph> Without graphic design elements I tried to get as creaive as possible with plain CSS. </Paragraph>
 
                 </div> 
 
                 <div style={explainBlock}>
                   <h4 style={h4Style}> 💾 Server-side Improvements (handled by project partner & all around amazing backend guy Austin):</h4>
-                  <p> Payment system mockup via Stripe's API, which has nifty options for reoccuring subscription charges. </p> 
-                  <p> Invoice PDF generation for every order. </p> 
+                  <Paragraph> Payment system mockup via Stripe's API, which has nifty options for reoccuring subscription charges. </Paragraph> 
+                  <Paragraph> Invoice PDF generation for every order. </Paragraph> 
                 </div> 
               
               </div> 

@@ -22,6 +22,11 @@ const HeaderLink = glamorous.a({
     color:  "#00C853",
     textDecoration: 'none', 
 })
+
+const Paragraph = glamorous.p ({ 
+    fontSize: '1.15em', 
+    fontWeight: '400',
+})
  
 
 export default class SumoRedesign extends React.PureComponent {
@@ -38,7 +43,7 @@ export default class SumoRedesign extends React.PureComponent {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr', 
-      gridRowGap: '10vh', 
+      gridRowGap: '20vh', 
       maxWidth: '100vw',
     }     
 
@@ -66,11 +71,12 @@ export default class SumoRedesign extends React.PureComponent {
               margin: '5%',
               background: "#B3E5FC",
               padding: '1em',
+              fontSize: '1.15em',
             }
 
             const explainBlock = {
               width: '85%', 
-              margin: '5% auto',
+              margin: '0 auto',
               padding: '2%',
             }
 
@@ -110,17 +116,17 @@ export default class SumoRedesign extends React.PureComponent {
                 <div style={explainBlock}> 
                 <h4 style={h4Style}>📏 Design thinking:</h4>
 
-                <p>  In my opinion, the original site was a little too dark & strong for a site with young people in mind, so I softened the dark neutrals, added a few primary colors and more whitespace.</p>
+                <Paragraph>  In my opinion, the original site was a little too dark & strong for a site with young people in mind, so I softened the dark neutrals, added a few primary colors and more whitespace.</Paragraph>
 
-                <p> The monospace font used in the navigation & for headers was chosen to invoke the programming element of the Robot League, and happened to have the perfect name: Share Tech Mono. </p>
+                <Paragraph> The monospace font used in the navigation & for headers was chosen to invoke the programming element of the Robot League, and happened to have the perfect name: Share Tech Mono. </Paragraph>
 
-                <p> Photos were chosen carefully to display the diversity of the teams, so that any potential student, or teacher thinking of their students, could find representation. </p>
+                <Paragraph> Photos were chosen carefully to display the diversity of the teams, so that any potential student, or teacher thinking of their students, could find representation. </Paragraph>
                 </div>
 
                 <div style={explainBlock}>
                 <h4 style={h4Style}> 💾 Server-side Improvements:</h4>
 
-                <p> Administrative duties made easier via CRUD-based dashboards. Multiple tasks grouped together on the same page using components within Material UI tabs.  </p>  
+                <Paragraph> Administrative duties made easier via CRUD-based dashboards. Multiple tasks grouped together on the same page using components within Material UI tabs.  </Paragraph>  
                 </div> 
               </div> 
 

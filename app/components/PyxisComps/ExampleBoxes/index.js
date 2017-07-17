@@ -127,7 +127,7 @@ class ExampleBoxes extends React.PureComponent {
           <PicDiv>
             <Overlay1>
               <h3> February </h3>
-              <h4> LUST </h4>
+              <h4 style={{color: '#fafafa'}}> LUST </h4>
               <p style={pStyle}>
                 Just in time for Valentine's this box features everything one would need for the most amorous celebration of the holiday. </p>
               </Overlay1>
@@ -137,7 +137,7 @@ class ExampleBoxes extends React.PureComponent {
               <Overlay2>
                 <h3 style={{margin: '0'}}> Spring </h3>
                 <h3 style={{margin: '0'}}> (Late March - Early April) </h3>
-                <h4 style={{margin: '.5em 0 0 0'}}> GLUTTONY </h4>
+                <h4 style={{margin: '.5em 0 0 0', color: '#fafafa'}}> GLUTTONY </h4>
                 <p style={pStyle}> Spring's bounty allows for a little over indulgence. This box is filled with rich drinks & edibles fit for a feast.</p>
                 </Overlay2>
               </PicDiv>
@@ -146,7 +146,7 @@ class ExampleBoxes extends React.PureComponent {
                 <Overlay3>
                   <h3 style={{margin: '0'}}> Early Summer </h3>
                   <h3 style={{margin: '0'}}>(Late May - Early June) </h3>
-                  <h4 style={{margin: '.5em 0 0 0'}}>  PRIDE </h4>
+                  <h4 style={{margin: '.5em 0 0 0', color: '#fafafa'}}>  PRIDE </h4>
                   <p style={pStyle}> This time of year Pride is tranformed from sin to celebration. This box has 2 versionsto chose from: one for Pride of the rainbow variety & one for regular old vanity. </p>
                 </Overlay3>
               </PicDiv>

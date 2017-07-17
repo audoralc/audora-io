@@ -23,6 +23,10 @@ const HeaderLink = glamorous.a({
   textDecoration: 'none',
 })
 
+const Paragraph = glamorous.p ({ 
+    fontSize: '1.15em', 
+    fontWeight: '400',
+})
 
 export default class SemperStudy extends React.PureComponent {
   render() {
@@ -30,7 +34,7 @@ export default class SemperStudy extends React.PureComponent {
       display: 'grid',
       gridTemplateColumns: '1fr 1fr 1fr 1fr',
       gridTemplateRows: '15vh auto auto auto auto 1fr',
-      gridRowGap: '10vh',
+      gridRowGap: '20vh',
     }
 
     const bodyWrapper = {
@@ -54,7 +58,7 @@ export default class SemperStudy extends React.PureComponent {
     }
     const explainBlock = {
       width: '85%',
-      margin: '5% auto',
+      margin: '0 auto',
       padding: '2%',
     }
 
@@ -69,131 +73,71 @@ export default class SemperStudy extends React.PureComponent {
     return (
 
       <div style={pageGrid}>
-
-
+        
         <Helmet
           title="Semper Disco Study"
           meta={[ { name: 'description', content: 'Description of Semper Disco Study' }]}/>
-
-
-        <Header>
-
-        </Header>
-
+        <Header></Header>
 
         <div style={bodyWrapper}>
 
-
           <Paper zDepth={2}>
-
-
             <div style={content}>
 
-
-
               <div style={textBlock}>
-
-
                 <h2>
-
                   <HeaderLink href="/semper-disco"> Semper Disco </HeaderLink>
-
                 </h2>
 
-
-
                 <div style={explainBlock}>
-
-
-                  <h4 style={h4Style}>
-
-                  </h4>
-
-                    <p>Semper disco is Latin for "always, I learn". Going through a coding bootcamp makes you viscerally aware of the sheer amount of things you can learn (or at least be introduced to) in one day. I decided to start recording what I'd learned inside & outside of the classroom, and then, make something out of it. I've planned & am actively developing a one-page React web app that uses animation & page transitions to produce a mind map-like visualization.</p>
-
+                  <h4 style={h4Style}></h4>
+                    <Paragraph>Semper disco is Latin for "always, I learn". Going through a coding bootcamp makes you viscerally aware of the sheer amount of things you can learn (or at least be introduced to) in one day. I decided to start recording what I'd learned inside & outside of the classroom, and then, make something out of it. I've planned & am actively developing a one-page React web app that uses animation & page transitions to produce a mind map-like visualization.</Paragraph>
                 </div>
-
-
-
-            
-
-
 
               </div>
 
 
-
-
               <div style={carouselStyle}>
-
-
                 <React_Bootstrap_Carousel
                   animation={true}
                   onSelect={this.onSelect}
                   className="carousel-fade"
                   >
 
-
                   <div style={{height:"80%",width:"100%", margin:'0 auto'}}>
-
-
                     <img
                       src="http://audora.me/img/semper-wire.png"
                       width="100%"/>
-
-
                   </div>
 
 
                   <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-
-
                     <img
                       src="http://audora.me/img/semper-two.jpg"
                       width="100%" />
-
-
                   </div>
 
 
                   <div style={{height:"80%",width:"80%", margin:'0 auto'}}>
-
-
                     <img
                       src="http://audora.me/img/semper-three.jpg"
                       width="100%" />
-
-
                   </div>
 
-
-                </React_Bootstrap_Carousel>
-
-
+                </React_Bootstrap_Carousel>                
               </div>
-
-
-
-
-
-
-
 
 
 
             </div>
 
-
           </Paper>
 
-
         </div>
-
 
         <Footer>
 
         </Footer>
-
 
       </div>
 
